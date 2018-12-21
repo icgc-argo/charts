@@ -45,26 +45,26 @@ spec:
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ template "ego.fullname" . }}-postgresql
-                  key: postgresql-password
+                  name: {{ template "ego.fullname" . }}-postgres
+                  key: postgres-password
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://{{ template "ego.fullname" . }}-postgresql:5432/{{ .Values.postgresql.postgresqlDatabase }}?stringtype=unspecified"
+              value: "jdbc:postgresql://{{ template "ego.fullname" . }}-postgres:5432/{{ .Values.postgres.postgresDb }}?stringtype=unspecified"
             - name: SPRING_FLYWAY_ENABLED
               value: "true"
             - name: SPRING_FLYWAY_LOCATIONS
-              value: "filesystem:src/main/resources/flyway/sql,classpath:db/migration"
+              value: "filesystem:/usr/src/flyway-migration-sql,classpath:db/migration"
           ports:
             - name: http
               containerPort: 8081
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
