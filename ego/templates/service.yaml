@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "mychart.fullname" . }}
+  name: {{ include "ego.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "mychart.name" . }}
-    helm.sh/chart: {{ include "mychart.chart" . }}
+    app.kubernetes.io/name: {{ include "ego.name" . }}
+    helm.sh/chart: {{ include "ego.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "mychart.name" . }}
+    app.kubernetes.io/name: {{ include "ego.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
