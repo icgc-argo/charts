@@ -8,12 +8,11 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  type: {{ .Values.service.type }}
+  clusterIP: None
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+      targetPort: postgres
+      name: postgres
   selector:
     app.kubernetes.io/name: {{ include "postgres.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
