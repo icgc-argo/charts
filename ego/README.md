@@ -39,7 +39,7 @@ The following tables lists the configurable parameters of the EGO chart and thei
 | `image.tag`                                     | EGO image tag                               | `VERSION`                                                                   |
 | `image.pullPolicy`                              | EGO image pull policy                       | `IfNotPresent`                                                              |
 | `service.type`                                  | Kubernetes Service type                     | `ClusterIP`                                                                 |
-| `service.port`                                  | EGO backend server port                     | `5432`                                                                      |
+| `service.port`                                  | EGO backend server port                     | `80`                                                                      |
 | `ingress.enabled`                               | EGO backend server port                     | `true`                                                                      |
 | `ingress.annotations.certmanager.k8s.io/issuer` | Issuer that produce TLS certificates        | `letsencrypt-prod-staging`                                                  |
 | `ingress.path`                                  | Ingress path                                | `/`                                                                         |
