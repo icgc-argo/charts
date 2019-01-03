@@ -11,7 +11,7 @@ image:
 
 uiImage:
   repository: overture/ego-ui
-  tag: "201901033"
+  tag: "2019010310"
   pullPolicy: IfNotPresent
 
 nameOverride: ""
