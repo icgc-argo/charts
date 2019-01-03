@@ -8,12 +8,16 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  type: {{ .Values.service.type }}
+  type: ClusterIP
   ports:
-    - port: {{ .Values.service.port }}
+    - port: 80
       targetPort: http
       protocol: TCP
       name: http
+    - port: 81
+      targetPort: http-ui
+      protocol: TCP
+      name: http-ui
   selector:
     app.kubernetes.io/name: {{ include "ego.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

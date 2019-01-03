@@ -1,6 +1,5 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "ego.fullname" . -}}
-{{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -26,13 +25,15 @@ spec:
   {{- end }}
 {{- end }}
   rules:
-  {{- range .Values.ingress.hosts }}
-    - host: {{ . | quote }}
+    - host: {{ .Values.ingress.host }}
       http:
         paths:
-          - path: {{ $ingressPath }}
+          - path: /api
             backend:
               serviceName: {{ $fullName }}
               servicePort: http
-  {{- end }}
+          - path: /
+            backend:
+              serviceName: {{ $fullName }}
+              servicePort: http-ui
 {{- end }}

@@ -25,7 +25,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: LINKEDIN_CLIENTID
-              value: {{ .Values.appConfig.linkedInClientId }}
+              value: {{ .Values.appConfig.linkedInClientID }}
             - name: LINKEDIN_CLIENTSECRET
               valueFrom:
                 secretKeyRef:
@@ -34,7 +34,7 @@ spec:
             - name: LINKEDIN_REDIRECTURI
               value: "https://{{ .Values.appConfig.host }}/oauth/linkedin-cb"
             - name: GITHUB_CLIENTID
-              value: {{ .Values.appConfig.githubClientId }}
+              value: {{ .Values.appConfig.githubClientID }}
             - name: GITHUB_CLIENTSECRET
               valueFrom:
                 secretKeyRef:
@@ -67,7 +67,23 @@ spec:
           #     port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.nodeSelector }}
+        - name: {{ .Chart.Name }}-ui
+          image: "{{ .Values.uiImage.repository }}:{{ .Values.uiImage.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: REACT_APP_API
+              value: "https://{{ .Values.appConfig.host }}/api"
+            - name: REACT_APP_FACEBOOK_APP_ID
+              value: {{ .Values.appConfig.reactAppFacebookAppID | quote }}
+            - name: REACT_APP_GOOGLE_APP_ID
+              value: {{ .Values.appConfig.reactAppGoogleAppID | quote }}
+            - name: REACT_APP_DEFAULT_REDIRECT_URI
+              value: "https://{{ .Values.appConfig.host }}"
+          ports:
+            - name: http-ui
+              containerPort: 80
+              protocol: TCP
+{{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
     {{- end }}

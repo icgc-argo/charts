@@ -38,17 +38,13 @@ The following tables lists the configurable parameters of the EGO chart and thei
 | `image.repository`                              | EGO image name                              | overture/ego                                                                |
 | `image.tag`                                     | EGO image tag                               | `VERSION`                                                                   |
 | `image.pullPolicy`                              | EGO image pull policy                       | `IfNotPresent`                                                              |
-| `service.type`                                  | Kubernetes Service type                     | `ClusterIP`                                                                 |
-| `service.port`                                  | EGO backend server port                     | `80`                                                                      |
 | `ingress.enabled`                               | EGO backend server port                     | `true`                                                                      |
 | `ingress.annotations.certmanager.k8s.io/issuer` | Issuer that produce TLS certificates        | `letsencrypt-prod-staging`                                                  |
-| `ingress.path`                                  | Ingress path                                | `/`                                                                         |
-| `ingress.hosts`                                 | Ingress hosts                               | `[ego.staging.cancercollaboratory.org]`                                     |
-| `ingress.hosts`                                 | Ingress hosts                               | `[ego.staging.cancercollaboratory.org]`                                     |
+| `ingress.host`                                  | Ingress hosts                               | `ego.staging.cancercollaboratory.org`                                       |
 | `appConfig.host`                                | Host name for EGO backend server            | `ego.staging.cancercollaboratory.org`                                       |
-| `appConfig.linkedInClientId`                    | LinkedIn Client ID                          | `nil`                                                                       |
+| `appConfig.linkedInClientID`                    | LinkedIn Client ID                          | `nil`                                                                       |
 | `appConfig.linkedInClientSecret`                | LinkedIn Client Secret                      | `nil`                                                                       |
-| `appConfig.githubClientId`                      | GitHub Client ID                            | `nil`                                                                       |
+| `appConfig.githubClientID`                      | GitHub Client ID                            | `nil`                                                                       |
 | `appConfig.githubClientSecret`                  | GitHub Client Secret                        | `nil`                                                                       |
 | `postgres`                                      | Configuration for PostgreSQL subchart       | `{postgresUsername: postgres, postgresPassword: password, postgresDb: ego}` |
 
