@@ -1,13 +1,22 @@
 apiVersion: v1
 entries:
+  ego:
+  - apiVersion: v1
+    created: 2019-01-04T15:19:41.304473579-05:00
+    description: A Helm chart for ego
+    digest: e479733d9f1c28df2943462b11838ef6f38ecad904a0974fbcd8174e955fe4e3
+    name: ego
+    urls:
+    - https://overture-stack.github.io/charts/ego-0.1.0.tgz
+    version: 0.1.0
   mychart:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-18T14:54:26.446435368-05:00
+    created: 2019-01-04T15:19:41.304649042-05:00
     description: A Helm chart for Kubernetes
     digest: 750282ed747c2d03e10213a6120d00bc8623b73d1d5a4ccba83f1e0f744adfba
     name: mychart
     urls:
     - https://overture-stack.github.io/charts/mychart-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-18T14:54:26.446163729-05:00
+generated: 2019-01-04T15:19:41.30400884-05:00

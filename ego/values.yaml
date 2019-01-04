@@ -55,10 +55,10 @@ postgres:
 appConfig:
   # api configs
   host: ego.staging.cancercollaboratory.org
+  googleClientID:
   linkedInClientID:
   linkedInClientSecret:
   githubClientID:
   githubClientSecret:
   # ui configs
   reactAppFacebookAppID:
-  reactAppGoogleAppID:

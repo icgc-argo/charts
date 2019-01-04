@@ -24,6 +24,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: GOOGLE_CLIENT_IDS
+              value: {{ .Values.appConfig.googleClientID }}
             - name: LINKEDIN_CLIENTID
               value: {{ .Values.appConfig.linkedInClientID }}
             - name: LINKEDIN_CLIENTSECRET
@@ -76,7 +78,7 @@ spec:
             - name: REACT_APP_FACEBOOK_APP_ID
               value: {{ .Values.appConfig.reactAppFacebookAppID | quote }}
             - name: REACT_APP_GOOGLE_APP_ID
-              value: {{ .Values.appConfig.reactAppGoogleAppID | quote }}
+              value: {{ .Values.appConfig.googleClientID | quote }}
             - name: REACT_APP_DEFAULT_REDIRECT_URI
               value: "https://{{ .Values.appConfig.host }}"
           ports:
