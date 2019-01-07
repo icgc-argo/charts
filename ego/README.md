@@ -18,7 +18,7 @@ This chart bootstraps an EGO deployment on a [Kubernetes](https://kubernetes.io)
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release ego overture/ego
+$ helm install --name my-release overture/ego
 ```
 
 The command deploys EGO on the Kubernetes cluster with the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.

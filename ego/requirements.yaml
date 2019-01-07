@@ -1,0 +1,4 @@
+dependencies:
+  - name: postgresql
+    repository: https://overture-stack.github.io/charts
+    version: 0.1.0
