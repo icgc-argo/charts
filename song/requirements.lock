@@ -1,0 +1,6 @@
+dependencies:
+- name: postgres
+  repository: https://overture-stack.github.io/charts
+  version: 0.1.0
+digest: sha256:80ebddbabd0cce92ef64b5d72866d1040d2dc6d39132c55604feddbb0a8e93a7
+generated: 2019-01-08T14:58:00.893937511-05:00
