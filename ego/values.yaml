@@ -54,6 +54,7 @@ postgres:
 
 appConfig:
   # api configs
+  activeProfiles: auth
   host: ego.staging.cancercollaboratory.org
   googleClientID:
   linkedInClientID:

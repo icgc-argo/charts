@@ -24,6 +24,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.appConfig.activeProfiles }}
             - name: GOOGLE_CLIENT_IDS
               value: {{ .Values.appConfig.googleClientID }}
             - name: LINKEDIN_CLIENTID
