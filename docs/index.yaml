@@ -2,7 +2,15 @@ apiVersion: v1
 entries:
   ego:
   - apiVersion: v1
-    created: 2019-02-19T11:55:48.448594838-05:00
+    created: 2019-02-20T11:35:00.797752108-05:00
+    description: A Helm chart for ego
+    digest: 7bf2b2c33f206051e8409b2b3a841d1e3350e230a20cf18c3672f24e5975f015
+    name: ego
+    urls:
+    - https://overture-stack.github.io/charts/ego-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    created: 2019-02-20T11:35:00.797415501-05:00
     description: A Helm chart for ego
     digest: 2506e7af50b7ae94ce4f52a8822d196b1fac77d652580e5fb528ba4100c92441
     name: ego
@@ -10,7 +18,7 @@ entries:
     - https://overture-stack.github.io/charts/ego-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2019-02-19T11:55:48.448236106-05:00
+    created: 2019-02-20T11:35:00.797083186-05:00
     description: A Helm chart for ego
     digest: e479733d9f1c28df2943462b11838ef6f38ecad904a0974fbcd8174e955fe4e3
     name: ego
@@ -20,11 +28,11 @@ entries:
   postgres:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-02-19T11:55:48.448772023-05:00
+    created: 2019-02-20T11:35:00.797917208-05:00
     description: A Helm chart for Kubernetes
     digest: 541780d70a6d533e3c99c42716a38aba2b5afd0fdfb2d135ee3807107817db63
     name: postgres
     urls:
     - https://overture-stack.github.io/charts/postgres-0.1.0.tgz
     version: 0.1.0
-generated: 2019-02-19T11:55:48.447763232-05:00
+generated: 2019-02-20T11:35:00.796647898-05:00

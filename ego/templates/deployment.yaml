@@ -26,26 +26,33 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: {{ .Values.appConfig.activeProfiles }}
-            - name: GOOGLE_CLIENT_IDS
+            - name: GOOGLE_CLIENT_CLIENTID
               value: {{ .Values.appConfig.googleClientID }}
-            - name: LINKEDIN_CLIENTID
+            - name: GOOGLE_CLIENT_CLIENTSECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "ego.fullname" . }}
+                  key: google-client-secret
+            - name: GOOGLE_CLIENT_PREESTABLISHEDREDIRECTURI
+              value: "https://{{ .Values.appConfig.host }}/api/oauth/login/google"
+            - name: LINKEDIN_CLIENT_CLIENTID
               value: {{ .Values.appConfig.linkedInClientID }}
-            - name: LINKEDIN_CLIENTSECRET
+            - name: LINKEDIN_CLIENT_CLIENTSECRET
               valueFrom:
                 secretKeyRef:
                   name: {{ template "ego.fullname" . }}
                   key: linkedin-client-secret
-            - name: LINKEDIN_REDIRECTURI
-              value: "https://{{ .Values.appConfig.host }}/oauth/linkedin-cb"
-            - name: GITHUB_CLIENTID
+            - name: LINKEDIN_CLIENT_PREESTABLISHEDREDIRECTURI
+              value: "https://{{ .Values.appConfig.host }}/api/oauth/login/linkedin"
+            - name: GITHUB_CLIENT_CLIENTID
               value: {{ .Values.appConfig.githubClientID }}
-            - name: GITHUB_CLIENTSECRET
+            - name: GITHUB_CLIENT_CLIENTSECRET
               valueFrom:
                 secretKeyRef:
                   name: {{ template "ego.fullname" . }}
                   key: github-client-secret
-            - name: GITHUB_REDIRECTURI
-              value: "https://{{ .Values.appConfig.host }}/oauth/github-cb"
+            - name: GITHUB_CLIENT_PREESTABLISHEDREDIRECTURI
+              value: "https://{{ .Values.appConfig.host }}/api/oauth/login/github"
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -77,12 +84,6 @@ spec:
           env:
             - name: REACT_APP_API
               value: "https://{{ .Values.appConfig.host }}/api"
-            - name: REACT_APP_FACEBOOK_APP_ID
-              value: {{ .Values.appConfig.reactAppFacebookAppID | quote }}
-            - name: REACT_APP_GOOGLE_APP_ID
-              value: {{ .Values.appConfig.googleClientID | quote }}
-            - name: REACT_APP_DEFAULT_REDIRECT_URI
-              value: "https://{{ .Values.appConfig.host }}"
           ports:
             - name: http-ui
               containerPort: 80
