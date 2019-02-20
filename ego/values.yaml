@@ -57,6 +57,7 @@ appConfig:
   activeProfiles: auth
   host: ego.staging.cancercollaboratory.org
   googleClientID:
+  googleClientSecret:
   linkedInClientID:
   linkedInClientSecret:
   githubClientID:
