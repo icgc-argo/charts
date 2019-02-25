@@ -1,0 +1,52 @@
+# Default values for ..
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: overture/enrolment
+  tag: "2019022511"
+
+uiImage:
+  repository: overture/enrolment-ui
+  tag: "2019022512"
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  annotations:
+    certmanager.k8s.io/issuer: letsencrypt-prod-staging
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  path: /
+  host: enrolment.staging.cancercollaboratory.org
+  tls:
+    - secretName: enrolment-staging-cert
+      hosts:
+        - enrolment.staging.cancercollaboratory.org
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+volumeSize: 10Gi
