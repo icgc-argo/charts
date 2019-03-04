@@ -27,7 +27,8 @@ ingress:
     certmanager.k8s.io/issuer: letsencrypt-prod-staging
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
-  host: song.staging.cancercollaboratory.org
+  hosts:
+    - song.staging.cancercollaboratory.org
   tls:
     - secretName: ego-staging-cert
       hosts:
