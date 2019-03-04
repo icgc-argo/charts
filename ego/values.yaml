@@ -62,5 +62,7 @@ appConfig:
   linkedInClientSecret:
   githubClientID:
   githubClientSecret:
+  swaggerHost:
+  swaggerBaseUrl:
   # ui configs
   reactAppFacebookAppID:

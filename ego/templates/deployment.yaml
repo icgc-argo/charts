@@ -64,6 +64,10 @@ spec:
               value: "true"
             - name: SPRING_FLYWAY_LOCATIONS
               value: "filesystem:/usr/src/flyway-migration-sql,classpath:db/migration"
+            - name: SWAGGER_HOST
+              value: {{ .Values.appConfig.swaggerHost }}
+            - name: SWAGGER_BASEURL
+              value: {{ .Values.appConfig.swaggerBaseUrl }}
           ports:
             - name: http
               containerPort: 8081
