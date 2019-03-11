@@ -1,0 +1,52 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+  creationTimestamp: null
+  labels:
+    io.kompose.service: storage-server
+  name: storage-server
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: storage-server
+    spec:
+      containers:
+      - env:
+        - name: AUTH_SERVER_CLIENTID
+          value: {{ .Values.appConfig.authServer.clientID }}
+        - name: AUTH_SERVER_CLIENTSECRET
+          value: {{ .Values.appConfig.authServer.clientSecret }}
+        - name: AUTH_SERVER_URL
+          value: {{ .Values.appConfig.authServer.URL }}
+        - name: OBJECT_STORAGE_ACCESS_KEY
+          value: {{ .Values.appConfig.objectStorage.accessKey }}
+        - name: OBJECT_STORAGE_SECRET_KEY
+          value: {{ .Values.appConfig.objectStorage.secretKey }}
+        - name: OBJECT_STORAGE_URL
+          value: {{ .Values.appConfig.objectStorage.URL }}
+        - name: SERVER_URL
+          value: {{ .Values.appConfig.serverUrl }}
+        - name: STORAGE_SERVER_DATA_BUCKET
+          value: {{ .Values.appConfig.storageServer.dataBucket }}
+        - name: STORAGE_SERVER_DATA_DIR
+          value: {{ .Values.appConfig.storageServer.dataDir }}
+        - name: STORAGE_SERVER_JMX_PORT
+          value: {{ quote .Values.appConfig.storageServer.JMXPort }}
+        - name: STORAGE_SERVER_OBJECT_SENTINEL
+          value: {{ .Values.appConfig.storageServer.sentinel }}
+        - name: STORAGE_SERVER_PORT
+          value: {{ quote .Values.appConfig.storageServer.port }}
+        - name: STORAGE_SERVER_STATE_BUCKET
+          value: {{ .Values.appConfig.storageServer.stateBucket }}
+        name: storage-server
+        image: overture/score-server:test
+        resources: {}
+      restartPolicy: Always
+status: {}
