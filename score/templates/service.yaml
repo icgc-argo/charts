@@ -3,17 +3,17 @@ kind: Service
 metadata:
   name: {{ include "score.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "score.name" . }}
-    helm.sh/chart: {{ include "score.chart" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
-    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app: {{ include "score.name" . }}
+    chart: {{ include "score.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 80
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "score.name" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
+    app: {{ include "score.name" . }}
+    release: {{ .Release.Name }}
