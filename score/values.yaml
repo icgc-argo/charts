@@ -6,8 +6,8 @@ replicaCount: 1
 
 image:
   repository: overture/score-server
-  tag: test
-  pullPolicy: IfNotPresent
+  tag: test04
+  ImagePullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
@@ -21,7 +21,7 @@ ingress:
   annotations:
     certmanager.k8s.io/issuer: letsencrypt-prod-staging
   hosts:
-    - score.staging.cancercollaboratory.org
+    - score.qa.cancercollaboratory.org
       
   tls:
     - secretName: letsencrypt-prod-score-qa-key
@@ -47,18 +47,21 @@ affinity: {}
 
 appConfig:
   authServer:
-    clientID: 3kJhz9pNtC0pFHAxr2SPkUkGjXrkWWqGcnPC0vBP
-    clientSecret: v9mjRtuEVwpt7cgqnsq6mxtCa5FbUOpKLGh7WX8a1dWbBKfrM3iV3VYMtE60jr3W7GLWtNeYIaJ8EUxPkaInclWVXf64qKdR3IKwyfpDU7JhvWEwIYQYdwV1YAUZjB2e
-    URL: http://localhost:8084/check_token/
+    clientID: 
+    clientSecret: 
+    URL: https://ego.qa.cancercollaboratory.org/api/o/check_token
+    uploadScope: scoreqa.WRITE
+    downloadScope: scoreqa.READ
   objectStorage:
-    accessKey: minio
-    secretKey: minio123
-    URL: http://localhost:8085
-  serverUrl: http://localhost:8080
+    accessKey: 
+    secretKey: 
+    URL: https://object.cancercollaboratory.org:9080
+  song:  
+    serverUrl: https://song.qa.cancercollaboratory.org 
   storageServer:
-    dataBucket: oicr.icgc.test
+    dataBucket: qa.icgc
     dataDir: data
     JMXPort: "10018"
     sentinel: heliograph
-    port: "8087"
-    stateBucket: oicr.icgc.test
+    port: "80"
+    stateBucket: qa.icgc
