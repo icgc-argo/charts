@@ -54,7 +54,15 @@ spec:
                   name: {{ template "ego.fullname" . }}
                   key: github-client-secret
             - name: GITHUB_CLIENT_PREESTABLISHEDREDIRECTURI
-              value: "https://{{ .Values.appConfig.host }}/api/oauth/login/github"
+            - name: FACEBOOK_CLIENT_CLIENTID
+              value: {{ .Values.appConfig.facebookClientID | quote }}
+            - name: FACEBOOK_CLIENT_CLIENTSECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "ego.fullname" . }}
+                  key: facebook-client-secret
+            - name: FACEBOOK_CLIENT_PREESTABLISHEDREDIRECTURI
+              value: "https://{{ .Values.appConfig.host }}/api/oauth/login/facebook"
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
