@@ -62,6 +62,8 @@ appConfig:
   linkedInClientSecret:
   githubClientID:
   githubClientSecret:
+  facebookClientID:
+  facebookClientSecret:
   swaggerHost:
   swaggerBaseUrl:
   # ui configs
