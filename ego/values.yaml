@@ -56,15 +56,15 @@ appConfig:
   # api configs
   activeProfiles: auth
   host: ego.staging.cancercollaboratory.org
-  googleClientID:
-  googleClientSecret:
-  linkedInClientID:
-  linkedInClientSecret:
-  githubClientID:
-  githubClientSecret:
-  facebookClientID:
-  facebookClientSecret:
+  googleClientID: ""
+  googleClientSecret: ""
+  linkedInClientID: ""
+  linkedInClientSecret: ""
+  githubClientID: ""
+  githubClientSecret: ""
+  facebookClientID: ""
+  facebookClientSecret: ""
   swaggerHost:
   swaggerBaseUrl:
   # ui configs
-  reactAppFacebookAppID:
+  reactAppFacebookAppID: ""
