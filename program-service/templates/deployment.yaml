@@ -20,6 +20,9 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://{{ template "program-service.fullname" . }}-postgres:5432/{{ .Values.postgres.postgresDb }}"
@@ -27,9 +30,6 @@ spec:
               value: "true"
             - name: SPRING_FLYWAY_LOCATIONS
               value: "classpath:flyway/sql,classpath:db/migration"
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: grpc
               containerPort: 50051
