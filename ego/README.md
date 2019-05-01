@@ -18,7 +18,7 @@ This chart bootstraps an EGO deployment on a [Kubernetes](https://kubernetes.io)
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release overture/ego
+$ helm install --name my-release argo/ego
 ```
 
 The command deploys EGO on the Kubernetes cluster with the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -57,7 +57,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 $ helm install --name my-release \
   --set postgres.postgresqlPassword=secretpassword,postgres.postgresDb=my-database \
-    overture/ego
+    argo/ego
 ```
 
 The above command sets the PostgreSQL `postgres` account password to `secretpassword`. Additionally it creates a database named `my-database`.
@@ -65,5 +65,5 @@ The above command sets the PostgreSQL `postgres` account password to `secretpass
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install --name my-release -f values.yaml overture/ego
+$ helm install --name my-release -f values.yaml argo/ego
 ```

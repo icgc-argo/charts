@@ -14,7 +14,7 @@ This chart bootstraps a PostgreSQL deployment on a [Kubernetes](https://kubernet
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release overture/postgres
+$ helm install --name my-release icgc/postgres
 ```
 
 The command deploys PostgreSQL on the Kubernetes cluster with the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -45,7 +45,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 $ helm install --name my-release \
   --set postgresqlPassword=secretpassword,postgresDb=my-database \
-    overture/postgres
+    icgc/postgres
 ```
 
 The above command sets the PostgreSQL `postgres` account password to `secretpassword`. Additionally it creates a database named `my-database`.
@@ -53,5 +53,5 @@ The above command sets the PostgreSQL `postgres` account password to `secretpass
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install --name my-release -f values.yaml overture/postgres
+$ helm install --name my-release -f values.yaml icgc/postgres
 ```
