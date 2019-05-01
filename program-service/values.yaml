@@ -46,3 +46,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+postgres:
+  postgresUsername: postgres
+  postgresPassword: password
+  postgresDb: program_service
