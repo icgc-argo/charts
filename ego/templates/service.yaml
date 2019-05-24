@@ -18,6 +18,10 @@ spec:
       targetPort: http-ui
       protocol: TCP
       name: http-ui
+    - port: 50051
+      targetPort: grpc
+      protocol: TCP
+      name: grpc
   selector:
     app.kubernetes.io/name: {{ include "ego.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
