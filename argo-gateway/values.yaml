@@ -41,6 +41,10 @@ resources:
   #  cpu: 100m
   #  memory: 128Mi
 
+appConfig:
+  EGO_ROOT_GRPC: ego.qa.cancercollaboratory.org:50051
+  PROGRAM_SERVICE_ROOT: program-service.qa.cancercollaboratory.org:50051
+
 nodeSelector: {}
 
 tolerations: []

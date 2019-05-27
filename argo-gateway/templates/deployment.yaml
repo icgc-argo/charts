@@ -37,6 +37,11 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: EGO_ROOT_GRPC
+              value: {{ .Values.appConfig.EGO_ROOT_GRPC }}
+            - name: PROGRAM_SERVICE_ROOT
+              value: {{ .Values.appConfig.PROGRAM_SERVICE_ROOT }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
