@@ -101,6 +101,8 @@ spec:
           env:
             - name: REACT_APP_API
               value: "https://{{ .Values.appConfig.host }}/api"
+            - name: REACT_APP_EGO_CLIENT_ID
+              value: {{ .Values.appConfig.egoClientId }}
           ports:
             - name: http-ui
               containerPort: 80
