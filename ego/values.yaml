@@ -67,4 +67,4 @@ appConfig:
   swaggerHost:
   swaggerBaseUrl:
   # ui configs
-  reactAppFacebookAppID: ""
+  egoClientId: ego
