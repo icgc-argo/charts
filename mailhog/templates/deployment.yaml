@@ -26,7 +26,6 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
         runAsNonRoot: true
-      hostNetwork: true
       containers:
         - name: {{ template "mailhog.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
