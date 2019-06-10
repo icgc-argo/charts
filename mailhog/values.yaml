@@ -67,3 +67,5 @@ tolerations:
 - key: "node-role.kubernetes.io/master"
   operator: "Exists"
 
+# the port to expose this
+smtpHostPort: 11025
