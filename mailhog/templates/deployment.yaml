@@ -50,7 +50,7 @@ spec:
             - name: smtp
               containerPort: 1025
               protocol: TCP
-              hostPort: 1025
+              hostPort: {{ .Values.smtpHostPort }}
           livenessProbe:
             tcpSocket:
               port: smtp
