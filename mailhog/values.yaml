@@ -1,0 +1,69 @@
+image:
+  repository: mailhog/mailhog
+  tag: v1.0.0
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  annotations: {}
+  clusterIP: ""
+  externalIPs: []
+  loadBalancerIP: ""
+  loadBalancerSourceRanges: []
+  type: ClusterIP
+  port:
+    http: 8025
+  nodePort:
+    http: ""
+
+ingress:
+  enabled: true
+  annotations:
+    certmanager.k8s.io/acme-challenge-type: dns01
+    certmanager.k8s.io/acme-dns01-provider: route53
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+  - host: mailhog.qa.cancercollaboratory.org
+    paths:
+    - "/"
+  tls:
+  - secretName: mailhog-qa-cert
+    hosts:
+    - mailhog.qa.cancercollaboratory.org
+
+auth:
+  enabled: false
+  existingSecret: ""
+  fileName: auth.txt
+  fileContents: ""
+
+podAnnotations: {}
+
+extraEnv: []
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+affinity: {}
+
+nodeSelector:
+  kubernetes.io/hostname: k8s-master-0
+
+
+tolerations:
+- key: "node-role.kubernetes.io/master"
+  operator: "Exists"
+
