@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: overture/program-service
+  repository: icgcargo/program-service
   tag: d26b502
   pullPolicy: IfNotPresent
 
