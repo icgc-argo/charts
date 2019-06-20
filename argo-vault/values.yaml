@@ -1,9 +1,6 @@
 # Default values for argo-vault.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
-replicaCount: 1
-
 nameOverride: ""
 fullnameOverride: ""
 
@@ -29,26 +26,18 @@ tolerations: []
 
 affinity: {}
 
+
 vaultVolume:
   size: 3Gi
   storageClass: standard
-  name: "{{ include 'argo-vault.fullname' . }}"
+
+createServiceAccount: true
+serviceAccountName: vault-auth
 
 # see https://github.com/helm/charts/tree/master/incubator/vault for vault chart values
-vaultChart:
-  replicaCount: 2
+vaultchart:
+  replicaCount: 1
   image:
     tag: 1.1.3
   vault:
     dev: false
-    config:
-      storage:
-        file:
-          path: "/mnt/vault/data"
-    extraVolumes:
-      - name: vault-data
-        persistentVolumeClaim:
-          claimName: "{{tpl .Values.vaultVolume }}"
-    extraVolumeMounts:
-      - name: vault-data
-        mountPath: /mnt/vault/data
