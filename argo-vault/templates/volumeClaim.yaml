@@ -1,17 +1,22 @@
+{{- range .Values.vaultchart.vault.extraVolumes }}
+{{- if .persistentVolumeClaim }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ include "argo-vault.fullname" . }}
+  name: {{ .persistentVolumeClaim.claimName }}
   labels:
-    app.kubernetes.io/name: {{ include "argo-vault.name" . }}
-    helm.sh/chart: {{ include "argo-vault.chart" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/name: {{ .persistentVolumeClaim.claimName }}
+    helm.sh/chart: {{ include "argo-vault.chart" $ }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {{ .Values.vaultVolume.size | quote }}
-{{- if .Values.vaultVolume.storageClass }}
-storageClassName: {{ .Values.vaultVolume.storageClass }}
+      storage: {{ $.Values.vaultVolume.size | quote }}
+{{- if $.Values.vaultVolume.storageClass }}
+storageClassName: {{ $.Values.vaultVolume.storageClass }}
+{{- end }}
+---
+{{- end }}
 {{- end }}

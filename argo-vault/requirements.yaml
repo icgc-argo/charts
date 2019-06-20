@@ -1,5 +1,5 @@
 dependencies:
   - name: vault
-    alias: vaultChart
+    alias: vaultchart
     repository: http://storage.googleapis.com/kubernetes-charts-incubator
     version: 0.18.9
