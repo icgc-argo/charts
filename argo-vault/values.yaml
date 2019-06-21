@@ -26,13 +26,9 @@ tolerations: []
 
 affinity: {}
 
-
 vaultVolume:
   size: 3Gi
   storageClass: standard
-
-createServiceAccount: true
-serviceAccountName: vault-auth
 
 # see https://github.com/helm/charts/tree/master/incubator/vault for vault chart values
 vaultchart:
