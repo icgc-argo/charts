@@ -39,12 +39,12 @@ spec:
               containerPort: 8080
               protocol: TCP
           livenessProbe:
-            initialDelaySeconds: 120
+            initialDelaySeconds: {{ .Values.deployment.livenessProbe.initialDelaySeconds }}
             httpGet:
               path: /status
               port: http
           readinessProbe:
-            initialDelaySeconds: 120
+            initialDelaySeconds: {{ .Values.deployment.readinessProbe.initialDelaySeconds }}
             httpGet:
               path: /status
               port: http

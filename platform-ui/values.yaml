@@ -28,6 +28,12 @@ ingress:
       hosts:
         - platform-ui.qa.cancercollaboratory.org
 
+deployment:
+  livenessProbe:
+    initialDelaySeconds: 120
+  readinessProbe:
+    initialDelaySeconds: 120
+
 resources:
   {}
   # We usually recommend not to specify default resources and to leave this as a conscious
