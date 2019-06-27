@@ -24,7 +24,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: API_ROOT
+            - name: GATEWAY_API_ROOT
               value: {{ .Values.appConfig.API_ROOT }}
             - name: NODE_PATH
               value: {{ .Values.appConfig.NODE_PATH }}
