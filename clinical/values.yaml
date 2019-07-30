@@ -47,4 +47,7 @@ tolerations: []
 
 affinity: {}
 
+appConfig:
+  port: 3000
+
 extraEnv: {}
