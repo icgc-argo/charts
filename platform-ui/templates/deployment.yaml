@@ -24,16 +24,12 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: GATEWAY_API_ROOT
-              value: {{ .Values.appConfig.API_ROOT }}
-            - name: NODE_PATH
-              value: {{ .Values.appConfig.NODE_PATH }}
-            - name: NODE_ENV
-              value: {{ .Values.appConfig.NODE_ENV }}
-            - name: EGO_API_ROOT
-              value: {{ .Values.appConfig.EGO_API_ROOT }}
-            - name: EGO_CLIENT_ID
-              value: {{ .Values.appConfig.EGO_CLIENT_ID }}
+{{- if .Values.appConfig }}
+  {{ range $key, $value := .Values.appConfig }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
           ports:
             - name: http
               containerPort: 8080
