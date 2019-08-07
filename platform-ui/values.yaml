@@ -53,9 +53,4 @@ tolerations: []
 
 affinity: {}
 
-appConfig:
-  API_ROOT: https://argo-gateway.qa.cancercollaboratory.org
-  NODE_PATH: ./
-  NODE_ENV: production
-  EGO_API_ROOT: https://ego.qa.cancercollaboratory.org
-  EGO_CLIENT_ID: platform-ui-qa
+appConfig: {}
