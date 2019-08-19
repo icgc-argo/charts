@@ -47,6 +47,12 @@ tolerations: []
 
 affinity: {}
 
+# choose rbac roles to enable
+rbac:
+  create:
+    # for vault kubernetes integration
+    tokenReview: true
+
 appConfig:
   port: 3000
 
