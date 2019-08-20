@@ -30,11 +30,8 @@ spec:
     - host: {{ . | quote }}
       http:
         paths:
-        {{- range $ingressPaths }}
-          - path: {{ . }}
-            backend:
+          - backend:
               serviceName: {{ $fullName }}
-              servicePort: http
-        {{- end }}
+              servicePort: grpc
   {{- end }}
 {{- end }}
