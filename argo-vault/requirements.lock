@@ -1,0 +1,6 @@
+dependencies:
+- name: vault
+  repository: http://storage.googleapis.com/kubernetes-charts-incubator
+  version: 0.18.16
+digest: sha256:937de988cd08f7d9e2fb478c8a114a2f190757d2e9ec17067c07c7f95ae0f386
+generated: 2019-08-20T18:36:39.657355333-04:00
