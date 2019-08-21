@@ -7,6 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: {{ .persistentVolumeClaim.claimName }}
     helm.sh/chart: {{ include "argo-vault.chart" $ }}
+    helm.sh/resource-policy: keep
     app.kubernetes.io/instance: {{ $.Release.Name }}
 spec:
   accessModes:
