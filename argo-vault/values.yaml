@@ -26,10 +26,6 @@ tolerations: []
 
 affinity: {}
 
-vaultVolume:
-  size: 3Gi
-  storageClass: standard
-
 # see https://github.com/helm/charts/tree/master/incubator/vault for vault chart values
 vaultchart:
   replicaCount: 1
@@ -37,3 +33,10 @@ vaultchart:
     tag: 1.1.3
   vault:
     dev: false
+    extraEnv:
+    - name: VAULT_UI
+      value: "true"
+    - name: VAULT_ADDR
+      value: http://localhost:8200
+etcdchart:
+  replicas: 3
