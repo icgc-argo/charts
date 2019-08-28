@@ -8,7 +8,6 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -21,11 +20,32 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       serviceAccountName: {{ include "clinical.fullname" . }}
+      initContainers:
+        - name: copy-certs
+          image: "{{ .Values.copyCertsImage.repository }}:{{ .Values.copyCertsImage.tag }}"
+          imagePullPolicy: {{ .Values.copyCertsImage.pullPolicy | quote }}
+          command:
+            - "sh"
+          args:
+            - "-c"
+            - |
+              set -e
+              set -x
+            {{- if .Values.mongoTLS.enabled }}
+              cp /mongodb-ca/tls.key /mongo-certs/tls.key
+              cp /mongodb-ca/tls.crt /mongo-certs/tls.crt
+            {{- end }}
+          volumeMounts:
+          {{- if .Values.mongoTLS.enabled }}
+            - name: mongodb-ca
+              mountPath: /mongodb-ca 
+            - name: mongodb-certs
+              mountPath: /mongo-certs
+          {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-
           env:
           - name: PORT
             value: {{ .Values.appConfig.port | quote }}
@@ -49,6 +69,9 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: mongodb-certs
+              mountPath: /mongodb-certs
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -61,3 +84,10 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+      volumes:
+        - name: mongodb-ca
+          secret:
+            defaultMode: 0400
+            secretName: mongodb-replica-test-mongodb-replicaset-ca
+        - name: mongodb-certs
+          emptyDir: {}
