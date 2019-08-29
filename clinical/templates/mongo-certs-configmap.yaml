@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: {{ template "clinical.name" . }}
+    chart: {{ template "clinical.chart" . }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+{{- if .Values.extraLabels }}
+{{ toYaml .Values.extraLabels | indent 4 }}
+{{- end }}
+  name: {{ template "clinical.fullname" . }}-mongodb-config
+data:
+  start.sh: |
+{{ .Files.Get "init/start.sh" | indent 4 }}

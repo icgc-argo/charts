@@ -34,6 +34,9 @@ spec:
             {{- if .Values.mongoTLS.enabled }}
               cp /mongodb-ca/tls.key /mongo-certs/tls.key
               cp /mongodb-ca/tls.crt /mongo-certs/tls.crt
+              cp /cert-config/start.sh /mongo-certs/start.sh
+              chmod 755 /mongo-certs/start.sh
+              sh /mongo-certs/start.sh
             {{- end }}
           volumeMounts:
           {{- if .Values.mongoTLS.enabled }}
@@ -41,6 +44,8 @@ spec:
               mountPath: /mongodb-ca 
             - name: mongodb-certs
               mountPath: /mongo-certs
+            - name: cert-config
+              mountPath: /cert-config
           {{- end }}
       containers:
         - name: {{ .Chart.Name }}
@@ -72,6 +77,7 @@ spec:
           volumeMounts:
             - name: mongodb-certs
               mountPath: /mongodb-certs
+
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -91,3 +97,6 @@ spec:
             secretName: mongodb-replica-test-mongodb-replicaset-ca
         - name: mongodb-certs
           emptyDir: {}
+        - name: cert-config
+          configMap:
+            name: {{ template "clinical.fullname" . }}-mongodb-config
