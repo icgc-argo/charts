@@ -42,6 +42,8 @@ spec:
               value: {{ .Values.appConfig.EGO_ROOT_GRPC }}
             - name: PROGRAM_SERVICE_ROOT
               value: {{ .Values.appConfig.PROGRAM_SERVICE_ROOT }}
+            - name: CLINICAL_SERVICE_ROOT
+              value: {{ .Values.appConfig.CLINICAL_SERVICE_ROOT }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
