@@ -44,6 +44,7 @@ resources:
 appConfig:
   EGO_ROOT_GRPC: ego.qa.cancercollaboratory.org:50051
   PROGRAM_SERVICE_ROOT: program-service.qa.cancercollaboratory.org:50051
+  CLINICAL_SERVICE_ROOT: https://clinical.qa.argo.cancercollaboratory.org/submission
 
 nodeSelector: {}
 
