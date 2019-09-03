@@ -43,10 +43,13 @@ resources:
 
 appConfig:
   EGO_ROOT_GRPC: ego.qa.cancercollaboratory.org:50051
+  EGO_ROOT_REST: https://ego.qa.cancercollaboratory.org/api
+  EGO_PUBLIC_KEY: 
   PROGRAM_SERVICE_ROOT: program-service.qa.cancercollaboratory.org:50051
-  CLINICAL_SERVICE_ROOT: https://clinical.qa.argo.cancercollaboratory.org/submission
-
-nodeSelector: {}
+  CLINICAL_SERVICE_ROOT: https://clinical.qa.argo.cancercollaboratory.org
+  # Optional, intentionally blank:
+  SUBMISSION_TEMPLATE_PATH: 
+  GQL_MAX_COST: 1000
 
 tolerations: []
 
