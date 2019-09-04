@@ -1,0 +1,207 @@
+mailhog:
+  smtpHostPort: 41000
+  ingress:
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    enabled: true
+    hosts:
+    - host: mailhog.test.argo.cancercollaboratory.org
+      paths:
+      - /
+    tls:
+    - hosts:
+      - mailhog.test.argo.cancercollaboratory.org
+      secretName: mailhog-test-argo-cert
+
+ego:
+  appConfig:
+    egoClientId: ego
+    host: ego.test.argo.cancercollaboratory.org
+    googleClientID: #secret#
+    googleClientSecret: #secret#
+    swaggerBaseUrl: /api
+    swaggerHost: ego.test.argo.cancercollaboratory.org
+  image:
+    tag: 2.5.0
+  ingress:
+    enabled: true
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    host: ego.test.argo.cancercollaboratory.org
+    tls:
+    - hosts:
+      - ego.test.argo.cancercollaboratory.org
+      secretName: ego-test-argo-cert
+  uiImage:
+    tag: release-2.0.6
+  rbac:
+    create:
+      tokenReview: true
+  postgres:
+    fullnameOverride: "argo-ego-postgres"
+
+program:
+  extraEnv:
+    APP_EGOURL: https://ego.test.argo.cancercollaboratory.org/api
+    APP_INVITATIONURLPREFIX: https://platform-ui.test.argo.cancercollaboratory.org/submission/program/join/
+    SPRING_MAIL_HOST: mailhog.test.argo.cancercollaboratory.org
+    SPRING_MAIL_PORT: 41000
+    SPRING_PROFILES_ACTIVE: default,auth
+  image:
+    tag: 48b0479
+  service:
+    port: 50051
+    type: ClusterIP
+  ingress:
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+      nginx.ingress.kubernetes.io/backend-protocol: GRPC
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    enabled: true
+    hosts:
+    - program.test.argo.cancercollaboratory.org
+    tls:
+    - hosts:
+      - program.test.argo.cancercollaboratory.org
+      secretName: program-test-argo-cert
+  postgres:
+    image:
+      repository: postgres
+      tag: 11.1
+    persistence:
+      size: 2Gi
+    fullnameOverride: "argo-program-postgres"
+    postgresDb: program_service
+    postgresPassword: #secret#
+    postgresUsername: postgres #secret#
+    replicaCount: 1
+    service:
+      port: 5432
+
+gateway:
+  appConfig:
+    EGO_ROOT_GRPC: argo-ego:50051
+    PROGRAM_SERVICE_ROOT: argo-program:50051
+  image:
+    tag: 1.0.1-c2ba898
+  ingress:
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    enabled: true
+    host: argo-gateway.test.argo.cancercollaboratory.org
+    tls:
+    - hosts:
+      - argo-gateway.test.argo.cancercollaboratory.org
+      secretName: argo-gateway-test-argo-cert
+
+ui:
+  appConfig:
+    API_ROOT: https://argo-gateway.test.argo.cancercollaboratory.org
+    EGO_API_ROOT: https://ego.test.argo.cancercollaboratory.org
+    EGO_CLIENT_ID: platform-ui
+    GA_TRACKING_ID: UA-145257360-3
+    GATEWAY_API_ROOT: https://argo-gateway.test.argo.cancercollaboratory.org
+    NODE_ENV: production
+    NODE_PATH: ./
+  deployment:
+    livenessProbe:
+      initialDelaySeconds: 120
+    readinessProbe:
+      initialDelaySeconds: 120
+  image:
+    tag: 1.2.3-9c77c23
+  ingress:
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    enabled: true
+    host: platform-ui.test.argo.cancercollaboratory.org
+    tls:
+    - hosts:
+      - platform-ui.test.argo.cancercollaboratory.org
+      secretName: platform-ui-test-argo-cert
+
+lecterndb:
+  image:
+    tag: 4.0.12-debian-9-r5
+
+lectern:
+  appConfig:
+    authEnabled: "true"
+    egoApi: https://ego.test.argo.cancercollaboratory.org/api/oauth/token/public_key
+    mongoHost: argo-lecterndb
+    mongoPass: #secret#
+    mongoPort: 27017
+    mongoUser: root #secret# 
+    port: 3000
+    scope: PROGRAMSERVICE.WRITE
+  deployment:
+    livenessProbe:
+      initialDelaySeconds: 120
+    readinessProbe:
+      initialDelaySeconds: 120
+  image:
+    pullPolicy: Always
+    tag: 1.1.3
+  ingress:
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    enabled: true
+    hosts:
+    - host: lectern.test.argo.cancercollaboratory.org
+      paths:
+      - /
+    tls:
+    - hosts:
+      - lectern.test.argo.cancercollaboratory.org
+      secretName: lectern-test-argo-cert
+
+clinicaldb:
+  tag: 4.0.11
+
+clinical:
+  extraEnv:
+    CLINICAL_DB_URL: mongodb://argo-clinicaldb-client:27017/clinical?replicaSet=rs0
+    INITIAL_SCHEMA_VERSION: "1.0"
+    JWT_TOKEN_PUBLIC_KEY_URL: https://ego.test.argo.cancercollaboratory.org/api/oauth/token/public_key
+    LECTERN_URL: https://lectern.test.argo.cancercollaboratory.org
+    LOG_LEVEL: debug
+    NODE_ENV: PRODUCTION
+    SCHEMA_NAME: ARGO Clinical Submission
+    VAULT_ENABLED: false
+    VAULT_ROLE: clinical.dev
+    VAULT_SECRETS_PATH: kv/data/dev/clinical/secrets_v1
+    VAULT_TOKEN:
+    VAULT_URL: https://vault.infra.argo.cancercollaboratory.org
+  image:
+    pullPolicy: Always
+    tag: 0.9.0
+  ingress:
+    annotations:
+      certmanager.k8s.io/acme-challenge-type: dns01
+      certmanager.k8s.io/acme-dns01-provider: route53
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
+    enabled: true
+    hosts:
+    - clinical.test.argo.cancercollaboratory.org
+    paths:
+    - /
+    tls:
+    - hosts:
+      - clinical.test.argo.cancercollaboratory.org
+      secretName: clinical-test-argo-cert
+  rbac:
+    create:
+      tokenReview: true
+
