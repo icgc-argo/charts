@@ -1,0 +1,30 @@
+dependencies:
+- name: ego
+  repository: https://overture-stack.github.io/charts-server/
+  version: 0.2.0
+- name: mailhog
+  repository: https://icgc-argo.github.io/charts/
+  version: 3.0.0
+- name: program-service
+  repository: https://icgc-argo.github.io/charts/
+  version: 0.2.1
+- name: argo-gateway
+  repository: https://icgc-argo.github.io/charts/
+  version: 1.0.8
+- name: platform-ui
+  repository: https://icgc-argo.github.io/charts/
+  version: 1.0.16
+- name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 7.2.3
+- name: mongodb-replicaset
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 3.9.6
+- name: lectern
+  repository: https://overture-stack.github.io/charts-server/
+  version: 0.2.2
+- name: clinical
+  repository: https://icgc-argo.github.io/charts/
+  version: 0.2.2
+digest: sha256:1ee8345caa7d2c1b1265c4b0f53f43510299efe17cba529f72a826770518f305
+generated: 2019-09-04T13:54:46.6098449-04:00
