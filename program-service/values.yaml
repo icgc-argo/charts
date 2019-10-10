@@ -51,7 +51,7 @@ tolerations: []
 
 affinity: {}
 
-postgres:
-  postgresUsername: postgres
-  postgresPassword: password
-  postgresDb: program_service
+rbac:
+  create:
+    # for vault kubernetes integration
+    tokenReview: true
