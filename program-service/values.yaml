@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: icgcargo/program-service
-  tag: 97d9e46
+  tag: 4b78e9b
   pullPolicy: IfNotPresent
 
 nameOverride: ""
