@@ -49,11 +49,11 @@ spec:
             - name: SERVER_PORT
               value: {{ .Values.appConfig.port | quote }}
             - name: NEXTFLOW_K8S_NAMESPACE
-              value: {{ .Values.appConfig.nextflow_k8s_namespace }}
+              value: {{ .Values.appConfig.nextflow_k8s_namespace | quote }}
             - name: NEXTFLOW_K8S_VOLMOUNTS
-              value: {{ .Values.appConfig.nextflow_k8s_volmounts }}
+              value: {{ .Values.appConfig.nextflow_k8s_volmounts | quote }}
             - name: NEXTFLOW_WEBLOGURL
-              value: {{ .Values.appConfig.nextflow_weblog_url }}
+              value: {{ .Values.appConfig.nextflow_weblog_url | quote }}
           {{- if .Values.env }}        
             {{ range $key, $value := .Values.env }}
             - name: {{ $key }}
