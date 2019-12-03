@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "workflow-search.fullname" . }}
+  labels:
+{{ include "workflow-search.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "workflow-search.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "workflow-search.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.appConfig.PORT }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.appConfig.PORT }}
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 8
+            failureThreshold: 1
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.appConfig.PORT }}
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+            periodSeconds: 3
+            failureThreshold: 2
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: SERVER_PORT
+              value: {{ .Values.appConfig.PORT | quote }}
+            - name: ELASTIC_HOST
+              value: {{ .Values.appConfig.ELASTIC_HOST | quote }}
+            - name: ELASTIC_PORT
+              value: {{ .Values.appConfig.ELASTIC_PORT | quote }}
+            - name: ELASTIC_WORKFLOWINDEX
+              value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
+            - name: ELASTIC_TASKINDEX
+              value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
+          {{- if .Values.env }}
+            {{ range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
