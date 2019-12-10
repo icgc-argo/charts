@@ -38,6 +38,8 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
+            - name: WF_HOST_PORT
+              value: {{ .Values.appConfig.port | quote }}
             - name: WF_SEARCH_URL
               value: {{ .Values.appConfig.search_api_url | quote }}
             - name: WF_MANAGEMENT_URL
