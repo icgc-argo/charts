@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: lepsalex/workflow-gateway
+  repository: icgcargo/workflow-gateway
   tag: latest
   pullPolicy: Always
 
