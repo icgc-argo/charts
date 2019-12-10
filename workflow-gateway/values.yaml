@@ -50,5 +50,6 @@ affinity: {}
 
 appConfig:
   port: 80
-  search_api_url: ""
-  management_api_url: ""
+  search_api_host: ""
+  management_api_host: ""
+  ui_host: ""

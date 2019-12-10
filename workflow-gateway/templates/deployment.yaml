@@ -38,12 +38,14 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: WF_HOST_PORT
+            - name: PORT
               value: {{ .Values.appConfig.port | quote }}
-            - name: WF_SEARCH_URL
-              value: {{ .Values.appConfig.search_api_url | quote }}
-            - name: WF_MANAGEMENT_URL
-              value: {{ .Values.appConfig.management_api_url | quote }}
+            - name: WF_SEARCH_HOST
+              value: {{ .Values.appConfig.search_api_host | quote }}
+            - name: WF_MANAGEMENT_HOST
+              value: {{ .Values.appConfig.management_api_host | quote }}
+            - name: WF_UI_HOST
+              value: {{ .Values.appConfig.ui_host | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
