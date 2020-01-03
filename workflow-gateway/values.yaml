@@ -49,7 +49,8 @@ tolerations: []
 affinity: {}
 
 appConfig:
-  port: 80
-  search_api_host: ""
-  management_api_host: ""
-  ui_host: ""
+  PORT: 80
+  WF_MANAGEMENT_HOST: ""
+  WF_SEARCH_HOST: ""
+  WF_UI_HOST: ""
+  WF_DOCS_HOST: ""

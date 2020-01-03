@@ -25,7 +25,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.appConfig.port }}
+              containerPort: {{ .Values.appConfig.PORT }}
               protocol: TCP
           # livenessProbe:
           #   httpGet:
@@ -39,13 +39,15 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
             - name: PORT
-              value: {{ .Values.appConfig.port | quote }}
-            - name: WF_SEARCH_HOST
-              value: {{ .Values.appConfig.search_api_host | quote }}
+              value: {{ .Values.appConfig.PORT | quote }}
             - name: WF_MANAGEMENT_HOST
-              value: {{ .Values.appConfig.management_api_host | quote }}
+              value: {{ .Values.appConfig.WF_MANAGEMENT_HOST | quote }}
+            - name: WF_SEARCH_HOST
+              value: {{ .Values.appConfig.WF_SEARCH_HOST | quote }}
             - name: WF_UI_HOST
-              value: {{ .Values.appConfig.ui_host | quote }}
+              value: {{ .Values.appConfig.WF_UI_HOST | quote }}
+            - name: WF_DOCS_HOST
+              value: {{ .Values.appConfig.WF_DOCS_HOST | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
