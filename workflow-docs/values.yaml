@@ -50,3 +50,5 @@ affinity: {}
 
 appConfig:
   port: 3000
+  wf_search_api: ""
+  wf_management_api: ""

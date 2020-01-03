@@ -44,6 +44,10 @@ spec:
           env:
             - name: PORT
               value: {{ .Values.appConfig.port | quote }}
+            - name: PORT
+              value: {{ .Values.appConfig.wf_search_api | quote }}
+            - name: PORT
+              value: {{ .Values.appConfig.wf_management_api | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
