@@ -3,7 +3,7 @@ dependencies:
     alias: vaultchart
     repository: http://storage.googleapis.com/kubernetes-charts-incubator
     version: 0.23.4
-  - name: etcd
-    alias: etcdchart
-    repository: http://storage.googleapis.com/kubernetes-charts-incubator
-    version: 0.7.3
+  - name: consul
+    alias: consulchart
+    repository: https://kubernetes-charts.storage.googleapis.com 
+    version: 3.9.4
