@@ -1,4 +1,0 @@
-dependencies:
-  - name: postgres
-    repository: https://icgc-argo.github.io/charts
-    version: 0.1.0
