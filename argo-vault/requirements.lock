@@ -2,8 +2,8 @@ dependencies:
 - name: vault
   repository: http://storage.googleapis.com/kubernetes-charts-incubator
   version: 0.23.4
-- name: etcd
-  repository: http://storage.googleapis.com/kubernetes-charts-incubator
-  version: 0.7.3
-digest: sha256:d5aa0481b035e40ab4a60df30de9604b69379ca8b50a07e469ce04127ffc6281
-generated: "2020-01-07T11:10:16.775822161-05:00"
+- name: consul
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 3.9.4
+digest: sha256:a842bef4cc6059abae84e2f7026abeb9eb0d43a102af1b3664efeb0c4196415e
+generated: "2020-01-07T14:44:48.043629006-05:00"
