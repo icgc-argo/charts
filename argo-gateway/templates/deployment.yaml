@@ -51,7 +51,7 @@ spec:
             - name: SUBMISSION_TEMPLATE_PATH
               value: {{ .Values.appConfig.SUBMISSION_TEMPLATE_PATH }}
             - name: GQL_MAX_COST
-              value: {{ .Values.appConfig.GQL_MAX_COST }}
+              value: {{ .Values.appConfig.GQL_MAX_COST | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
