@@ -31,8 +31,8 @@ ingress:
 
 persistence:
   enabled: false
+  accessMode: ReadWriteMany
   # storageClass: slow
-  # accessMode: ReadWriteMany
   # size: 20Gi
 
 resources: {}
