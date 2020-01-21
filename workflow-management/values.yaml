@@ -57,6 +57,7 @@ appConfig:
   port: 8080
   nextflow_k8s_namespace: ""
   nextflow_k8s_volmounts: ""
+  nextflow_k8s_masterUrl: ""
   nextflow_weblog_url: ""
 
 env: {}
