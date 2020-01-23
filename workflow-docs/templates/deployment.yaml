@@ -44,6 +44,8 @@ spec:
           env:
             - name: PORT
               value: {{ .Values.appConfig.port | quote }}
+            - name: HOST
+              value: {{ .Values.appConfig.host | quote }}
             - name: WF_SEARCH_API
               value: {{ .Values.appConfig.wf_search_api | quote }}
             - name: WF_MANAGEMENT_API
