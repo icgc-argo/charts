@@ -38,20 +38,12 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: EGO_ROOT_GRPC
-              value: {{ .Values.appConfig.EGO_ROOT_GRPC }}
-            - name: EGO_ROOT_REST
-              value: {{ .Values.appConfig.EGO_ROOT_REST }}
-            - name: EGO_PUBLIC_KEY
-              value: {{ .Values.appConfig.EGO_PUBLIC_KEY }}
-            - name: PROGRAM_SERVICE_ROOT
-              value: {{ .Values.appConfig.PROGRAM_SERVICE_ROOT }}
-            - name: CLINICAL_SERVICE_ROOT
-              value: {{ .Values.appConfig.CLINICAL_SERVICE_ROOT }}
-            - name: SUBMISSION_TEMPLATE_PATH
-              value: {{ .Values.appConfig.SUBMISSION_TEMPLATE_PATH }}
-            - name: GQL_MAX_COST
-              value: {{ .Values.appConfig.GQL_MAX_COST | quote }}
+{{- if .Values.appConfig }} 
+  {{- range $key, $value := .Values.appConfig }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
