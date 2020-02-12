@@ -5,8 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: icgcargo/workflow-traffic
+  tag: latest
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
@@ -64,3 +65,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+appConfig:
+  port: 3000
+  KAFKA_CLIENT_ID: "workflow-traffic"
+  KAFKA_BROKERS: ""
