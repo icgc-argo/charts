@@ -67,6 +67,6 @@ tolerations: []
 affinity: {}
 
 appConfig:
-  port: 3000
+  port: 8080
   KAFKA_CLIENT_ID: "workflow-traffic"
   KAFKA_BROKERS: ""
