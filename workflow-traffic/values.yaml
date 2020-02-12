@@ -70,3 +70,5 @@ appConfig:
   port: 8080
   KAFKA_CLIENT_ID: "workflow-traffic"
   KAFKA_BROKERS: ""
+
+env: {}
