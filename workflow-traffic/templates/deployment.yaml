@@ -46,6 +46,12 @@ spec:
               value: {{ .Values.appConfig.KAFKA_CLIENT_ID | quote }}
             - name: KAFKA_BROKERS
               value: {{ .Values.appConfig.KAFKA_BROKERS | quote }}
+          {{- if .Values.env }}
+            {{- range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
