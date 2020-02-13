@@ -70,5 +70,6 @@ appConfig:
   port: 8080
   KAFKA_CLIENT_ID: "workflow-traffic"
   KAFKA_BROKERS: ""
+  WES_API_START_RUN_URL: ""
 
 env: {}
