@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   securityContext:
-    {{- toYaml .Values.securityContext | nindent 12 }}
+    {{- toYaml .Values.securityContext | nindent 4 }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
