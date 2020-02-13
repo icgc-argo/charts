@@ -8,6 +8,8 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
+  securityContext:
+    {{- toYaml .Values.securityContext | nindent 4 }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
