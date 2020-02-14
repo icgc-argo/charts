@@ -56,4 +56,9 @@ rbac:
 appConfig:
   port: 3000
 
+podSecurityContext:
+  runAsGroup: 1000
+  runAsNonRoot: true
+  runAsUser: 1000
+
 extraEnv: {}
