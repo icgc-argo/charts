@@ -16,7 +16,7 @@ service:
   type: ClusterIP
   port: 80
 
-securityContext:
+podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true
   runAsUser: 9999
