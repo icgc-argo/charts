@@ -16,6 +16,11 @@ service:
   type: ClusterIP
   port: 80
 
+securityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
+
 ingress:
   enabled: true
   annotations:
