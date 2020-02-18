@@ -8,8 +8,6 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  securityContext:
-    {{- toYaml .Values.securityContext | nindent 4 }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -21,6 +19,10 @@ spec:
         app.kubernetes.io/name: {{ include "program-service.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      {{- with .Values.podSecurityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       serviceAccountName: {{ include "program-service.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
