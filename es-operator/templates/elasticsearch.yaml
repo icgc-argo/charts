@@ -1,0 +1,100 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  # the operator adds -es automatically to all resources it manages
+  name: {{ .Values.elastic.name }}
+spec:
+  version: {{ .Values.elastic.version}}
+  http:
+    tls:
+      certificate:
+        secretName: {{ include "es-operator.fullname" . }}
+  nodeSets:
+  - name: {{ .Values.elastic.nodes.master.name }}
+    count: {{ .Values.elastic.nodes.master.count }}
+    config:
+      node.master: true
+      node.data: false
+      node.ingest: false
+      node.ml: false
+      xpack.ml.enabled: false
+
+    # Master nodes need storage too but less than data:
+    # https://engineering.vulcan.com/2019_0128_Elasticsearch-on-Kubernetes.aspx
+    volumeClaimTemplates:
+    - metadata:
+        # cant be changed: The name of the volume claim must always be elasticsearch-data
+        # https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-volume-claim-templates.html
+        name: elasticsearch-data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: {{ .Values.elastic.nodes.master.storage }}
+        storageClassName: standard
+    podTemplate:
+      serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
+      spec:
+        # https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-virtual-memory.html
+        containers:
+        - name: elasticsearch
+{{- if .Values.env }}
+          env:
+  {{ range $key, $value := .Values.elastic.nodes.master.env }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+        {{- with .Values.elastic.nodes.master.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+        {{- end }}
+        initContainers:
+        - name: sysctl
+          securityContext:
+            privileged: true
+          command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
+
+  - name: {{ .Values.elastic.nodes.data.name }}
+    count: {{ .Values.elastic.nodes.data.count }}
+    config:
+      node.master: false
+      node.data: true
+      node.ingest: true
+      node.ml: false
+      xpack.ml.enabled: false
+    volumeClaimTemplates:
+    - metadata:
+        # cant be changed: The name of the volume claim must always be elasticsearch-data
+        # https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-volume-claim-templates.html
+        # the operator will qualify this to avoid conflicts
+        name: elasticsearch-data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: {{ .Values.elastic.nodes.data.storage }}
+        storageClassName: standard
+    podTemplate:
+      serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
+      spec:
+        containers:
+        - name: elasticsearch
+{{- if .Values.env }}
+          env:
+  {{ range $key, $value := .Values.elastic.nodes.data.env }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+        {{- with .Values.elastic.nodes.data.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+        {{- end }}
+        initContainers:
+        - name: sysctl
+          securityContext:
+            privileged: true
+          command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
