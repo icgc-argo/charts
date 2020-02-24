@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: {{ include "es-operator.fullname" . }}
+spec:
+  isCA: true
+  dnsNames:
+  - {{ include "es-operator.fullname" . }}-http
+  - {{ include "es-operator.fullname" . }}-http.default.svc
+  - {{ include "es-operator.fullname" . }}-http.default.svc.cluster.local
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: {{ .Values.elastic.http.tls.issuer }}
+  secretName: {{ include "es-operator.fullname" . }}
