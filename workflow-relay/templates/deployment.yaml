@@ -57,6 +57,17 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
             - name: ELASTIC_TASKINDEX
               value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
+            - name: ELASTIC_USEAUTHENTICATION
+              value: {{ .Values.appConfig.ELASTIC_USEAUTHENTICATION | quote }}
+            {{- if .Values.appConfig.ELASTIC_USEAUTHENTICATION }}
+            - name: ELASTIC_USERNAME
+              value: {{ .Values.appConfig.ELASTIC_USERNAME | quote }}
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.appConfig.ELASTIC_SECRET.name }}
+                  key: {{ .Values.appConfig.ELASTIC_SECRET.key }}
+            {{- end }}
             - name: SPRING_PROFILES_ACTIVE
               value: {{ .Values.appConfig.SPRING_PROFILES_ACTIVE | quote }}
             - name: SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS
@@ -78,14 +89,10 @@ spec:
               podAffinityTerm:
                 labelSelector:
                   matchExpressions:
-                    - key: "app"
+                    - key: "app.kubernetes.io/name"
                       operator: In
                       values:
                       - {{ include "workflow-relay.name" . }}
-                    - key: "release"
-                      operator: In
-                      values:
-                      - {{ .Release.Name }}
                 topologyKey: "kubernetes.io/hostname"
     {{- with .Values.tolerations }}
       tolerations:
