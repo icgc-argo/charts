@@ -36,6 +36,14 @@ spec:
     podTemplate:
       serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       spec:
+      {{- with .Values.tolerations }}
+        tolerations:
+          {{- toYaml . | nindent 10 }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+        nodeSelector:
+          {{- toYaml . | nindent 10 }}
+      {{- end }}
         # https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-virtual-memory.html
         containers:
         - name: elasticsearch
@@ -80,6 +88,14 @@ spec:
     podTemplate:
       serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       spec:
+      {{- with .Values.tolerations }}
+        tolerations:
+          {{- toYaml . | nindent 10 }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+        nodeSelector:
+          {{- toYaml . | nindent 10 }}
+      {{- end }}
         containers:
         - name: elasticsearch
 {{- if .Values.env }}
