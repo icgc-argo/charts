@@ -75,18 +75,18 @@ spec:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
             - weight: 1
-                  podAffinityTerm:
-                    labelSelector:
-                      matchExpressions:
-                        - key: "app"
-                          operator: In
-                          values:
-                          - {{ include "workflow-relay.name" . }}
-                        - key: "release"
-                          operator: In
-                          values:
-                          - {{ .Release.Name }}
-                    topologyKey: "kubernetes.io/hostname"
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: "app"
+                      operator: In
+                      values:
+                      - {{ include "workflow-relay.name" . }}
+                    - key: "release"
+                      operator: In
+                      values:
+                      - {{ .Release.Name }}
+                topologyKey: "kubernetes.io/hostname"
     {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
