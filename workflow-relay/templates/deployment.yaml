@@ -47,16 +47,18 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.appConfig.SPRING_PROFILES_ACTIVE | quote }}
+            - name: SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS
+              value: {{ .Values.appConfig.SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS | quote }}
             - name: SERVER_PORT
               value: {{ .Values.appConfig.PORT | quote }}
             - name: ELASTIC_HOST
               value: {{ .Values.appConfig.ELASTIC_HOST | quote }}
             - name: ELASTIC_PORT
               value: {{ .Values.appConfig.ELASTIC_PORT | quote }}
-            - name: ELASTIC_WORKFLOWINDEX
-              value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
-            - name: ELASTIC_TASKINDEX
-              value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
+            - name: ELASTIC_USEHTTPS
+              value: {{ .Values.appConfig.ELASTIC_USEHTTPS | quote }}
             - name: ELASTIC_USEAUTHENTICATION
               value: {{ .Values.appConfig.ELASTIC_USEAUTHENTICATION | quote }}
             {{- if .Values.appConfig.ELASTIC_USEAUTHENTICATION }}
@@ -68,12 +70,12 @@ spec:
                   name: {{ .Values.appConfig.ELASTIC_SECRET.name }}
                   key: {{ .Values.appConfig.ELASTIC_SECRET.key }}
             {{- end }}
-            - name: SPRING_PROFILES_ACTIVE
-              value: {{ .Values.appConfig.SPRING_PROFILES_ACTIVE | quote }}
-            - name: SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS
-              value: {{ .Values.appConfig.SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS | quote }}
+            - name: ELASTIC_WORKFLOWINDEX
+              value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
+            - name: ELASTIC_TASKINDEX
+              value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
           {{- if .Values.env }}
-            {{ range $key, $value := .Values.env }}
+            {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}

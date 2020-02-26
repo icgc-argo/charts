@@ -53,12 +53,29 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_HOST | quote }}
             - name: ELASTIC_PORT
               value: {{ .Values.appConfig.ELASTIC_PORT | quote }}
+            - name: ELASTIC_USEHTTPS
+              value: {{ .Values.appConfig.ELASTIC_USEHTTPS | quote }}
+            - name: ELASTIC_USEAUTHENTICATION
+              value: {{ .Values.appConfig.ELASTIC_USEAUTHENTICATION | quote }}
+            {{- if .Values.appConfig.ELASTIC_USEAUTHENTICATION }}
+            - name: ELASTIC_USERNAME
+              value: {{ .Values.appConfig.ELASTIC_USERNAME | quote }}
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.appConfig.ELASTIC_SECRET.name }}
+                  key: {{ .Values.appConfig.ELASTIC_SECRET.key }}
+            {{- end }}
+            - name: ELASTIC_WORKFLOWINDEX
+              value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
+            - name: ELASTIC_TASKINDEX
+              value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
             - name: ELASTIC_WORKFLOWINDEX
               value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
             - name: ELASTIC_TASKINDEX
               value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
           {{- if .Values.env }}
-            {{ range $key, $value := .Values.env }}
+            {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
