@@ -57,8 +57,8 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_HOST | quote }}
             - name: ELASTIC_PORT
               value: {{ .Values.appConfig.ELASTIC_PORT | quote }}
-            - name: ELASTIC_USE_HTTPS
-              value: {{ .Values.appConfig.ELASTIC_USE_HTTPS | quote }}
+            - name: ELASTIC_USEHTTPS
+              value: {{ .Values.appConfig.ELASTIC_USEHTTPS | quote }}
             - name: ELASTIC_USEAUTHENTICATION
               value: {{ .Values.appConfig.ELASTIC_USEAUTHENTICATION | quote }}
             {{- if .Values.appConfig.ELASTIC_USEAUTHENTICATION }}
