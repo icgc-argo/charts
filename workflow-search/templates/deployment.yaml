@@ -70,10 +70,6 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
             - name: ELASTIC_TASKINDEX
               value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
-            - name: ELASTIC_WORKFLOWINDEX
-              value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
-            - name: ELASTIC_TASKINDEX
-              value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
           {{- if .Values.env }}
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
