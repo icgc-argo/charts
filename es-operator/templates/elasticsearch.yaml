@@ -34,8 +34,8 @@ spec:
             storage: {{ .Values.elastic.nodes.master.storage }}
         storageClassName: standard
     podTemplate:
-      serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       spec:
+        serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       {{- with .Values.tolerations }}
         tolerations:
           {{- toYaml . | nindent 10 }}
@@ -86,8 +86,8 @@ spec:
             storage: {{ .Values.elastic.nodes.data.storage }}
         storageClassName: standard
     podTemplate:
-      serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       spec:
+        serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       {{- with .Values.tolerations }}
         tolerations:
           {{- toYaml . | nindent 10 }}

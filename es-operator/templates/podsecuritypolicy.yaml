@@ -17,3 +17,5 @@ spec:
   - secret
   - configMap
   - persistentVolumeClaim
+  - emptyDir
+  - downwardAPI
