@@ -38,13 +38,6 @@ elastic:
           memory: 2Gi #8Gi
           cpu: 0.5
 
-imagePullSecrets: []
-
-serviceAccount:
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
-  name:
-
 # the operator will create the service, this is needed for the ingress
 service:
   type: ClusterIP
