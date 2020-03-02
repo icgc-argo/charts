@@ -52,3 +52,9 @@ appConfig:
   port: 5000
   search_api_url: ""
   management_api_url: ""
+
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
+
