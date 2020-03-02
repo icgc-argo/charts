@@ -54,3 +54,8 @@ appConfig:
   WF_SEARCH_HOST: ""
   WF_UI_HOST: ""
   WF_DOCS_HOST: ""
+
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
