@@ -35,6 +35,12 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+# choose rbac roles to enable
+rbac:
+  create:
+    # for vault kubernetes integration
+    tokenReview: true
+
 service:
   type: ClusterIP
   port: 80
