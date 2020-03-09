@@ -10,7 +10,7 @@ metadata:
 ---
 {{- if .Values.rbac.create.tokenReview }}
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: {{ template "donor-submission-aggregator.fullname" . }}
   namespace: {{ .Release.Namespace }}
