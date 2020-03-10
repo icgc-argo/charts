@@ -43,7 +43,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
             - name: PORT
-              value: "8000"
+              value: {{ .Values.appConfig.PORT | quote }}
             - name: WF_MANAGEMENT_HOST
               value: {{ .Values.appConfig.WF_MANAGEMENT_HOST | quote }}
             - name: WF_SEARCH_HOST
