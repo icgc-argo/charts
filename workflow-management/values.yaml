@@ -54,7 +54,7 @@ affinity: {}
 
 appConfig:
   port: 8080
-  nextflow_k8s_runAsUser: 9999
+  nextflow_k8s_runAsUser: ""
   nextflow_k8s_namespace: ""
   nextflow_k8s_volmounts:
     - ""
