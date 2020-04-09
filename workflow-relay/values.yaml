@@ -60,4 +60,9 @@ appConfig:
   ELASTIC_WORKFLOWINDEX: ""
   ELASTIC_TASKINDEX: ""
 
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
+
 env: {}
