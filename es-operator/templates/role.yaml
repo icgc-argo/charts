@@ -4,7 +4,7 @@ metadata:
   name: {{ include "es-operator.fullname" . }}
 rules:
 - apiGroups:
-  - extensions
+  - policy
   resourceNames:
   - {{ include "es-operator.fullname" . }}
   resources:

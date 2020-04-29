@@ -1,7 +1,7 @@
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: {{ include "es-operator.fullname" . }}
+  name: {{ include "es-operator.fullname" . }}-{{ .Release.Namespace }}
 spec:
   allowPrivilegeEscalation: true
   fsGroup:
