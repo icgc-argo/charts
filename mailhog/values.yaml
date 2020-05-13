@@ -59,9 +59,6 @@ resources: {}
 
 affinity: {}
 
-nodeSelector:
-  kubernetes.io/hostname: k8s-master-0
-
 
 tolerations:
 - key: "node-role.kubernetes.io/master"
