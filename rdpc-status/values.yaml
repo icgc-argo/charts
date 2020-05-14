@@ -74,4 +74,4 @@ appConfig:
   PORT: 8080
   WES_GQL: ""
   CEL_LIMIT: 3
-  CEL_RANGE_DAYS: 3
+  CEL_RANGE_DAYS: 2
