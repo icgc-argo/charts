@@ -25,11 +25,11 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.appConfig.PORT }}
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -41,6 +41,13 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: WES_GQL
+              value: {{ .Values.appConfig.WES_GQL | quote }}
+            - name: CEL_LIMIT
+              value: {{ .Values.appConfig.CEL_LIMIT | quote }}
+            - name: CEL_RANGE_DAYS
+              value: {{ .Values.appConfig.CEL_RANGE_DAYS | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
