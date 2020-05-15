@@ -15,8 +15,9 @@ service:
   type: ClusterIP
   port:
     http: 8025
-  nodePort:
-    http: ""
+    # change this if want different smtp port on service
+    smtp: 1025
+      
 
 ingress:
   enabled: true
@@ -59,13 +60,10 @@ resources: {}
 
 affinity: {}
 
-nodeSelector:
-  kubernetes.io/hostname: k8s-master-0
+tolerations: {}
 
 
-tolerations:
-- key: "node-role.kubernetes.io/master"
-  operator: "Exists"
-
-# the port to expose this
-smtpHostPort: 11025
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999

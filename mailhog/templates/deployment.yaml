@@ -22,10 +22,10 @@ spec:
         app.kubernetes.io/name: {{ include "mailhog.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      {{- with .Values.podSecurityContext }}
       securityContext:
-        runAsUser: 1000
-        fsGroup: 1000
-        runAsNonRoot: true
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
         - name: {{ template "mailhog.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -49,7 +49,6 @@ spec:
             - name: smtp
               containerPort: 1025
               protocol: TCP
-              hostPort: {{ .Values.smtpHostPort }}
           livenessProbe:
             tcpSocket:
               port: smtp
@@ -68,10 +67,6 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
     {{- with .Values.affinity }}
       affinity:
-        {{- toYaml . | nindent 8 }}
-    {{- end }}
-    {{- with .Values.nodeSelector }}
-      nodeSelector:
         {{- toYaml . | nindent 8 }}
     {{- end }}
     {{- with .Values.tolerations }}

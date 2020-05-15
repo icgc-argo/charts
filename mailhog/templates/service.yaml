@@ -32,9 +32,10 @@ spec:
       port: {{ .Values.service.port.http }}
       protocol: TCP
       targetPort: http
-      {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.nodePort.http))) }}
-      nodePort: {{ .Values.service.nodePort.http }}
-      {{- end }}
+    - name: smtp
+      port: {{ .Values.service.port.smtp }}
+      protocol: TCP
+      targetPort: smtp
   selector:
     app.kubernetes.io/name: {{ include "mailhog.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
