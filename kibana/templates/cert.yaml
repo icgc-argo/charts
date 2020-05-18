@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: {{ include "kibana.fullname" . }}
+spec:
+  isCA: true
+  dnsNames:
+  - {{ include "kibana.fullname" . }}-http
+  - {{ include "kibana.fullname" . }}-http.default.svc
+  - {{ include "kibana.fullname" . }}-http.default.svc.cluster.local
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: {{ .Values.kibana.http.tls.issuer }}
+  secretName: {{ include "kibana.fullname" . }}

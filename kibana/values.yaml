@@ -1,0 +1,36 @@
+# Default values for kibana.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+kibana:
+  # operator will add -kb to all resources it manage
+  # in this chart we do that in the helper templates 
+  name: platform-dev
+  version: 7.7.0
+  http:
+    # this tls is for the service not the ingress to encrypt internal traffic
+    tls:
+      issuer: selfsigned-issuer  # this needs to be pre created in the cluster
+
+elasticsearch:
+  name: platform-dev
+
+# the operator will create the service, this is needed for the ingress
+service:
+  type: ClusterIP
+  port: 5601
+
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod-a
+    nginx.ingress.kubernetes.io/proxy-body-size: 10m
+  host: kibana.dev.argo.cancercollaboratory.org
+  tls:
+    - secretName: kibana-dev-argo-cert
+      hosts:
+        - kibana.dev.argo.cancercollaboratory.org
+
+nodeSelector: {}
+
+tolerations: []
+
