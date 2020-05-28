@@ -3,7 +3,7 @@ entries:
   argo-docs:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.414479-04:00"
+    created: "2020-05-28T16:56:42.31424-04:00"
     description: A Helm chart for Kubernetes
     digest: 6372217bf7699c026e1daa7defa49793bcb75c5183733e24dc2f0ae0eadd29fb
     name: argo-docs
@@ -12,7 +12,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.413678-04:00"
+    created: "2020-05-28T16:56:42.313549-04:00"
     description: A Helm chart for Kubernetes
     digest: c40bee90939d0bdad2dfe35c6b2a5768b0cbe2520993cb188161a1f0095bd6aa
     name: argo-docs
@@ -21,7 +21,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.412018-04:00"
+    created: "2020-05-28T16:56:42.312435-04:00"
     description: A Helm chart for Kubernetes
     digest: 20295000ba4cec3737795ee62c7c295e383d7950ec1008526c9d75f0ce2310fc
     name: argo-docs
@@ -31,7 +31,7 @@ entries:
   argo-gateway:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.444847-04:00"
+    created: "2020-05-28T16:56:42.336391-04:00"
     description: A Helm chart for Kubernetes
     digest: 61f3d2e6e0216a8e12459e64df52b794be784503a89634a596c7a9bbbca23ddf
     name: argo-gateway
@@ -40,7 +40,7 @@ entries:
     version: 2.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.442933-04:00"
+    created: "2020-05-28T16:56:42.335666-04:00"
     description: A Helm chart for Kubernetes
     digest: 38ee82f0311bd8b5c24846f60f73730735457a2a381b88263711bf3a6dc3fee6
     name: argo-gateway
@@ -49,7 +49,7 @@ entries:
     version: 2.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.441043-04:00"
+    created: "2020-05-28T16:56:42.334499-04:00"
     description: A Helm chart for Kubernetes
     digest: 0c81c8985d4feebbdf4f1b36ca6d6a2df70a38e71218c58d0b117cdf68ed65da
     name: argo-gateway
@@ -58,7 +58,7 @@ entries:
     version: 2.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.439921-04:00"
+    created: "2020-05-28T16:56:42.333769-04:00"
     description: A Helm chart for Kubernetes
     digest: a5e936dde7d85046e792062b5bf784a5cb04c9a980085d8539fdb299d3f2baec
     name: argo-gateway
@@ -67,7 +67,7 @@ entries:
     version: 2.0.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.438799-04:00"
+    created: "2020-05-28T16:56:42.333058-04:00"
     description: A Helm chart for Kubernetes
     digest: d1f1c135aa430a76a981233fd88d11d1fd4cfc4c46c921594fa0878b299d7d8e
     name: argo-gateway
@@ -76,7 +76,7 @@ entries:
     version: 2.0.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.435948-04:00"
+    created: "2020-05-28T16:56:42.332465-04:00"
     description: A Helm chart for Kubernetes
     digest: 84868a3b3470a491a6df2bda395654f0a06a3416dae39f40f1db7369c64f2d28
     name: argo-gateway
@@ -85,7 +85,7 @@ entries:
     version: 2.0.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.43414-04:00"
+    created: "2020-05-28T16:56:42.331949-04:00"
     description: A Helm chart for Kubernetes
     digest: 2372b220524d89762ca2c7830bf9ad77ad124a0fde10222a7e7292f7b67a35a1
     name: argo-gateway
@@ -94,7 +94,7 @@ entries:
     version: 2.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.433177-04:00"
+    created: "2020-05-28T16:56:42.331292-04:00"
     description: A Helm chart for Kubernetes
     digest: 6f55b5d262cde3c5ae50a080d4c8dd2d5607c5892735e5f8d07d7932ca9f3767
     name: argo-gateway
@@ -103,7 +103,7 @@ entries:
     version: 2.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.43051-04:00"
+    created: "2020-05-28T16:56:42.3306-04:00"
     description: A Helm chart for Kubernetes
     digest: 1601f9c9452abd03e54ec448f45463161ccc500a6721752400e488fdf13ad510
     name: argo-gateway
@@ -112,7 +112,7 @@ entries:
     version: 2.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.429668-04:00"
+    created: "2020-05-28T16:56:42.329545-04:00"
     description: A Helm chart for Kubernetes
     digest: a6a8d60078e71541adc8ee373cb4c16ae33c9e7e8ab769d032ead2b2c17bce77
     name: argo-gateway
@@ -121,7 +121,7 @@ entries:
     version: 2.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.42849-04:00"
+    created: "2020-05-28T16:56:42.327775-04:00"
     description: A Helm chart for Kubernetes
     digest: 470367dfaffca7cd18b8065a618ec2c8c77814c35c586508ba54901812c9e6c6
     name: argo-gateway
@@ -130,7 +130,7 @@ entries:
     version: 1.0.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.426684-04:00"
+    created: "2020-05-28T16:56:42.327056-04:00"
     description: A Helm chart for Kubernetes
     digest: f9bbd0e3e6c9f3807386af2523259223e339b32c7ce2cb6a307a9ec672779f50
     name: argo-gateway
@@ -139,7 +139,7 @@ entries:
     version: 1.0.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.423965-04:00"
+    created: "2020-05-28T16:56:42.324348-04:00"
     description: A Helm chart for Kubernetes
     digest: 8ec4697e201089d7973b8f022d7e6cfc5bedaa0b8164d745d88d5a4c0e6de837
     name: argo-gateway
@@ -148,7 +148,7 @@ entries:
     version: 1.0.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.422277-04:00"
+    created: "2020-05-28T16:56:42.321646-04:00"
     description: A Helm chart for Kubernetes
     digest: 90f92d1a5ca8326785fe417d295cf07e7cd50b8cc75faabc4e64c3e46c38fc7f
     name: argo-gateway
@@ -157,7 +157,7 @@ entries:
     version: 1.0.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.419769-04:00"
+    created: "2020-05-28T16:56:42.319028-04:00"
     description: A Helm chart for Kubernetes
     digest: 5f0dd0cbd88f120cf821101a84ee02840b16df395107dd496bc5a6db414a0d66
     name: argo-gateway
@@ -166,7 +166,7 @@ entries:
     version: 1.0.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.418795-04:00"
+    created: "2020-05-28T16:56:42.318184-04:00"
     description: A Helm chart for Kubernetes
     digest: bcd5af914ae61a691765c475ae726424a635229b7e2e65caae253f2a4fb16afe
     name: argo-gateway
@@ -175,7 +175,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.417695-04:00"
+    created: "2020-05-28T16:56:42.317372-04:00"
     description: A Helm chart for Kubernetes
     digest: c874ac0304230d791d2f8ffb747120f4d9402552c78fe5166d45c7b6bee85a79
     name: argo-gateway
@@ -184,7 +184,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.417051-04:00"
+    created: "2020-05-28T16:56:42.316755-04:00"
     description: A Helm chart for Kubernetes
     digest: c0b632480748ecb605f436be62a02227420db6912b17d039f42c91d6f3da4545
     name: argo-gateway
@@ -193,7 +193,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.416354-04:00"
+    created: "2020-05-28T16:56:42.316113-04:00"
     description: A Helm chart for Kubernetes
     digest: 84e78f265b809c47bed8b024004b5a56736d363e06833ebd1c9452f0383b1555
     name: argo-gateway
@@ -202,7 +202,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.415626-04:00"
+    created: "2020-05-28T16:56:42.315473-04:00"
     description: A Helm chart for Kubernetes
     digest: 98c3e235e48232b15dd71d62a0e32d41a497a14a0286dbf6d9ef172f24aa3391
     name: argo-gateway
@@ -212,7 +212,7 @@ entries:
   argo-stack:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.455837-04:00"
+    created: "2020-05-28T16:56:42.345341-04:00"
     dependencies:
     - alias: ego
       name: ego
@@ -259,7 +259,7 @@ entries:
   argo-vault:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.476862-04:00"
+    created: "2020-05-28T16:56:42.366033-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -277,7 +277,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.473638-04:00"
+    created: "2020-05-28T16:56:42.363061-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -295,7 +295,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.47048-04:00"
+    created: "2020-05-28T16:56:42.360904-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -313,7 +313,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.468276-04:00"
+    created: "2020-05-28T16:56:42.358984-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -327,7 +327,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.466026-04:00"
+    created: "2020-05-28T16:56:42.353828-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -341,7 +341,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.462896-04:00"
+    created: "2020-05-28T16:56:42.350961-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -355,7 +355,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.460661-04:00"
+    created: "2020-05-28T16:56:42.349011-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -369,7 +369,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.458397-04:00"
+    created: "2020-05-28T16:56:42.347261-04:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -384,7 +384,7 @@ entries:
   clinical:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.483076-04:00"
+    created: "2020-05-28T16:56:42.373078-04:00"
     description: A Helm chart for Argo clinical
     digest: 348ca9e812e8da4c603b792916bad6cbd8d22a598b2ba0b6a28eaf082488d87d
     name: clinical
@@ -393,7 +393,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.482362-04:00"
+    created: "2020-05-28T16:56:42.371386-04:00"
     description: A Helm chart for Argo clinical
     digest: b64003110b94ab8585a4dda85ef2ead82580cff783a033f941487591678b1e4b
     name: clinical
@@ -402,7 +402,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.48149-04:00"
+    created: "2020-05-28T16:56:42.37059-04:00"
     description: A Helm chart for Argo clinical
     digest: 49ec62d23226b3449d920b428505778c93027f04ac76c3d6bb691daf14a148be
     name: clinical
@@ -411,7 +411,7 @@ entries:
     version: 0.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.480816-04:00"
+    created: "2020-05-28T16:56:42.369992-04:00"
     description: A Helm chart for Argo clinical
     digest: 1c47e6ada856a870ddf463b8893d4d8db5746c5317856ed09ef4aa4f2359e54d
     name: clinical
@@ -420,7 +420,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.480043-04:00"
+    created: "2020-05-28T16:56:42.369392-04:00"
     description: A Helm chart for Argo clinical
     digest: 5fdb8e4e15cac282c95308d4afcaa1cb1d304d19c7aa15f89d6056127162e051
     name: clinical
@@ -429,7 +429,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.479256-04:00"
+    created: "2020-05-28T16:56:42.368586-04:00"
     description: A Helm chart for Argo clinical
     digest: 88f61233ea7812c5db06dd86616b6307c6c62f706274a6b6c109a0ee2c05b7cf
     name: clinical
@@ -438,7 +438,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.478285-04:00"
+    created: "2020-05-28T16:56:42.36772-04:00"
     description: A Helm chart for Argo clinical
     digest: 358b73fb2cb055a0d18bd37270516391519a3485c2a194941da5d811b2f56661
     name: clinical
@@ -448,7 +448,7 @@ entries:
   daco2ego:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.483802-04:00"
+    created: "2020-05-28T16:56:42.374359-04:00"
     description: A Helm chart for daco2ego
     digest: 8a21954075a274a9b5f814a26327dbaa5da48958a23d698e0ef58a39a5f7d171
     name: daco2ego
@@ -458,7 +458,7 @@ entries:
   donor-submission-aggregator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.490925-04:00"
+    created: "2020-05-28T16:56:42.380818-04:00"
     description: A Helm chart for Kubernetes
     digest: 301116dddaa89d0d694b4f09579483973aeab338bcfb35bc11742f16ae5d286c
     name: donor-submission-aggregator
@@ -468,7 +468,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.490139-04:00"
+    created: "2020-05-28T16:56:42.379698-04:00"
     description: A Helm chart for Kubernetes
     digest: 68855727978d34a666701887d4e9a1d310282f048e5e79a8bafc3ac8fbc0edd2
     name: donor-submission-aggregator
@@ -478,7 +478,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.489292-04:00"
+    created: "2020-05-28T16:56:42.378863-04:00"
     description: A Helm chart for Kubernetes
     digest: 3915b852ee21bd2fb409d5df6d89b4e53288d35da27485051a6b1bae44fd876f
     name: donor-submission-aggregator
@@ -488,7 +488,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.488348-04:00"
+    created: "2020-05-28T16:56:42.377217-04:00"
     description: A Helm chart for Kubernetes
     digest: 46c8911c834d6e8a1651c6da8684fb5acf4dcf4063de98129b9d2bd3c96287e1
     name: donor-submission-aggregator
@@ -498,7 +498,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.486967-04:00"
+    created: "2020-05-28T16:56:42.376054-04:00"
     description: A Helm chart for Kubernetes
     digest: 32e0e7ca5afd92d29da2cef8f57c7179d02dd4d943a3d7546315408fc257f39e
     name: donor-submission-aggregator
@@ -508,7 +508,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.485588-04:00"
+    created: "2020-05-28T16:56:42.375214-04:00"
     description: A Helm chart for Kubernetes
     digest: a0f9ac084a2bc419437e0d6f3cd5e1fd246e3c5c7786f34307a664fea667e997
     name: donor-submission-aggregator
@@ -518,7 +518,7 @@ entries:
     version: 0.1.0
   es-operator:
   - apiVersion: v2
-    created: "2020-05-28T15:20:20.494575-04:00"
+    created: "2020-05-28T16:56:42.385327-04:00"
     description: A Helm chart for Kubernetes
     digest: 02824873619b200b975379214d771b197ef462dc78b9b57bab6c55447210745b
     name: es-operator
@@ -527,7 +527,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
-    created: "2020-05-28T15:20:20.493842-04:00"
+    created: "2020-05-28T16:56:42.384239-04:00"
     description: A Helm chart for Kubernetes
     digest: 7188d815918b0f209e50473e04a0d956f305badbee0a4c2962b13fbc3e5e1c86
     name: es-operator
@@ -536,7 +536,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v2
-    created: "2020-05-28T15:20:20.493173-04:00"
+    created: "2020-05-28T16:56:42.383445-04:00"
     description: A Helm chart for Kubernetes
     digest: 9264b7166b462197c9deda0d2a4c2f53256047144e0878349de3b8e4105001d4
     name: es-operator
@@ -545,7 +545,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
-    created: "2020-05-28T15:20:20.491852-04:00"
+    created: "2020-05-28T16:56:42.3825-04:00"
     description: A Helm chart for Kubernetes
     digest: db90f1131b61cc6fdabcf3c0e24c0284c8bdd5bc18e1c77b4f78c660c644f74c
     name: es-operator
@@ -556,7 +556,7 @@ entries:
   jenkins-backup:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-05-28T15:20:20.495441-04:00"
+    created: "2020-05-28T16:56:42.386101-04:00"
     description: Backup jenkins data
     digest: f786ea7ff74f634663837bb3db76879b982ee187d89177976999c2b46c7ce066
     name: jenkins-backup
@@ -567,7 +567,7 @@ entries:
   kafka-ui:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.496067-04:00"
+    created: "2020-05-28T16:56:42.38671-04:00"
     description: A Helm chart for Kubernetes
     digest: dbe0986d71d33ec4a6f7d1f4a2593ebdbc44e0b020165c905fd57e9b4a31ff64
     name: kafka-ui
@@ -576,7 +576,7 @@ entries:
     version: 0.1.0
   kship:
   - apiVersion: v2
-    created: "2020-05-28T15:20:20.496886-04:00"
+    created: "2020-05-28T16:56:42.387328-04:00"
     description: A Helm chart for Kubernetes
     digest: e30b04f6b0b92a29c3e54495858f53b47f4d7087c3a914498f4b93a451df78dc
     name: kship
@@ -587,7 +587,7 @@ entries:
   mailhog:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-05-28T15:20:20.498951-04:00"
+    created: "2020-05-28T16:56:42.389587-04:00"
     description: An e-mail testing tool for developers
     digest: 9ddad23fc08fcb76415865d9c67d0d6e4de70007a3ce11caa504f09febdb00f9
     name: mailhog
@@ -596,7 +596,7 @@ entries:
     version: 4.0.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-05-28T15:20:20.497705-04:00"
+    created: "2020-05-28T16:56:42.388405-04:00"
     description: An e-mail testing tool for developers
     digest: 479946b05f20060639cc25840080cc08b87320f7524fa5aa562a984628a3a1be
     name: mailhog
@@ -606,7 +606,16 @@ entries:
   platform-ui:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.511961-04:00"
+    created: "2020-05-28T16:56:42.409499-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 118c7eafeef4161765ba5f2cb564106c86180e557420baaad11b77b712bf2aa8
+    name: platform-ui
+    urls:
+    - https://icgc-argo.github.io/charts/platform-ui-1.0.18.tgz
+    version: 1.0.18
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-28T16:56:42.408738-04:00"
     description: A Helm chart for Kubernetes
     digest: cf142fe0d2ad37c90be6a31188b48bd780586ddeea78fc8e37e02fbb1053bc53
     name: platform-ui
@@ -615,7 +624,7 @@ entries:
     version: 1.0.17
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.511212-04:00"
+    created: "2020-05-28T16:56:42.407989-04:00"
     description: A Helm chart for Kubernetes
     digest: 5f3dc02a481a06ff788374b593b0827c60597cc555d6b9e9e9a94cf2a7d48bba
     name: platform-ui
@@ -624,7 +633,7 @@ entries:
     version: 1.0.16
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.510646-04:00"
+    created: "2020-05-28T16:56:42.407314-04:00"
     description: A Helm chart for Kubernetes
     digest: 8d1a25f5d0dcc8286a934670149c9439029862986c141200b56b248041dba2fc
     name: platform-ui
@@ -633,7 +642,7 @@ entries:
     version: 1.0.15
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.509875-04:00"
+    created: "2020-05-28T16:56:42.406264-04:00"
     description: A Helm chart for Kubernetes
     digest: c60fe50759d0c87a8b832336b46e7c72b4877c5bcbe9ccb530301cfff0923b3d
     name: platform-ui
@@ -642,7 +651,7 @@ entries:
     version: 1.0.14
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.509303-04:00"
+    created: "2020-05-28T16:56:42.40556-04:00"
     description: A Helm chart for Kubernetes
     digest: b76be1ce7a73f94764b9af52265f3c9357cdeee68941113d8bf7c3b322f04a4e
     name: platform-ui
@@ -651,7 +660,7 @@ entries:
     version: 1.0.13
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.508527-04:00"
+    created: "2020-05-28T16:56:42.404456-04:00"
     description: A Helm chart for Kubernetes
     digest: 755119070f8bca230a9c06037777bc570c855119537f997978120a353922d54d
     name: platform-ui
@@ -660,7 +669,7 @@ entries:
     version: 1.0.12
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.507828-04:00"
+    created: "2020-05-28T16:56:42.402916-04:00"
     description: A Helm chart for Kubernetes
     digest: bf1789a77e2842c3f3606eb727dc9a2cfd047193367443d95751d25122d53d27
     name: platform-ui
@@ -669,7 +678,7 @@ entries:
     version: 1.0.11
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.506658-04:00"
+    created: "2020-05-28T16:56:42.402116-04:00"
     description: A Helm chart for Kubernetes
     digest: e6e98d3f12b78cec78bd5ef5164f0d54b4daa470a06f626dc1734033d3cdfacc
     name: platform-ui
@@ -678,7 +687,7 @@ entries:
     version: 1.0.10
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.524657-04:00"
+    created: "2020-05-28T16:56:42.42423-04:00"
     description: A Helm chart for Kubernetes
     digest: 0859687eaeeb20982daf22945cd57fd33d50b2918ceb1f109a71f2878c449ef6
     name: platform-ui
@@ -687,7 +696,7 @@ entries:
     version: 1.0.9
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.520937-04:00"
+    created: "2020-05-28T16:56:42.419379-04:00"
     description: A Helm chart for Kubernetes
     digest: e0f7f171b49363f865ba7229814582f33a753040fb858b65c47e5f60a35871b6
     name: platform-ui
@@ -696,7 +705,7 @@ entries:
     version: 1.0.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.518713-04:00"
+    created: "2020-05-28T16:56:42.416176-04:00"
     description: A Helm chart for Kubernetes
     digest: 2590823dfe5b33c50a27d19a25b99dc65e5b2289428da8d80a5472628056de94
     name: platform-ui
@@ -705,7 +714,7 @@ entries:
     version: 1.0.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.516584-04:00"
+    created: "2020-05-28T16:56:42.414215-04:00"
     description: A Helm chart for Kubernetes
     digest: 58f521c245c6d1196ae23fddae5db73773618b3dacaddb9079ada6ec6d785829
     name: platform-ui
@@ -714,7 +723,7 @@ entries:
     version: 1.0.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.514549-04:00"
+    created: "2020-05-28T16:56:42.41238-04:00"
     description: A Helm chart for Kubernetes
     digest: df897e2f6dac04648473469fba53ee1a27cd2ed6e6e331415cfbcc32452c5d50
     name: platform-ui
@@ -723,7 +732,7 @@ entries:
     version: 1.0.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.513621-04:00"
+    created: "2020-05-28T16:56:42.411346-04:00"
     description: A Helm chart for Kubernetes
     digest: 96bf8f33e9a4d4a9abc77c4008da950aaf90755170a92f3ea2537d875b7f08f1
     name: platform-ui
@@ -732,7 +741,7 @@ entries:
     version: 1.0.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.512594-04:00"
+    created: "2020-05-28T16:56:42.410237-04:00"
     description: A Helm chart for Kubernetes
     digest: 30b26976604ce12ea2353895499d83ba891fbc31a134acd31d3049694435f11d
     name: platform-ui
@@ -741,7 +750,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.499793-04:00"
+    created: "2020-05-28T16:56:42.391331-04:00"
     description: A Helm chart for Kubernetes
     digest: 97b1bd11a933ffd246a8745b30c216a955cdcde2868300f53e9b822c1e2494da
     name: platform-ui
@@ -751,7 +760,7 @@ entries:
   postgres:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.525947-04:00"
+    created: "2020-05-28T16:56:42.425483-04:00"
     description: A Helm chart for Kubernetes
     digest: 18dc60605ce7ab326b68157b2533d9e63ab3d0b8097e9b48fbce6807cc508e34
     name: postgres
@@ -760,7 +769,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.525223-04:00"
+    created: "2020-05-28T16:56:42.424886-04:00"
     description: A Helm chart for Kubernetes
     digest: 541780d70a6d533e3c99c42716a38aba2b5afd0fdfb2d135ee3807107817db63
     name: postgres
@@ -770,7 +779,7 @@ entries:
   program-service:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.539942-04:00"
+    created: "2020-05-28T16:56:42.438512-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -783,7 +792,7 @@ entries:
     version: 1.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.537892-04:00"
+    created: "2020-05-28T16:56:42.437285-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -796,7 +805,7 @@ entries:
     version: 1.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.536488-04:00"
+    created: "2020-05-28T16:56:42.435916-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -809,7 +818,7 @@ entries:
     version: 1.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.534947-04:00"
+    created: "2020-05-28T16:56:42.434263-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -822,7 +831,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.533549-04:00"
+    created: "2020-05-28T16:56:42.432821-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -835,7 +844,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.532379-04:00"
+    created: "2020-05-28T16:56:42.43131-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -848,7 +857,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.531233-04:00"
+    created: "2020-05-28T16:56:42.430383-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -861,7 +870,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.530035-04:00"
+    created: "2020-05-28T16:56:42.429454-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -874,7 +883,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.52877-04:00"
+    created: "2020-05-28T16:56:42.427928-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -887,7 +896,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.527529-04:00"
+    created: "2020-05-28T16:56:42.427025-04:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -900,7 +909,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.526515-04:00"
+    created: "2020-05-28T16:56:42.426057-04:00"
     description: A Helm chart for Kubernetes
     digest: 0c242a90995834f57f6665aba74393b1b1ef7b895d50209dc9c9e69686820014
     name: program-service
@@ -910,7 +919,7 @@ entries:
   rdpc-status:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-28T15:20:20.540667-04:00"
+    created: "2020-05-28T16:56:42.439278-04:00"
     description: A Helm chart for Kubernetes
     digest: 87c1c1adc69b3ce6c8c2fe7f751cfd3d0ed3be911033e1f82a173d758db725e0
     name: rdpc-status
@@ -921,7 +930,7 @@ entries:
   workflow-docs:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.541901-04:00"
+    created: "2020-05-28T16:56:42.440682-04:00"
     description: A Helm chart for Kubernetes
     digest: db8223af47b30c758deca4b1d3da54a4a2ab26acecb8805ef8397f2cf9ab2351
     name: workflow-docs
@@ -930,7 +939,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.541256-04:00"
+    created: "2020-05-28T16:56:42.439891-04:00"
     description: A Helm chart for Kubernetes
     digest: 2ebbca43b5fd73747f949223056f5e541bb4755bb4c2701305876962a266b136
     name: workflow-docs
@@ -940,7 +949,7 @@ entries:
   workflow-gateway:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.543094-04:00"
+    created: "2020-05-28T16:56:42.441931-04:00"
     description: A Helm chart for Kubernetes
     digest: 49e50998a41b232ad63b990a90714636d05aeb86b2157f4fb431efd8ce43e1ba
     name: workflow-gateway
@@ -949,7 +958,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.542496-04:00"
+    created: "2020-05-28T16:56:42.441306-04:00"
     description: A Helm chart for Kubernetes
     digest: 870410efb1d5b00dcbc05b6abd44d9bf9228316681be2754101889d026a49bae
     name: workflow-gateway
@@ -959,7 +968,7 @@ entries:
   workflow-management:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.544364-04:00"
+    created: "2020-05-28T16:56:42.443091-04:00"
     description: A Helm chart for Kubernetes
     digest: c0d8734b857e6a1f337684b694ba5c1b10d99abee092e9a691a80053cf619fa6
     name: workflow-management
@@ -968,7 +977,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.543781-04:00"
+    created: "2020-05-28T16:56:42.442419-04:00"
     description: A Helm chart for Kubernetes
     digest: e98a87c053e99b5b93766e31a72c7bdcd3a972c3ee7994ebf2627511e6d2e380
     name: workflow-management
@@ -978,7 +987,7 @@ entries:
   workflow-relay:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.54558-04:00"
+    created: "2020-05-28T16:56:42.445036-04:00"
     description: A Helm chart for Kubernetes
     digest: 3372d90911d2a92d772c5222936ef5c1c3159a3be1739a1a43f971b42cf03a23
     name: workflow-relay
@@ -987,7 +996,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.544947-04:00"
+    created: "2020-05-28T16:56:42.443783-04:00"
     description: A Helm chart for Kubernetes
     digest: d800900a5cd579b69c7e97a7361f762196506b2f52eb3a6b9c1add7a1edbeb51
     name: workflow-relay
@@ -997,7 +1006,7 @@ entries:
   workflow-search:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.546215-04:00"
+    created: "2020-05-28T16:56:42.445729-04:00"
     description: A Helm chart for Kubernetes
     digest: 92cb89d3802fe560b797066f7ff31f0b6e7b3aa3558ea849bed1705cff6d356b
     name: workflow-search
@@ -1007,7 +1016,7 @@ entries:
   workflow-traffic:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2020-05-28T15:20:20.547261-04:00"
+    created: "2020-05-28T16:56:42.446288-04:00"
     description: A Helm chart for Kubernetes
     digest: e3893047a4f89412bc77bfd0d28083c1c020265fc237eb7bbb1070bd25202da0
     name: workflow-traffic
@@ -1018,7 +1027,7 @@ entries:
   workflow-ui:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.551806-04:00"
+    created: "2020-05-28T16:56:42.447499-04:00"
     description: A Helm chart for Kubernetes
     digest: 513c8eb2bda2ed16519792ce79fa46fd57c6d7156e532ae68c813d19229fe56b
     name: workflow-ui
@@ -1027,11 +1036,11 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-28T15:20:20.549143-04:00"
+    created: "2020-05-28T16:56:42.446855-04:00"
     description: A Helm chart for Kubernetes
     digest: 3e089a2dfc48d6edb35166b53588fa0429c03eae84f67853ebdde4a4485792c9
     name: workflow-ui
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-28T15:20:20.410149-04:00"
+generated: "2020-05-28T16:56:42.304883-04:00"

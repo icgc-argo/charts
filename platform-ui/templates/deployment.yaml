@@ -41,12 +41,12 @@ spec:
           livenessProbe:
             initialDelaySeconds: {{ .Values.deployment.livenessProbe.initialDelaySeconds }}
             httpGet:
-              path: /status
+              path: /
               port: http
           readinessProbe:
             initialDelaySeconds: {{ .Values.deployment.readinessProbe.initialDelaySeconds }}
             httpGet:
-              path: /status
+              path: /
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
