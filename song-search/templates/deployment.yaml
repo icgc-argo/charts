@@ -25,11 +25,11 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.appConfig.PORT }}
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -41,6 +41,30 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: SERVER_PORT
+              value: {{ .Values.appConfig.PORT | quote }}
+            - name: ELASTIC_HOST
+              value: {{ .Values.appConfig.ELASTIC_HOST | quote }}
+            - name: ELASTIC_PORT
+              value: {{ .Values.appConfig.ELASTIC_PORT | quote }}
+            - name: ELASTIC_USEHTTPS
+              value: {{ .Values.appConfig.ELASTIC_USEHTTPS | quote }}
+            - name: ELASTIC_USEAUTHENTICATION
+              value: {{ .Values.appConfig.ELASTIC_USEAUTHENTICATION | quote }}
+            {{- if .Values.appConfig.ELASTIC_USEAUTHENTICATION }}
+            - name: ELASTIC_USERNAME
+              value: {{ .Values.appConfig.ELASTIC_USERNAME | quote }}
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.appConfig.ELASTIC_SECRET.name }}
+                  key: {{ .Values.appConfig.ELASTIC_SECRET.key }}
+            {{- end }}
+            - name: ELASTIC_ANALYSIS_CENTRIC_INDEX
+              value: {{ .Values.appConfig.ELASTIC_ANALYSIS_CENTRIC_INDEX | quote }}
+            - name: ELASTIC_FILE_CENTRIC_INDEX
+              value: {{ .Values.appConfig.ELASTIC_FILE_CENTRIC_INDEX | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

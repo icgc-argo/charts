@@ -5,32 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: icgcargo/song-search
+  tag: latest
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-
-serviceAccount:
-  # Specifies whether a service account should be created
-  create: true
-  # Annotations to add to the service account
-  annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
-  name:
-
-podSecurityContext: {}
-  # fsGroup: 2000
-
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
 
 service:
   type: ClusterIP
@@ -49,6 +30,28 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+  
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -66,3 +69,14 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+appConfig:
+  PORT: 8080
+  ELASTIC_HOST: ""
+  ELASTIC_PORT: ""
+  ELASTIC_USEHTTPS: false
+  ELASTIC_USEAUTHENTICATION: false
+  ELASTIC_USERNAME: ""
+  ELASTIC_SECRET: {}
+  ELASTIC_ANALYSIS_CENTRIC_INDEX: ""
+  ELASTIC_FILE_CENTRIC_INDEX: ""
