@@ -33,12 +33,20 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /actuator/health
+              port: {{ .Values.appConfig.PORT }}
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 8
+            failureThreshold: 1
           readinessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /actuator/health
+              port: {{ .Values.appConfig.PORT }}
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 3
+            failureThreshold: 2
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
