@@ -70,3 +70,4 @@ appConfig:
 
 extraEnv:
   WORKFLOW_SEARCH_URL: http://search/graphql
+  SONG_SEARCH_URL: http://song-search/graphql
