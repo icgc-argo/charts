@@ -993,6 +993,16 @@ entries:
   psql-backup:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2020-06-17T11:58:09.905573-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 867c1af66253be49347c9bde124c9618f29b034970d1fff44e3094a745187a77
+    name: psql-backup
+    type: application
+    urls:
+    - psql-backup-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2020-06-16T15:09:03.349289-04:00"
     description: A Helm chart for Kubernetes
     digest: e661858fb4298aa422ca41d62c961be6f2855520e6b23acd54a479844744eda5
@@ -1209,4 +1219,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-06-16T15:09:03.344607-04:00"
+generated: "2020-06-17T11:58:09.903164-04:00"
