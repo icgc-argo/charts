@@ -447,6 +447,16 @@ entries:
     version: 0.1.0
   clinical-mongo-backup:
   - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2020-06-18T17:46:26.562077-04:00"
+    description: Backup clinical-mongo cluster
+    digest: bf5d66d8bf0e828ab326430fedda657604f786c2c2ab8e79dd1ffbc200edbdfd
+    name: clinical-mongo-backup
+    type: application
+    urls:
+    - clinical-mongo-backup-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-16T15:09:03.34744-04:00"
     description: Backup clinical-mongo cluster
@@ -467,6 +477,16 @@ entries:
     - https://icgc-argo.github.io/charts/clinical-mongo-backup-0.1.0.tgz
     version: 0.1.0
   consul-backup:
+  - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2020-06-18T17:46:26.562831-04:00"
+    description: Backup etcd cluster
+    digest: 3c2548d62889a96613c26cf1909c978c90dbff7871cab249a0c942cde8b64763
+    name: consul-backup
+    type: application
+    urls:
+    - consul-backup-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-12T16:16:25.0591606-04:00"
@@ -587,6 +607,16 @@ entries:
     version: 0.1.0
   etcd-backup:
   - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2020-06-18T17:46:26.563579-04:00"
+    description: Backup etcd cluster
+    digest: 71747e74502389f29607721c9e6bf731299556c43b8f6f3c83f661c8af5febbd
+    name: etcd-backup
+    type: application
+    urls:
+    - etcd-backup-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-16T15:09:03.34792-04:00"
     description: Backup etcd cluster
@@ -607,6 +637,16 @@ entries:
     - https://icgc-argo.github.io/charts/etcd-backup-0.1.0.tgz
     version: 0.1.0
   jenkins-backup:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2020-06-18T17:46:26.564285-04:00"
+    description: Backup jenkins data
+    digest: 87686aae2dc2c31bf2eff8732635aed458d2d07bc2c33cc8a2c6afc55e247c3e
+    name: jenkins-backup
+    type: application
+    urls:
+    - jenkins-backup-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2020-06-12T16:16:25.1021602-04:00"
@@ -638,6 +678,16 @@ entries:
     - https://icgc-argo.github.io/charts/kship-0.1.0.tgz
     version: 0.1.0
   lectern-backup:
+  - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2020-06-18T17:46:26.565022-04:00"
+    description: A Helm chart for Kubernetes
+    digest: dca88dc4c7361b9bb09e4f95f1f390c7f1368c77e2774a2679b4db23fd0ac604
+    name: lectern-backup
+    type: application
+    urls:
+    - lectern-backup-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-16T15:09:03.348342-04:00"
@@ -992,10 +1042,10 @@ entries:
     version: 0.1.0
   psql-backup:
   - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2020-06-17T11:58:09.905573-04:00"
+    appVersion: 0.0.2
+    created: "2020-06-18T17:46:26.565464-04:00"
     description: A Helm chart for Kubernetes
-    digest: 867c1af66253be49347c9bde124c9618f29b034970d1fff44e3094a745187a77
+    digest: 0b91b7230a1fa4398d32b6fd20fabb06d3d5f7015d79a0dcccf6655fe28c996f
     name: psql-backup
     type: application
     urls:
@@ -1219,4 +1269,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-06-17T11:58:09.903164-04:00"
+generated: "2020-06-18T17:46:26.554437-04:00"
