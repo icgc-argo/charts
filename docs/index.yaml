@@ -447,6 +447,16 @@ entries:
     version: 0.1.0
   clinical-mongo-backup:
   - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2020-06-23T16:52:25.138447-04:00"
+    description: Backup clinical-mongo cluster
+    digest: 2024646ac9fcad280757ad7712f42e7bf86cd3f3070a4f24b0338e91a713ba73
+    name: clinical-mongo-backup
+    type: application
+    urls:
+    - clinical-mongo-backup-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-16T15:09:03.34744-04:00"
     description: Backup clinical-mongo cluster
@@ -587,6 +597,16 @@ entries:
     version: 0.1.0
   etcd-backup:
   - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2020-06-23T16:52:25.139224-04:00"
+    description: Backup etcd cluster
+    digest: 8ddeac2f34b0c500fcb60b7c8e4f6b98f56d8400296860b17f998adb081805cc
+    name: etcd-backup
+    type: application
+    urls:
+    - etcd-backup-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-16T15:09:03.34792-04:00"
     description: Backup etcd cluster
@@ -638,6 +658,16 @@ entries:
     - https://icgc-argo.github.io/charts/kship-0.1.0.tgz
     version: 0.1.0
   lectern-backup:
+  - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2020-06-23T16:52:25.140008-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 78cb7ac359e03b0b7a772d0b637c12444f70218589d93dacff57982a02337645
+    name: lectern-backup
+    type: application
+    urls:
+    - lectern-backup-0.1.3.tgz
+    version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2020-06-16T15:09:03.348342-04:00"
@@ -992,6 +1022,16 @@ entries:
     version: 0.1.0
   psql-backup:
   - apiVersion: v2
+    appVersion: 0.1.3
+    created: "2020-06-23T16:52:25.140773-04:00"
+    description: A Helm chart for Kubernetes
+    digest: b630ecac4b0c839986093dd81c70053165bb95e765315d705be8a8e378596020
+    name: psql-backup
+    type: application
+    urls:
+    - psql-backup-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.0.1
     created: "2020-06-17T11:58:09.905573-04:00"
     description: A Helm chart for Kubernetes
@@ -1219,4 +1259,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-06-17T11:58:09.903164-04:00"
+generated: "2020-06-23T16:52:25.134201-04:00"
