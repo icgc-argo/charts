@@ -55,5 +55,5 @@ affinity: {}
 
 appConfig:
   port: 5000
-  search_api_url: ""
-  management_api_url: ""
+  rdpc_gateway: ""
+  management_api: ""
