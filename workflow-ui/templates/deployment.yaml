@@ -42,10 +42,10 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: REACT_APP_SEARCH_API
-              value: {{ .Values.appConfig.search_api_url | quote }}
+            - name: REACT_APP_RDPC_GATEWAY
+              value: {{ .Values.appConfig.rdpc_gateway | quote }}
             - name: REACT_APP_MANAGEMENT_API
-              value: {{ .Values.appConfig.management_api_url | quote }}
+              value: {{ .Values.appConfig.management_api | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
