@@ -73,6 +73,12 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_ANALYSIS_CENTRIC_INDEX | quote }}
             - name: ELASTIC_FILE_CENTRIC_INDEX
               value: {{ .Values.appConfig.ELASTIC_FILE_CENTRIC_INDEX | quote }}
+          {{- if .Values.env }}
+            {{- range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
