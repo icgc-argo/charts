@@ -74,6 +74,10 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
             - name: ELASTIC_TASKINDEX
               value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.appConfig.SPRING_PROFILES_ACTIVE | quote }}
+            - name: AUTH_JWTPUBLICKEYURL
+              value: {{ .Values.appConfig.AUTH_JWTPUBLICKEYURL | quote }}
           {{- if .Values.env }}
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
