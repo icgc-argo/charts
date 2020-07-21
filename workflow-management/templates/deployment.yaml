@@ -19,6 +19,7 @@ spec:
         app.kubernetes.io/name: {{ include "workflow-management.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ include "workflow-management.serviceAccountName" . }}
       {{- with .Values.podSecurityContext }}
       securityContext:
         {{- toYaml . | nindent 8 }}
