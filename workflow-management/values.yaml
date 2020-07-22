@@ -59,12 +59,12 @@ affinity: {}
 appConfig:
   port: 8080
   nextflow_k8s_runAsUser: ""
+  nextflow_k8s_serviceAccount: ""
   nextflow_k8s_namespace: ""
   nextflow_k8s_volmounts:
     - ""
   nextflow_k8s_masterUrl: ""
   nextflow_k8s_trust_certificate: false
-  nextflow_k8s_serviceAccount: "workflow-management"
   nextflow_weblog_url: ""
 
 env: {}
