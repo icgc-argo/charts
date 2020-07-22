@@ -19,6 +19,7 @@ spec:
         app.kubernetes.io/name: {{ include "workflow-management.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ include "workflow-management.serviceAccountName" . }}
       {{- with .Values.podSecurityContext }}
       securityContext:
         {{- toYaml . | nindent 8 }}
@@ -54,19 +55,23 @@ spec:
               value: {{ .Values.appConfig.port | quote }}
             - name: NEXTFLOW_K8S_RUNASUSER
               value: {{ .Values.appConfig.nextflow_k8s_runAsUser | quote }}
+            - name: NEXTFLOW_K8S_SERVICEACCOUNT
+              value: {{ .Values.appConfig.nextflow_k8s_serviceAccount | quote }}
             - name: NEXTFLOW_K8S_NAMESPACE
               value: {{ .Values.appConfig.nextflow_k8s_namespace | quote }}
             - name: NEXTFLOW_K8S_MASTERURL
               value: {{ .Values.appConfig.nextflow_k8s_masterUrl | quote }}
             - name: NEXTFLOW_K8S_TRUSTCERTIFICATE
               value: {{ .Values.appConfig.nextflow_k8s_trust_certificate | quote }}
+            - name: NEXTFLOW_K8S_SERVICEACCOUNT
+              value: {{ .Values.appConfig.nextflow_k8s_serviceAccount | quote }}
             - name: NEXTFLOW_WEBLOGURL
               value: {{ .Values.appConfig.nextflow_weblog_url | quote }}
             {{- range $i, $value := .Values.appConfig.nextflow_k8s_volmounts}}
             - name: NEXTFLOW_K8S_VOLMOUNTS_{{$i}}
               value: {{ $value | quote }}
             {{- end }}
-          {{- if .Values.env }}        
+          {{- if .Values.env }}
             {{ range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}

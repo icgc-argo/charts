@@ -16,6 +16,10 @@ service:
   type: ClusterIP
   port: 80
 
+serviceAccount:
+  create: true
+  name: workflow-management
+
 podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true
@@ -55,6 +59,7 @@ affinity: {}
 appConfig:
   port: 8080
   nextflow_k8s_runAsUser: ""
+  nextflow_k8s_serviceAccount: ""
   nextflow_k8s_namespace: ""
   nextflow_k8s_volmounts:
     - ""

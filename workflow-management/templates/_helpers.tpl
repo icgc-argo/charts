@@ -30,3 +30,34 @@ Create chart name and version as used by the chart label.
 {{- define "workflow-management.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Common labels
+*/}}
+{{- define "workflow-management.labels" -}}
+helm.sh/chart: {{ include "workflow-management.chart" . }}
+{{ include "workflow-management.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end -}}
+
+{{/*
+Selector labels
+*/}}
+{{- define "workflow-management.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "workflow-management.name" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end -}}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "workflow-management.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create -}}
+    {{ default (include "workflow-management.fullname" .) .Values.serviceAccount.name }}
+{{- else -}}
+    {{ default "default" .Values.serviceAccount.name }}
+{{- end -}}
+{{- end -}}
