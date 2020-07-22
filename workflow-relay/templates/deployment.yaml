@@ -78,6 +78,10 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
             - name: ELASTIC_TASKINDEX
               value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
+            - name: ELASTIC_NUMBEROFSHARDS
+              value: {{ .Values.appConfig.ELASTIC_NUMBEROFSHARDS | quote }}
+            - name: ELASTIC_NUMBEROFREPLICAS
+              value: {{ .Values.appConfig.ELASTIC_NUMBEROFREPLICAS | quote }}
           {{- if .Values.env }}
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
