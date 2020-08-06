@@ -1,3 +1,4 @@
 values.secrets.yaml
 .vscode
 .idea/
+.DS_Store

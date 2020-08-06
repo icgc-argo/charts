@@ -48,14 +48,22 @@ spec:
             - name: http
               containerPort: 3518
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+         livenessProbe:
+           httpGet:
+             path: /actuator/health
+             port: 3518
+           initialDelaySeconds: 60
+           timeoutSeconds: 2
+           periodSeconds: 8
+           failureThreshold: 1
+         readinessProbe:
+           httpGet:
+             path: /actuator/health
+             port: 3518
+           initialDelaySeconds: 30
+           timeoutSeconds: 2
+           periodSeconds: 3
+           failureThreshold: 2
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
