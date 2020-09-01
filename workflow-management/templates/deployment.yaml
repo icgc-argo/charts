@@ -51,8 +51,6 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: {{ .Values.appConfig.SPRING_PROFILES_ACTIVE | quote }}
             - name: SERVER_PORT
               value: {{ .Values.appConfig.port | quote }}
             - name: NEXTFLOW_K8S_RUNASUSER
@@ -71,14 +69,7 @@ spec:
               value: {{ .Values.appConfig.nextflow_weblog_url | quote }}
             {{- range $i, $value := .Values.appConfig.nextflow_k8s_volmounts}}
             - name: NEXTFLOW_K8S_VOLMOUNTS_{{$i}}
-              value: {{ $value | quote }}            
-            {{- end }}
-            {{- if (contains "apiKey" .Values.appConfig.SPRING_PROFILES_ACTIVE) }}
-            - name: SECRET_APIKEY
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Values.appConfig.secret_apikey_ref.name }}
-                  key: {{ .Values.appConfig.secret_apikey_ref.key }}
+              value: {{ $value | quote }}
             {{- end }}
           {{- if .Values.env }}
             {{ range $key, $value := .Values.env }}
