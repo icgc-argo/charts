@@ -6,7 +6,7 @@ rules:
 - apiGroups:
   - policy
   resourceNames:
-  - {{ include "es-operator.fullname" . }}
+  - {{ include "es-operator.fullname" . }}-{{ .Release.Namespace }}
   resources:
   - podsecuritypolicies
   verbs:
