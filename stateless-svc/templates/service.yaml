@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "stateless-svc.fullname" . }}
+  labels:
+    {{- include "stateless-svc.labels" . | nindent 4 }}
+    {{- include "stateless-svc.customLabels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "stateless-svc.selectorLabels" . | nindent 4 }}
