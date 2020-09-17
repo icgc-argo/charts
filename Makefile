@@ -1,3 +1,3 @@
 
 index:
-	helm repo index ./docs --url https://icgc-argo.github.io/charts/ 
+	helm3 repo index ./docs --url https://icgc-argo.github.io/charts/ 
