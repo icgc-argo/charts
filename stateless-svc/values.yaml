@@ -34,7 +34,6 @@ podSecurityContext:
   runAsUser: 9999
 
 extraEnv: {}
-
 securityContext: {}
   # capabilities:
   #   drop:
