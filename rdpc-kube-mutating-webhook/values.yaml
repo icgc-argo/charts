@@ -57,7 +57,7 @@ appConfig:
   debug: false
   port: 8080
   overrideVolumeCollisions: true
-  targetNamespace: "rdpc-wes-dev"
+  targetNamespace: "some-specific-namespace"
   emptyDir:
     volumeName: icgc-argo-scratch
     mountPath : /icgc-argo-scratch
