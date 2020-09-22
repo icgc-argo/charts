@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "rdpc-kube-mutating-webhook.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
+    helm.sh/chart: {{ include "rdpc-kube-mutating-webhook.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      serviceAccountName: {{ include "rdpc-kube-mutating-webhook.fullname" . }}
+      {{- with .Values.podSecurityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: SERVER_PORT
+            value: {{ .Values.appConfig.port | quote }}
+          - name: SERVER_SSL_ENABLE
+            value: "false"
+          - name: APP_DEBUG
+            value: {{ .Values.appConfig.debug | quote }}
+          - name: APP_OVERRIDEVOLUMECOLLISIONS
+            value: {{ .Values.appConfig.overrideVolumeCollisions | quote }}
+          - name: APP_TARGETNAMESPACE
+            value: {{ .Values.appConfig.targetNamespace | quote }}
+          - name: APP_EMPTYDIR_VOLUMENAME
+            value: {{ .Values.appConfig.emptyDir.volumeName | quote }}
+          - name: APP_EMPTYDIR_MOUNTPATH
+            value: {{ .Values.appConfig.emptyDir.mountPath | quote }}
+{{- if .Values.extraEnv }}        
+  {{ range $key, $value := .Values.extraEnv }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.appConfig.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

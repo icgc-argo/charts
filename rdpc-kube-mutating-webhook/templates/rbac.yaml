@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app: {{ template "rdpc-kube-mutating-webhook.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: {{ template "rdpc-kube-mutating-webhook.fullname" . }}
+---
+{{- if .Values.rbac.create.tokenReview }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ template "rdpc-kube-mutating-webhook.fullname" . }}-{{ .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+  - kind: ServiceAccount
+    name: {{ template "rdpc-kube-mutating-webhook.fullname" . }}
+    namespace: {{ .Release.Namespace }}
+{{- end }}
