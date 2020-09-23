@@ -61,3 +61,10 @@ Create the name of the service account to use
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Name of the namespace where wes jobs will be created
+*/}}
+{{- define "workflow-management.wesNamespace" -}}
+{{- default .Release.Namespace .Values.wes.namespace | trunc 63 | trimSuffix "-" -}}
+{{- end -}}

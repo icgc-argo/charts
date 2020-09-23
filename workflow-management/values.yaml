@@ -69,3 +69,9 @@ appConfig:
   spring_profiles_active: "default"
 
 env: {}
+
+
+## When defined, wes jobs will be directed to that namespace, 
+## otherwise they will exist in the same namespace as this service
+wes:
+  namespace: ""
