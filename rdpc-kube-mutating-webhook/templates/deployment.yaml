@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "rdpc-kube-mutating-webhook.fullname" . }}
+  name: {{ include "kube-webhook.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
-    helm.sh/chart: {{ include "rdpc-kube-mutating-webhook.chart" . }}
+    app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
+    helm.sh/chart: {{ include "kube-webhook.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -12,21 +12,21 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
+      app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
+        app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
-      serviceAccountName: {{ include "rdpc-kube-mutating-webhook.fullname" . }}
+      serviceAccountName: {{ include "kube-webhook.fullname" . }}
       {{- with .Values.podSecurityContext }}
       securityContext:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: server
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:

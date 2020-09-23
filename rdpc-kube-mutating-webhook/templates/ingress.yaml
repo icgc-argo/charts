@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "rdpc-kube-mutating-webhook.fullname" . -}}
+{{- $fullName := include "kube-webhook.fullname" . -}}
 {{- $ingressPaths := .Values.ingress.paths -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
-    helm.sh/chart: {{ include "rdpc-kube-mutating-webhook.chart" . }}
+    app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
+    helm.sh/chart: {{ include "kube-webhook.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
   {{- with .Values.ingress.annotations }}

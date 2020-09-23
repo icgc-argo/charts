@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "rdpc-kube-mutating-webhook.fullname" . }}
+  name: {{ include "kube-webhook.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
-    helm.sh/chart: {{ include "rdpc-kube-mutating-webhook.chart" . }}
+    app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
+    helm.sh/chart: {{ include "kube-webhook.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "rdpc-kube-mutating-webhook.name" . }}
+    app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
