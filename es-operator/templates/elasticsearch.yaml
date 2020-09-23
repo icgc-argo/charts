@@ -18,21 +18,28 @@ spec:
       node.ingest: false
       node.ml: false
       xpack.ml.enabled: false
-
+{{- if .Values.elastic.nodes.master.extraConfig }}
+  {{- range $key, $value := .Values.elastic.nodes.master.extraConfig }}
+      {{ $key }}: {{ $value }}
+  {{- end }}
+{{- end }}
     # Master nodes need storage too but less than data:
     # https://engineering.vulcan.com/2019_0128_Elasticsearch-on-Kubernetes.aspx
     volumeClaimTemplates:
-    - metadata:
-        # cant be changed: The name of the volume claim must always be elasticsearch-data
-        # https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-volume-claim-templates.html
-        name: elasticsearch-data
-      spec:
-        accessModes:
-        - ReadWriteOnce
-        resources:
-          requests:
-            storage: {{ .Values.elastic.nodes.master.storage }}
-        storageClassName: standard
+      - metadata:
+          # cant be changed: The name of the volume claim must always be elasticsearch-data
+          # https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-volume-claim-templates.html
+          name: elasticsearch-data
+        spec:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: {{ .Values.elastic.nodes.master.storage }}
+          storageClassName: standard
+    {{- with .Values.elastic.nodes.master.extraVolumeClaimTemplates }}
+      {{- toYaml . | nindent 6 }}
+    {{- end }} 
     podTemplate:
       spec:
         serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
@@ -58,6 +65,28 @@ spec:
           resources:
             {{- toYaml . | nindent 12 }}
         {{- end }}
+      {{ if or .Values.elastic.nodes.master.extraVolumeMounts .Values.elastic.backup.pvc.create }}
+          volumeMounts:
+          {{- if .Values.elastic.backup.pvc.create }}
+            - mountPath: /usr/share/elasticsearch/backups
+              name: backup-vol
+          {{- end }}
+          {{- with .Values.elastic.nodes.master.extraVolumeMounts }}
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+      {{- end }}  
+        
+      {{- if or .Values.elastic.nodes.master.extraVolumes .Values.elastic.backup.pvc.create }}
+        volumes: 
+        {{- if .Values.elastic.backup.pvc.create }}
+          - name: backup-vol
+            persistentVolumeClaim:
+              claimName: {{ include "es-operator.fullname" . }}-bk
+        {{- end }}
+        {{- with .Values.elastic.nodes.master.extraVolumes }}
+          {{ toYaml . | nindent 10 }}
+        {{- end }}
+      {{- end }}
         initContainers:
         - name: sysctl
           securityContext:
@@ -72,19 +101,27 @@ spec:
       node.ingest: true
       node.ml: false
       xpack.ml.enabled: false
+{{- if .Values.elastic.nodes.data.extraConfig }}
+  {{- range $key, $value := .Values.elastic.nodes.data.extraConfig }}
+      {{ $key }}: {{ $value }}
+  {{- end }}
+{{- end }}
     volumeClaimTemplates:
-    - metadata:
-        # cant be changed: The name of the volume claim must always be elasticsearch-data
-        # https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-volume-claim-templates.html
-        # the operator will qualify this to avoid conflicts
-        name: elasticsearch-data
-      spec:
-        accessModes:
-        - ReadWriteOnce
-        resources:
-          requests:
-            storage: {{ .Values.elastic.nodes.data.storage }}
-        storageClassName: standard
+      - metadata:
+          # cant be changed: The name of the volume claim must always be elasticsearch-data
+          # https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-volume-claim-templates.html
+          # the operator will qualify this to avoid conflicts
+          name: elasticsearch-data
+        spec:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: {{ .Values.elastic.nodes.data.storage }}
+          storageClassName: standard
+    {{- with .Values.elastic.nodes.data.extraVolumeClaimTemplates }}
+        {{- toYaml . | nindent 6 }}
+    {{- end }} 
     podTemplate:
       spec:
         serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
@@ -100,7 +137,7 @@ spec:
         - name: elasticsearch
 {{- if .Values.env }}
           env:
-  {{ range $key, $value := .Values.elastic.nodes.data.env }}
+  {{- range $key, $value := .Values.elastic.nodes.data.env }}
           - name: {{ $key }}
             value: {{ $value | quote }}
   {{- end }}
@@ -109,6 +146,28 @@ spec:
           resources:
             {{- toYaml . | nindent 12 }}
         {{- end }}
+      {{- if or .Values.elastic.nodes.data.extraVolumeMounts .Values.elastic.backup.pvc.create }}
+          volumeMounts:
+          {{- if .Values.elastic.backup.pvc.create }}
+            - mountPath: /usr/share/elasticsearch/backups
+              name: backup-vol
+          {{- end }}
+          {{ with .Values.elastic.nodes.data.extraVolumeMounts }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- end }}  
+        
+      {{- if or .Values.elastic.nodes.data.extraVolumes .Values.elastic.backup.pvc.create }}
+        volumes: 
+        {{- if .Values.elastic.backup.pvc.create }}
+          - name: backup-vol
+            persistentVolumeClaim:
+              claimName: {{ include "es-operator.fullname" . }}-bk
+        {{- end }}
+        {{- with .Values.elastic.nodes.data.extraVolumes }}
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
+      {{- end }}
         initContainers:
         - name: sysctl
           securityContext:
