@@ -58,6 +58,7 @@ appConfig:
   port: 8080
   overrideVolumeCollisions: true
   targetNamespace: "some-specific-namespace"
+  hostName: kube-webhook.local
   emptyDir:
     volumeName: icgc-argo-scratch
     mountPath : /icgc-argo-scratch
