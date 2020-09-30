@@ -8,11 +8,17 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 webhooks:
-  - name: {{ .Values.appConfig.hostName | quote }}
+  - name: {{ .Values.mutatingWebhookConfig.webhookHostName | quote }}
     clientConfig:
-      url: https://{{ .Values.appConfig.hostName }}/mutate
+      url: https://{{ .Values.mutatingWebhookConfig.webhookHostName }}/mutate
+    namespaceSelector:
+      matchExpressions:
+      - key: name
+        operator: In
+        values: [ {{ .Values.mutatingWebhookConfig.targetNamespace | quote }} ]
     rules:
       - operations: [ "CREATE" ]
         apiGroups: [""]
         apiVersions: ["v1"]
         resources: ["pods"]
+        scope: "Namespaced"

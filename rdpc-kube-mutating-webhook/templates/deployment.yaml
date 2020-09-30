@@ -36,10 +36,10 @@ spec:
             value: "false"
           - name: APP_DEBUG
             value: {{ .Values.appConfig.debug | quote }}
+          - name: APP_DRYRUN
+            value: {{ .Values.appConfig.dryRun | quote }}
           - name: APP_OVERRIDEVOLUMECOLLISIONS
             value: {{ .Values.appConfig.overrideVolumeCollisions | quote }}
-          - name: APP_TARGETNAMESPACE
-            value: {{ .Values.appConfig.targetNamespace | quote }}
           - name: APP_EMPTYDIR_VOLUMENAME
             value: {{ .Values.appConfig.emptyDir.volumeName | quote }}
           - name: APP_EMPTYDIR_MOUNTPATH
