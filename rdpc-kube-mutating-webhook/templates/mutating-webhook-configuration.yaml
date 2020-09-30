@@ -11,11 +11,6 @@ webhooks:
   - name: {{ .Values.appConfig.hostName | quote }}
     clientConfig:
       url: https://{{ .Values.appConfig.hostName }}/mutate
-      # service:
-        # name: {{ include "kube-webhook.fullname" . }}
-        # namespace: {{ .Release.Namespace }}
-        # path: "/mutate"
-      # caBundle: blah
     rules:
       - operations: [ "CREATE" ]
         apiGroups: [""]
