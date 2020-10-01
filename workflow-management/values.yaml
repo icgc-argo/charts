@@ -66,6 +66,6 @@ appConfig:
   nextflow_k8s_masterUrl: ""
   nextflow_k8s_trust_certificate: false
   nextflow_weblog_url: ""
-  SPRING_PROFILES_ACTIVE: "default"
+  spring_profiles_active: "default"
 
 env: {}
