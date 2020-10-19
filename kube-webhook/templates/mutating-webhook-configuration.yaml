@@ -1,0 +1,24 @@
+apiVersion: admissionregistration.k8s.io/v1beta1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: {{ include "kube-webhook.fullname" . }}-{{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "kube-webhook.name" . }}
+    helm.sh/chart: {{ include "kube-webhook.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+webhooks:
+  - name: {{ .Values.mutatingWebhookConfig.webhookHostName | quote }}
+    clientConfig:
+      url: https://{{ .Values.mutatingWebhookConfig.webhookHostName }}/mutate
+    namespaceSelector:
+      matchExpressions:
+      - key: name
+        operator: In
+        values: [ {{ .Values.mutatingWebhookConfig.targetNamespace | quote }} ]
+    rules:
+      - operations: [ "CREATE" ]
+        apiGroups: [""]
+        apiVersions: ["v1"]
+        resources: ["pods"]
+        scope: "Namespaced"
