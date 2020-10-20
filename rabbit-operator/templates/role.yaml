@@ -6,7 +6,7 @@ rules:
 - apiGroups:
   - policy
   resourceNames:
-  - {{ .Values.rabbit.name }}
+  - {{ .Values.rabbit.name }}-{{ .Release.Namespace }}
   resources:
   - podsecuritypolicies
   verbs:

@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: {{ .Values.rabbit.name }}
+  name: {{ .Values.rabbit.name }}-{{ .Release.Namespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -9,4 +9,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.rabbit.name }}-rabbitmq-server
-  namespace: rdpc-collab-dev
+  namespace: {{ .Release.Namespace }}
