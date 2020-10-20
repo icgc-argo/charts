@@ -8,7 +8,7 @@ image:
   repository: icgcargo/workflow-graph-registry
   pullPolicy: Always
   # Overrides the image tag whose default is the chart version.
-  tag: "3b69861"
+  tag: "07d3652"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -67,7 +67,8 @@ tolerations: []
 affinity: {}
 
 appConfig:
-  psqlSecretName: registry-postgres-postgresql
-  databaseUrl: jdbc:postgresql://registry-postgres-postgresql.rdpc-collab-dev:5432/registry
+  port: 8080
+  psqlSecretName: 
+  databaseUrl: 
 
 extraEnv: {}
