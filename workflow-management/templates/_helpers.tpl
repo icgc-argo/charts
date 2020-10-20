@@ -67,7 +67,7 @@ Create the name of the WES service account to use
 */}}
 {{- define "workflow-management.wesServiceAccountName" -}}
 {{- if .Values.serviceAccount.create -}}
-    {{ default (include "workflow-management.fullname" .) .Values.serviceAccount.name }}
+    {{ default (include "workflow-management.fullname" .) .Values.serviceAccount.name }}-wes
 {{- else -}}
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
