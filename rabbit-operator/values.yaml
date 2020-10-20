@@ -1,0 +1,19 @@
+rabbit:
+  name: wfg-rabbit
+  replicas: 1
+
+service:
+  type: ClusterIP
+  port: 5672
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+nodeSelector: {}
+
+tolerations: []

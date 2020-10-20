@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ .Values.rabbit.name }}
+rules:
+- apiGroups:
+  - policy
+  resourceNames:
+  - {{ .Values.rabbit.name }}-{{ .Release.Namespace }}
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
