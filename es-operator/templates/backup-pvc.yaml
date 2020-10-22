@@ -1,0 +1,26 @@
+{{if .Values.elastic.backup.pvc.create }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ include "es-operator.fullname" . }}-bk
+spec:
+  {{- with .Values.elastic.backup.pvc.accessModes }}
+  accessModes:
+      {{- toYaml . | nindent 6 }}
+  {{- end }}
+  storageClassName: ""
+  volumeName: {{ .Values.elastic.backup.pvc.volumeName }}
+  resources:
+    requests:
+      storage: {{ .Values.elastic.backup.pvc.size }}
+{{end}}
+
+
+---
+{{if .Values.elastic.backup.pv.create }}
+kind: PersistentVolume
+apiVersion: v1
+{{ with .Values.elastic.backup.pv.definition }}
+{{ toYaml .}}
+{{ end }}
+{{end}}

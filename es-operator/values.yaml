@@ -24,6 +24,9 @@ elastic:
         limits:
           memory: 2Gi #8Gi
           cpu: 0.5
+      extraVolumeClaimTemplates: []
+      extraVolumeMounts: []
+      extraConfig: {}
     data: 
       name: data
       count: 3
@@ -37,6 +40,34 @@ elastic:
         limits:
           memory: 2Gi #8Gi
           cpu: 0.5
+      extraVolumeClaimTemplates: []
+      extraVolumeMounts: []
+      extraConfig: {}   
+  backup:
+    pv:
+      create: false
+      definition:
+        metadata:
+          name: es-backup-pv-1
+        spec:
+          capacity:
+            storage: 10Gi
+          accessModes:
+            - ReadWriteMany
+          # needed to guarantee binding from the pvc
+          claimRef:
+            namespace: default
+            name: myclaim
+          nfs:
+            server: #
+            path: #
+    pvc:
+      create: false 
+      accessModes: 
+      - ReadWriteMany
+      size: 50Gi
+      # only needed if you want to guarantee binding to a specific pv
+      volumeName: es-backup-pv-1
 
 # the operator will create the service, this is needed for the ingress
 service:
