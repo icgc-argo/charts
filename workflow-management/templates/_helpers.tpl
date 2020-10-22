@@ -63,17 +63,6 @@ Create the name of the service account to use
 {{- end -}}
 
 {{/*
-Create the name of the WES service account to use
-*/}}
-{{- define "workflow-management.wesServiceAccountName" -}}
-{{- if .Values.serviceAccount.create -}}
-    {{ default (include "workflow-management.fullname" .) .Values.serviceAccount.name }}-wes
-{{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
-{{- end -}}
-{{- end -}}
-
-{{/*
 Name of the namespace where wes jobs will be created
 */}}
 {{- define "workflow-management.wesNamespace" -}}
