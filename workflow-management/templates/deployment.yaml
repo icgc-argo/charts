@@ -50,7 +50,6 @@ spec:
             failureThreshold: 2
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-# value: {{ .Values.appConfig.nextflow_k8s_serviceAccount | quote }}
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: {{ .Values.appConfig.spring_profiles_active | quote }}
