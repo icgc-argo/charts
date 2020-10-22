@@ -61,6 +61,8 @@ spec:
               value: {{ include "workflow-management.serviceAccountName" . }}
             - name: NEXTFLOW_K8S_NAMESPACE
               value: {{ .Release.Namespace }}
+            - name: NEXTFLOW_K8S_RUNNAMESPACE
+              value: {{ include "workflow-management.wesNamespace" . }}
             - name: NEXTFLOW_K8S_MASTERURL
               value: {{ .Values.appConfig.nextflow_k8s_masterUrl | quote }}
             - name: NEXTFLOW_K8S_TRUSTCERTIFICATE
