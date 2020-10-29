@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/workflow-search
+  repository: ghcr.io/icgc-argo/workflow-search
   tag: latest
   pullPolicy: Always
 
