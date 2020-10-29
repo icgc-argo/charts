@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/song-search
+  repository: ghcr.io/icgc-argo/song-search
   tag: latest
   pullPolicy: Always
 
