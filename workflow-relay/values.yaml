@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/workflow-relay
+  repository: ghcr.io/icgc-argo/workflow-relay
   tag: latest
   pullPolicy: Always
 
