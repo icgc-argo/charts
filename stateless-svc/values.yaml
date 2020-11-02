@@ -34,6 +34,14 @@ podSecurityContext:
   runAsUser: 9999
 
 extraEnv: {}
+  # PROCESS_VAR: abc
+extraEnvYaml: []
+# - name: ELASTIC_USER
+#   valueFrom:
+#     secretKeyRef:
+#       name: secret-name
+#       key: secret-key
+
 securityContext: {}
   # capabilities:
   #   drop:
