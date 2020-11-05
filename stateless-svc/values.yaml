@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/non-existing
+  repository: ghcr.io/icgc-argo/non-existing
   tag: 0.1.0
   pullPolicy: IfNotPresent
 
@@ -34,6 +34,14 @@ podSecurityContext:
   runAsUser: 9999
 
 extraEnv: {}
+  # PROCESS_VAR: abc
+extraEnvYaml: []
+# - name: ELASTIC_USER
+#   valueFrom:
+#     secretKeyRef:
+#       name: secret-name
+#       key: secret-key
+
 securityContext: {}
   # capabilities:
   #   drop:
