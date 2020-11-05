@@ -1,4 +1,5 @@
 {{/* vim: set filetype=mustache: */}}
+
 {{/*
 Expand the name of the chart.
 */}}
@@ -55,9 +56,58 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 Create the name of the service account to use
 */}}
 {{- define "workflow-management.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create -}}
-    {{ default (include "workflow-management.fullname" .) .Values.serviceAccount.name }}
+{{- if .Values.kubeConfig.app.serviceAccount.create -}}
+    {{ default (include "workflow-management.fullname" .) .Values.kubeConfig.app.serviceAccount.name }}
 {{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
+    {{ default "default" .Values.kubeConfig.app.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Create the name of the rolebinding to use
+*/}}
+{{- define "workflow-management.roleBindingName" -}}
+{{- if .Values.kubeConfig.app.roleBinding.create -}}
+    {{ default (include "workflow-management.fullname" .) .Values.kubeConfig.app.roleBinding.name }}
+{{- else -}}
+    {{ default "default" .Values.kubeConfig.app.roleBinding.name }}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Name of the namespace where wes jobs will be created
+*/}}
+{{- define "workflow-management.wesNamespace" -}}
+{{- default .Release.Namespace .Values.kubeConfig.wes.namespace | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
+
+{{/*
+Name of the serviceAccount used for creating wes jobs.
+If the wes namespace is not defined, or the wes serviceAccount name is not defined, 
+then the serviceAccount name {{- include "workflow-management.serviceAccountName" . -}}-wes is used, to avoid a collision in the same namespace
+*/}}
+{{- define "workflow-management.wesServiceAccountName" -}}
+{{- $name := printf "%s" (include "workflow-management.serviceAccountName" . ) -}}
+{{- $is_same_namespace := or (not .Values.kubeConfig.wes.namespace) (eq .Release.Namespace .Values.kubeConfig.wes.namespace) -}}
+{{- if and $is_same_namespace  (not .Values.kubeConfig.wes.serviceAccount.name) -}}
+	{{- printf "%s-%s" $name "wes" -}}
+{{- else -}}
+	{{- default $name .Values.kubeConfig.wes.serviceAccount.name | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Name of the rolebinding used for wes jobs. 
+If the wes namespace is not defined, or the wes roleBinding name is not defined, 
+then the rolebinding name {{- include "workflow-management.roleBindingName" . -}}-wes is used, to avoid a collision in the same namespace
+*/}}
+{{- define "workflow-management.wesRoleBindingName" -}}
+{{- $name := printf "%s" (include "workflow-management.roleBindingName" . ) -}}
+{{- $is_same_namespace := or (not .Values.kubeConfig.wes.namespace) (eq .Release.Namespace .Values.kubeConfig.wes.namespace) -}}
+{{- if and $is_same_namespace (not .Values.kubeConfig.wes.roleBinding.name) -}}
+	{{- printf "%s-%s" $name "wes" -}}
+{{- else -}}
+	{{- default $name .Values.kubeConfig.wes.roleBinding.name | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
+{{- end -}}
+

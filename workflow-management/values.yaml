@@ -16,10 +16,6 @@ service:
   type: ClusterIP
   port: 80
 
-serviceAccount:
-  create: true
-  name: workflow-management
-
 podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true
@@ -59,8 +55,6 @@ affinity: {}
 appConfig:
   port: 8080
   nextflow_k8s_runAsUser: ""
-  nextflow_k8s_serviceAccount: ""
-  nextflow_k8s_namespace: ""
   nextflow_k8s_volmounts:
     - ""
   nextflow_k8s_masterUrl: ""
@@ -69,3 +63,31 @@ appConfig:
   spring_profiles_active: "default"
 
 env: {}
+
+
+kubeConfig:
+  app:
+    serviceAccount:
+      create: true
+      name: ""
+    roleBinding:
+      create: true
+      name: ""
+  wes:
+    ## When defined, wes jobs will be directed to this namespace, 
+    ## otherwise they will exist in the namespace {{ .Release.Namespace }}
+    namespace: ""
+    serviceAccount:
+      create: true
+      ## When defined, wes jobs will use this service account name.
+      ## If not defined and the wes.namspace is equal to {{ .Release.Namespace }}, will use this service account name (since no collisions).
+      ## If not defined and the wes.namspace is NOT defined, will use the service account name: {{ .Values.kubeConfig.app.serviceAccount.name }}-wes.
+      name: ""
+    roleBinding:
+      create: true
+      ## When defined, wes jobs will use this rolebinding name.
+      ## If not defined and the wes.namspace is equal to {{ .Release.Namespace }}, will use this rolebinding name (since no collisions).
+      ## If not defined and the wes.namspace is NOT defined, will use the rolebinding name: {{ .Values.kubeConfig.app.roleBinding.name }}-wes
+      name: ""
+
+

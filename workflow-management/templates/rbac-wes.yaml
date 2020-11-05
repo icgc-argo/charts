@@ -1,9 +1,9 @@
-{{- if .Values.kubeConfig.app.roleBinding.create -}}
+{{- if .Values.kubeConfig.wes.roleBinding.create -}}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: {{ template "workflow-management.roleBindingName" . }}
-  namespace: {{ .Release.Namespace }}
+  name: {{ template "workflow-management.wesRoleBindingName" . }}
+  namespace: {{ template "workflow-management.wesNamespace" . }}
   labels:
 {{ include "workflow-management.labels" . | nindent 4 }}
 roleRef:
@@ -11,6 +11,9 @@ roleRef:
   kind: ClusterRole
   name: edit
 subjects:
+  - kind: ServiceAccount
+    name: {{ template "workflow-management.wesServiceAccountName" . }}
+    namespace: {{ template "workflow-management.wesNamespace" . }}
   - kind: ServiceAccount
     name: {{ template "workflow-management.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
