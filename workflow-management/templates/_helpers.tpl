@@ -1,4 +1,5 @@
 {{/* vim: set filetype=mustache: */}}
+
 {{/*
 Expand the name of the chart.
 */}}
@@ -55,10 +56,21 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 Create the name of the service account to use
 */}}
 {{- define "workflow-management.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create -}}
-    {{ default (include "workflow-management.fullname" .) .Values.serviceAccount.name }}
+{{- if .Values.kubeConfig.app.serviceAccount.create -}}
+    {{ default (include "workflow-management.fullname" .) .Values.kubeConfig.app.serviceAccount.name }}
 {{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
+    {{ default "default" .Values.kubeConfig.app.serviceAccount.name }}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Create the name of the rolebinding to use
+*/}}
+{{- define "workflow-management.roleBindingName" -}}
+{{- if .Values.kubeConfig.app.roleBinding.create -}}
+    {{ default (include "workflow-management.fullname" .) .Values.kubeConfig.app.roleBinding.name }}
+{{- else -}}
+    {{ default "default" .Values.kubeConfig.app.roleBinding.name }}
 {{- end -}}
 {{- end -}}
 
@@ -66,5 +78,36 @@ Create the name of the service account to use
 Name of the namespace where wes jobs will be created
 */}}
 {{- define "workflow-management.wesNamespace" -}}
-{{- default .Release.Namespace .Values.wes.namespace | trunc 63 | trimSuffix "-" -}}
+{{- default .Release.Namespace .Values.kubeConfig.wes.namespace | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Name of the serviceAccount used for creating wes jobs
+*/}}
+{{- define "workflow-management.wesServiceAccountName" -}}
+{{- if not .Values.kubeConfig.wes.namespace -}}
+	{{- if or (not .Values.kubeConfig.wes.serviceAccount.name) (eq (include "workflow-management.serviceAccountName" .) .Values.kubeConfig.wes.serviceAccount.name) -}}
+		{{- include "workflow-management.serviceAccountName" . -}}-wes
+	{{- else -}}
+		{{- default (include "workflow-management.serviceAccountName" .) .Values.kubeConfig.wes.serviceAccount.name | trunc 63 | trimSuffix "-" -}}
+	{{- end -}}
+{{- else -}}
+	{{- default (include "workflow-management.serviceAccountName" .) .Values.kubeConfig.wes.serviceAccount.name | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Name of the rolebinding used for wes jobs
+*/}}
+{{- define "workflow-management.wesRoleBindingName" -}}
+{{- if not .Values.kubeConfig.wes.namespace -}}
+	{{- if or (not .Values.kubeConfig.wes.roleBinding.name) (eq (include "workflow-management.roleBindingName" .) .Values.kubeConfig.wes.roleBinding.name) -}}
+		{{- include "workflow-management.roleBindingName" . -}}-wes
+	{{- else -}}
+		{{- default (include "workflow-management.roleBindingName" .) .Values.kubeConfig.wes.roleBinding.name | trunc 63 | trimSuffix "-" -}}
+	{{- end -}}
+{{- else -}}
+	{{- default (include "workflow-management.roleBindingName" .) .Values.kubeConfig.wes.roleBinding.name | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
+{{- end -}}
+

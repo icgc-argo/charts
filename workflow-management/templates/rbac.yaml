@@ -1,7 +1,8 @@
+{{- if .Values.kubeConfig.app.roleBinding.create -}}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: {{ template "workflow-management.fullname" . }}
+  name: {{ template "workflow-management.roleBindingName" . }}
   namespace: {{ .Release.Namespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -11,11 +12,14 @@ subjects:
   - kind: ServiceAccount
     name: {{ template "workflow-management.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
+{{- end -}}
+
+{{- if .Values.kubeConfig.wes.roleBinding.create -}}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: {{ template "workflow-management.fullname" . }}-wes
+  name: {{ template "workflow-management.wesRoleBindingName" . }}
   namespace: {{ template "workflow-management.wesNamespace" . }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -23,8 +27,9 @@ roleRef:
   name: edit
 subjects:
   - kind: ServiceAccount
-    name: {{ template "workflow-management.serviceAccountName" . }}
+    name: {{ template "workflow-management.wesServiceAccountName" . }}
     namespace: {{ template "workflow-management.wesNamespace" . }}
   - kind: ServiceAccount
     name: {{ template "workflow-management.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
+{{- end -}}

@@ -58,7 +58,8 @@ spec:
             - name: NEXTFLOW_K8S_RUNASUSER
               value: {{ .Values.appConfig.nextflow_k8s_runAsUser | quote }}
             - name: NEXTFLOW_K8S_SERVICEACCOUNT
-              value: {{ include "workflow-management.serviceAccountName" . }}
+              #rtisma [not sure if its wesServiceAccountName or serviceAccountName]  original --> value: {{ include "workflow-management.serviceAccountName" . }}
+              value: {{ include "workflow-management.wesServiceAccountName" . }}
             - name: NEXTFLOW_K8S_NAMESPACE
               value: {{ .Release.Namespace }}
             - name: NEXTFLOW_K8S_RUNNAMESPACE
@@ -71,7 +72,7 @@ spec:
               value: {{ .Values.appConfig.nextflow_weblog_url | quote }}
             {{- range $i, $value := .Values.appConfig.nextflow_k8s_volmounts}}
             - name: NEXTFLOW_K8S_VOLMOUNTS_{{$i}}
-              value: {{ $value | quote }}            
+              value: {{ $value | quote }}
             {{- end }}
             {{- if (contains "apiKey" .Values.appConfig.spring_profiles_active) }}
             - name: SECRET_APIKEY

@@ -16,10 +16,6 @@ service:
   type: ClusterIP
   port: 80
 
-serviceAccount:
-  create: true
-  name: workflow-management
-
 podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true
@@ -69,7 +65,27 @@ appConfig:
 env: {}
 
 
-## When defined, wes jobs will be directed to that namespace, 
-## otherwise they will exist in the same namespace as this service
-wes:
-  namespace: ""
+kubeConfig:
+  app:
+    serviceAccount:
+      create: true
+      name: ""
+    roleBinding:
+      create: true
+      name: ""
+  wes:
+    ## When defined, wes jobs will be directed to this namespace, 
+    ## otherwise they will exist in the namespace {{ .Release.Namespace }}
+    namespace: ""
+    serviceAccount:
+      create: true
+      ## When defined, wes jobs will use this service account,
+      ## otherwise they will use the service account {{ .Values.kubeConfig.app.serviceAccount}}-wes
+      name: ""
+    roleBinding:
+      create: true
+      ## When defined, wes jobs will use this rolebinding
+      ## otherwise they will use the rolebinding {{ .Values.kubeConfig.app.roleBinding.name}}-wes
+      name: ""
+
+
