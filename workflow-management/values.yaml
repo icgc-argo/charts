@@ -79,13 +79,15 @@ kubeConfig:
     namespace: ""
     serviceAccount:
       create: true
-      ## When defined, wes jobs will use this service account,
-      ## otherwise they will use the service account {{ .Values.kubeConfig.app.serviceAccount}}-wes
+      ## When defined, wes jobs will use this service account name.
+      ## If not defined and the wes.namspace is equal to {{ .Release.Namespace }}, will use this service account name (since no collisions).
+      ## If not defined and the wes.namspace is NOT defined, will use the service account name: {{ .Values.kubeConfig.app.serviceAccount.name }}-wes.
       name: ""
     roleBinding:
       create: true
-      ## When defined, wes jobs will use this rolebinding
-      ## otherwise they will use the rolebinding {{ .Values.kubeConfig.app.roleBinding.name}}-wes
+      ## When defined, wes jobs will use this rolebinding name.
+      ## If not defined and the wes.namspace is equal to {{ .Release.Namespace }}, will use this rolebinding name (since no collisions).
+      ## If not defined and the wes.namspace is NOT defined, will use the rolebinding name: {{ .Values.kubeConfig.app.roleBinding.name }}-wes
       name: ""
 
 
