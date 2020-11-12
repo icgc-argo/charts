@@ -46,6 +46,18 @@ spec:
               value: {{ .Values.appConfig.rdpc_gateway | quote }}
             - name: REACT_APP_MANAGEMENT_API
               value: {{ .Values.appConfig.management_api | quote }}
+            - name: REACT_APP_EGO_API_ROOT
+              value: {{ .Values.appConfig.ego_api_root | quote }}
+            - name: REACT_APP_EGO_CLIENT_ID
+              value: {{ .Values.appConfig.ego_client_id | quote }}
+            - name: REACT_APP_EGO_COOKIE_KEY
+              value: {{ .Values.appConfig.ego_cookie_key | quote }}
+            - name: REACT_APP_EGO_JWT_KEY
+              value: {{ .Values.appConfig.ego_jwt_key | quote }}
+            - name: REACT_APP_RDPC_DOMAIN
+              value: {{ .Values.appConfig.rdpc_domain | quote }}
+            - name: REACT_APP_RDPC_REGION
+              value: {{ .Values.appConfig.rdpc_region | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
