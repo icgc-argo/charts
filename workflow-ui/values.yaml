@@ -59,7 +59,6 @@ appConfig:
   management_api: ""
   ego_api_root: ""
   ego_client_id: ""
-  ego_cookie_key: ""
   ego_jwt_key: ""
   rdpc_domain: ""
   rdpc_region: ""
