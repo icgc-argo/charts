@@ -80,6 +80,10 @@ spec:
                   name: {{ .Values.appConfig.secret_apikey_ref.name }}
                   key: {{ .Values.appConfig.secret_apikey_ref.key }}
             {{- end }}
+            {{- if (contains "secure" .Values.appConfig.spring_profiles_active) }}
+            - name: AUTH_JWTPUBLICKEYURL
+              value: {{ .Values.appConfig.AUTH_JWTPUBLICKEYURL }}
+            {{- end }}
           {{- if .Values.env }}
             {{ range $key, $value := .Values.env }}
             - name: {{ $key }}
