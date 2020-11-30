@@ -61,6 +61,9 @@ appConfig:
   nextflow_k8s_trust_certificate: false
   nextflow_weblog_url: ""
   spring_profiles_active: "default"
+  client_id: ""
+  client_secret: ""
+  auth_token_uri: ""
 
 env: {}
 
