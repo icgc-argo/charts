@@ -62,7 +62,6 @@ appConfig:
   nextflow_weblog_url: ""
   spring_profiles_active: "default"
   client_id: ""
-  client_secret: ""
   auth_token_uri: ""
 
 env: {}
