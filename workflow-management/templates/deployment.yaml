@@ -84,6 +84,17 @@ spec:
             - name: AUTH_JWTPUBLICKEYURL
               value: {{ .Values.appConfig.auth_jwtpublickeyurl }}
             {{- end }}
+            {{- if (contains "oauth2Token" .Values.appConfig.spring_profiles_active) }}
+            - name: SECRET_CLIENTID
+              value: {{ .Values.appConfig.client_id}}
+            - name: SECRET_CLIENTSECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "workflow-management.fullname" . }}
+                  key: client-secret
+            - name: SECRET_TOKENURI
+              value: {{ .Values.appConfig.auth_token_uri }}  
+            {{- end }}
           {{- if .Values.env }}
             {{ range $key, $value := .Values.env }}
             - name: {{ $key }}
