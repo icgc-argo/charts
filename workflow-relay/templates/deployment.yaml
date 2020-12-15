@@ -86,14 +86,14 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_NUMBEROFSHARDS | quote }}
             - name: ELASTIC_NUMBEROFREPLICAS
               value: {{ .Values.appConfig.ELASTIC_NUMBEROFREPLICAS | quote }}
-            - name: SPRING_CLOUD_STREAM_BINDINGS_GRAPHLOG_INFODEBUG_INDEX_DESTINATION
-              value: {{ .Values.appConfig.GRAPHLOG_INFODEBUG_TOPIC | quote }}
-            - name: SPRING_CLOUD_STREAM_BINDINGS_GRAPHLOG_ERRORWARNING_INDEX_DESTINATION
-              value: {{ .Values.appConfig.GRAPHLOG_ERRORWARNING_TOPIC | quote }}
-            - name: SPRING_CLOUD_STREAM_KAFKA_BINDINGS_GRAPHLOG_INFODEBUG_INDEX_CONSUMER_DLQNAME
-              value: "{{ .Values.appConfig.GRAPHLOG_INFODEBUG_TOPIC}}_dlq"
-            - name: SPRING_CLOUD_STREAM_KAFKA_BINDINGS_GRAPHLOG_ERRORWARNING_INDEX_CONSUMER_DLQNAME
-              value: "{{ .Values.appConfig.GRAPHLOG_ERRORWARNING_TOPIC}}_dlq"
+            - name: SPRING_CLOUD_STREAM_BINDINGS_GRAPHLOG_INFO_DEBUG_INDEX_DESTINATION
+              value: {{ .Values.appConfig.GRAPHLOG_INFO_DEBUG_TOPIC | quote }}
+            - name: SPRING_CLOUD_STREAM_BINDINGS_GRAPHLOG_ERROR_WARNING_INDEX_DESTINATION
+              value: {{ .Values.appConfig.GRAPHLOG_ERROR_WARNING_TOPIC | quote }}
+            - name: SPRING_CLOUD_STREAM_KAFKA_BINDINGS_GRAPHLOG_INFO_DEBUG_INDEX_CONSUMER_DLQNAME
+              value: "{{ .Values.appConfig.GRAPHLOG_INFO_DEBUG_TOPIC}}_dlq"
+            - name: SPRING_CLOUD_STREAM_KAFKA_BINDINGS_GRAPHLOG_ERROR_WARNING_INDEX_CONSUMER_DLQNAME
+              value: "{{ .Values.appConfig.GRAPHLOG_ERROR_WARNING_TOPIC}}_dlq"
           {{- if .Values.env }}
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
