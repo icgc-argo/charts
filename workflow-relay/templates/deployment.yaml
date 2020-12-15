@@ -78,10 +78,22 @@ spec:
               value: {{ .Values.appConfig.ELASTIC_WORKFLOWINDEX | quote }}
             - name: ELASTIC_TASKINDEX
               value: {{ .Values.appConfig.ELASTIC_TASKINDEX | quote }}
+            - name: ELASTIC_GRAPHLOGINFODEBUGINDEX
+              value: {{ .Values.appConfig.ELASTIC_GRAPHLOGINFODEBUGINDEX | quote }}
+            - name: ELASTIC_GRAPHLOGERRORWARNINGINDEX
+              value: {{ .Values.appConfig.ELASTIC_GRAPHLOGERRORWARNINGINDEX | quote }}
             - name: ELASTIC_NUMBEROFSHARDS
               value: {{ .Values.appConfig.ELASTIC_NUMBEROFSHARDS | quote }}
             - name: ELASTIC_NUMBEROFREPLICAS
               value: {{ .Values.appConfig.ELASTIC_NUMBEROFREPLICAS | quote }}
+            - name: SPRING_CLOUD_STREAM_BINDINGS_GRAPHLOG_INFODEBUG_INDEX_DESTINATION
+              value: {{ .Values.appConfig.GRAPHLOG_INFODEBUG_TOPIC | quote }}
+            - name: SPRING_CLOUD_STREAM_BINDINGS_GRAPHLOG_ERRORWARNING_INDEX_DESTINATION
+              value: {{ .Values.appConfig.GRAPHLOG_ERRORWARNING_TOPIC | quote }}
+            - name: SPRING_CLOUD_STREAM_KAFKA_BINDINGS_GRAPHLOG_INFODEBUG_INDEX_CONSUMER_DLQNAME
+              value: "{{ .Values.appConfig.GRAPHLOG_INFODEBUG_TOPIC}}_dlq"
+            - name: SPRING_CLOUD_STREAM_KAFKA_BINDINGS_GRAPHLOG_ERRORWARNING_INDEX_CONSUMER_DLQNAME
+              value: "{{ .Values.appConfig.GRAPHLOG_ERRORWARNING_TOPIC}}_dlq"
           {{- if .Values.env }}
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
