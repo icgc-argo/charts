@@ -1,9 +1,0 @@
-dependencies:
-- name: vault
-  repository: http://storage.googleapis.com/kubernetes-charts-incubator
-  version: 0.23.4
-- name: consul
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 3.9.4
-digest: sha256:a842bef4cc6059abae84e2f7026abeb9eb0d43a102af1b3664efeb0c4196415e
-generated: "2020-01-07T14:44:48.043629006-05:00"
