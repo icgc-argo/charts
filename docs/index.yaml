@@ -486,6 +486,22 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/clinical-mongo-backup-0.1.0.tgz
     version: 0.1.0
+  consul:
+  - apiVersion: v1
+    appVersion: 1.8.5
+    created: "2020-12-16T10:19:00.985991-05:00"
+    description: Official HashiCorp Consul Chart
+    digest: 14a576ea2435cf784f55d4f62c904165f0eddaa0aff42d26d4aa980390d9e248
+    home: https://www.consul.io
+    icon: https://raw.githubusercontent.com/hashicorp/consul-helm/master/assets/icon.png
+    name: consul
+    sources:
+    - https://github.com/hashicorp/consul
+    - https://github.com/hashicorp/consul-helm
+    - https://github.com/hashicorp/consul-k8s
+    urls:
+    - https://icgc-argo.github.io/charts/charts/consul-0.26.0.tgz
+    version: 0.26.0
   consul-backup:
   - apiVersion: v2
     appVersion: 1.17.0
@@ -1374,6 +1390,30 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/stateless-svc-0.1.0.tgz
     version: 0.1.0
+  vault:
+  - apiVersion: v2
+    appVersion: 1.5.4
+    created: "2020-12-16T10:19:00.988486-05:00"
+    description: Official HashiCorp Vault Chart
+    digest: 9b081cb301c4d47b05ef19e3fbf35aab45b797e4bfd55baa74a74cd3a122d51a
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    urls:
+    - https://icgc-argo.github.io/charts/charts/vault-0.8.0.tgz
+    version: 0.8.0
   workflow-docs:
   - apiVersion: v1
     appVersion: "1.0"
@@ -1641,4 +1681,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-12-15T15:38:33.4107907-05:00"
+generated: "2020-12-16T10:19:00.979154-05:00"
