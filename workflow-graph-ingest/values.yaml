@@ -68,8 +68,8 @@ affinity: {}
 
 appConfig:
   port: 8082
-  rabbitHost: wfg-rabbit-rabbitmq-headless.rdpc-collab-qa
-  kafkaBrokers: kafka-headless.rdpc-collab-qa:9092
+  rabbitHost: # fill me in!
+  kafkaBrokers: # fill me in!
 
 extraEnv:
   SPRING_CLOUD_STREAM_BINDINGS_INBOUND_DESTINATION: wfg-test
@@ -80,10 +80,10 @@ extraEnvYaml:
   - name: SPRING_RABBITMQ_USERNAME
     valueFrom:
       secretKeyRef:
-        name: wfg-rabbit-rabbitmq-admin
+        name: # fill me in!
         key: username
   - name: SPRING_RABBITMQ_PASSWORD
     valueFrom:
         secretKeyRef:
-          name: wfg-rabbit-rabbitmq-admin
+          name: # fill me in!
           key: password
