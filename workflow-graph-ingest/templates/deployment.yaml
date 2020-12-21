@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "workflow-graph-ingest.fullname" . }}
+  labels:
+    app: workflow-graph-ingest
+    {{- include "workflow-graph-ingest.labels" . | nindent 4 }}
+spec:
+{{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      {{- include "workflow-graph-ingest.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        app: workflow-graph-ingest
+        {{- include "workflow-graph-ingest.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "workflow-graph-ingest.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: SERVER_PORT
+            value: {{ .Values.appConfig.port | quote }}
+          - name: SPRING_RABBITMQ_HOST
+            value: {{ .Values.appConfig.rabbitHost }}
+          - name: SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS
+            value: {{ .Values.appConfig.kafkaBrokers }}
+{{- if .Values.extraEnv }}        
+  {{ range $key, $value := .Values.extraEnv }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+        {{- with .Values.extraEnvYaml }}
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.appConfig.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.appConfig.port }}
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+            periodSeconds: 8
+            failureThreshold: 1
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.appConfig.port }}
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 3
+            failureThreshold: 2
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
