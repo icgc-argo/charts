@@ -1,0 +1,106 @@
+# Default values for workflow-graph-node.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: ghcr.io/icgc-argo/workflow-graph-node
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart version.
+  tag: "0.3.0"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+appConfig: 
+  port: 8080
+  managementPort: 8081
+  rdpcUrl: # fill me in!
+  rabbitHost: # fill me in!
+  configMapName: # fill me in!
+  configMapFilename: # fill me in!
+
+extraEnv: {}
+  #SPRING_PROFILES_ACTIVE: registry,oauth
+  #RABBIT_SCHEMA_REGISTRYURL: # fill me in!
+  #OAUTH_CLIENTCREDENTIALS_CLIENTID: # fill me in!
+  #OAUTH_CLIENTCREDENTIALS_TOKENURI: # fill me in!
+  #OAUTH_CLIENTCREDENTIALS_PUBLICKEYURI: # fill me in!
+  #LOG4J2_KAFKA_BROKERS: kafka-headless.rdpc-collab-qa:9092
+
+
+extraEnvYaml: {}
+  # - name: RABBIT_ENDPOINTS_STANDALONE_USERNAME
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: # fill me in!
+  #       key: username
+  # - name: RABBIT_ENDPOINTS_STANDALONE_PASSWORD
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: # fill me in!
+  #       key: password
+  # - name: OAUTH_CLIENTCREDENTIALS_CLIENTSECRET
+  #   valueFrom: 
+  #     secretKeyRef:
+  #       name: # fill me in!
+  #       key: secret
