@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ghcr.io/icgc-argo/workflow-graph-manager
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  # Overrides the image tag whose default is the chart version.
+  tag: "0.1.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -25,8 +25,10 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext:
+  runAsGroup: 9999
+  runAsNonRoot: true
+  runAsUser: 9999
 
 securityContext: {}
   # capabilities:
@@ -77,3 +79,24 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+appConfig:
+  profilesActive: secure
+  server:
+    port: 8080
+  elastic:
+    host: localhost
+    port: 9200
+    useHttps: false
+    useAuthentication: false
+    username: elastic
+    secret: 
+      name: elastic-user
+      key: elastic
+    graphLogInfoDebugIndex: graphlog_info_debug
+    graphLogErrorWarningIndex: graphlog_error_warning
+  auth:
+    jwtPublicKeyUrl: "http://localhost:8081/oauth/token/public_key"
+    jwtPublicKeyStr: "-----BEGIN PUBLIC KEY-----\nSET ME IF YOU DONT HAVE A URL, BUT URL TAKES PRIORITY\n-----END PUBLIC KEY-----"
+
+env: {}

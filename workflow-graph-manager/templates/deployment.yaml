@@ -35,18 +35,64 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.appConfig.server.port }}
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /actuator/health
+              port: {{ .Values.appConfig.server.port }}
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 8
+            failureThreshold: 1
           readinessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /actuator/health
+              port: {{ .Values.appConfig.server.port }}
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 3
+            failureThreshold: 2
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: SERVER_PORT
+              value: {{ .Values.appConfig.server.port | quote }}
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.appConfig.profilesActive | quote }}
+            - name: ELASTIC_HOST
+              value: {{ .Values.appConfig.elastic.host | quote }}
+            - name: ELASTIC_PORT
+              value: {{ .Values.appConfig.elastic.port | quote }}
+            - name: ELASTIC_USEHTTPS
+              value: {{ .Values.appConfig.elastic.useHttps | quote }}
+            - name: ELASTIC_USEAUTHENTICATION
+              value: {{ .Values.appConfig.elastic.useAuthentication | quote }}
+            {{- if .Values.appConfig.elastic.useAuthentication }}
+            - name: ELASTIC_USERNAME
+              value: {{ .Values.appConfig.elastic.username | quote }}
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.appConfig.elastic.secret.name }}
+                  key: {{ .Values.appConfig.elastic.secret.key }}
+            {{- end }}
+            - name: ELASTIC_GRAPHLOGINFODEBUGINDEX
+              value: {{ .Values.appConfig.elastic.graphLogInfoDebugIndex | quote }}
+            - name: ELASTIC_GRAPHLOGERRORWARNINGINDEX
+              value: {{ .Values.appConfig.elastic.graphLogErrorWarningIndex | quote }}
+            - name: AUTH_JWTPUBLICKEYURL
+              value: {{ .Values.appConfig.auth.jwtPublicKeyUrl | quote }}
+            {{- if not .Values.appConfig.auth.jwtPublicKeyUrl }}
+            - name: AUTH_JWTPUBLICKEYSTR
+              value: {{ .Values.appConfig.auth.jwtPublicKeyStr | quote }}
+            {{- end }}
+          {{- if .Values.env }}
+            {{- range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
