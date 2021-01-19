@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/clinical
+  repository: ghcr.io/icgc-argo/clinical
   tag: latest
   pullPolicy: Always
 
