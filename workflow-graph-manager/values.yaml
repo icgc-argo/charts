@@ -6,9 +6,8 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/icgc-argo/workflow-graph-manager
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart version.
-  tag: "0.1.0"
+  tag: latest
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
