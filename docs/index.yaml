@@ -745,6 +745,16 @@ entries:
   kafka-connect:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2021-01-21T15:32:24.824821-05:00"
+    description: Backup kafka topics
+    digest: ce8d8134c49665796c193440ef1d2b0a8f68281b468572ceda7192b4b589d390
+    name: kafka-connect
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/kafka-connect-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2021-01-20T12:25:43.927142311-05:00"
     description: Backup kafka topics
     digest: 94c5086741d1f0feb8b36e12d11812ddbf47db787bf5dc69fa2374dfc4ac191f
@@ -1701,4 +1711,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-20T12:25:43.843939604-05:00"
+generated: "2021-01-21T15:32:24.824113-05:00"
