@@ -1225,6 +1225,16 @@ entries:
     version: 0.1.0
   psql-backup:
   - apiVersion: v2
+    appVersion: 0.1.4
+    created: "2021-02-01T13:55:34.32369-05:00"
+    description: A Helm chart for Kubernetes
+    digest: f560b419030bb9007045e6b0a0c13bec6a2cf0c7341c697e9a584769a635f9f7
+    name: psql-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/psql-backup-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 0.1.3
     created: "2021-01-27T13:06:22.43599906-05:00"
     description: A Helm chart for Kubernetes
