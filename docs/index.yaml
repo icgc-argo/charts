@@ -834,6 +834,15 @@ entries:
   kube-webhook:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-02-08T14:00:36.611155-05:00"
+    description: A Helm chart for kube-webhook
+    digest: a4b27dbf1807e67b1254a4a15aad5a9e452467641c93835425870c731b0db693
+    name: kube-webhook
+    urls:
+    - https://icgc-argo.github.io/charts/charts/kube-webhook-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-01-27T13:06:22.397668459-05:00"
     description: A Helm chart for kube-webhook
     digest: db897ca6f3abf16839aae815ea19c497eaf2057109c1daf912c3e4ef06552826
@@ -1751,4 +1760,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-01T14:46:07.475156-05:00"
+generated: "2021-02-08T14:00:36.610034-05:00"
