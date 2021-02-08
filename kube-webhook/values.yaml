@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/rdpc-kube-mutating-webhook
+  repository: ghcr.io/icgc-argo/rdpc-kube-mutating-webhook
   tag: latest
   pullPolicy: Always
 
