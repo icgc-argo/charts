@@ -78,7 +78,7 @@ appConfig:
   configMapName: # fill me in!
   configMapFilename: # fill me in!
 
-kubeConfig:
+wfgConfig:
   pipelineId: # fill me in!
   nodeId: # fill me in!
 
