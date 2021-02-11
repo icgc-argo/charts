@@ -57,7 +57,6 @@ ingress:
 
 resources: {}
 
-
 autoscaling:
   enabled: false
   minReplicas: 1
@@ -79,6 +78,10 @@ appConfig:
   configMapName: # fill me in!
   configMapFilename: # fill me in!
 
+kubeConfig:
+  pipelineId: # fill me in!
+  nodeId: # fill me in!
+
 extraEnv: {}
   #SPRING_PROFILES_ACTIVE: registry,oauth
   #RABBIT_SCHEMA_REGISTRYURL: # fill me in!
@@ -86,7 +89,6 @@ extraEnv: {}
   #OAUTH_CLIENTCREDENTIALS_TOKENURI: # fill me in!
   #OAUTH_CLIENTCREDENTIALS_PUBLICKEYURI: # fill me in!
   #LOG4J2_KAFKA_BROKERS: kafka-headless.rdpc-collab-qa:9092
-
 
 extraEnvYaml: {}
   # - name: RABBIT_ENDPOINTS_STANDALONE_USERNAME
