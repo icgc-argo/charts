@@ -37,6 +37,7 @@ Common labels
 {{- define "workflow-graph-node.labels" -}}
 helm.sh/chart: {{ include "workflow-graph-node.chart" . }}
 {{ include "workflow-graph-node.selectorLabels" . }}
+{{ include "workflow-graph-node.workflowGraphLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -49,16 +50,16 @@ Selector labels
 {{- define "workflow-graph-node.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "workflow-graph-node.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
-{{ include "workflow-graph-node.workflowGraphLabels" . }}
 {{- end }}
 
 {{/*
-Workflow Graph Labels (added to selector labels)
+Workflow Graph Labels
 */}}
 {{- define "workflow-graph-node.workflowGraphLabels" -}}
-common.k8s.org.icgc.argo/type: workflow-graph-node
-workflow-graph-node.k8s.org.icgc.argo/pipeline-id: {{ .Values.kubeConfig.pipelineId }}
-workflow-graph-node.k8s.org.icgc.argo/node-id: {{ .Values.kubeConfig.nodeId }}
+common.org.icgc.argo/type: workflow-graph
+workflow-graph.org.icgc.argo/app: workflow-graph-node
+workflow-graph.org.icgc.argo/pipeline-id: {{ .Values.kubeConfig.pipelineId }}
+workflow-graph.org.icgc.argo/node-id: {{ .Values.kubeConfig.nodeId }}
 {{- end }}
 
 {{/*
