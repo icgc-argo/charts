@@ -71,6 +71,10 @@ appConfig:
   rabbitHost: # fill me in!
   kafkaBrokers: # fill me in!
 
+wfgConfig:
+  pipelineId: # fill me in!
+  nodeId: # fill me in!
+
 extraEnv:
   SPRING_CLOUD_STREAM_BINDINGS_INBOUND_DESTINATION: wfg-test
   SPRING_CLOUD_STREAM_KAFKA_BINDINGS_INBOUND_CONSUMER_ENABLEDLQ: true

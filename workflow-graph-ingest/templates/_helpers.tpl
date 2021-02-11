@@ -58,8 +58,8 @@ Workflow Graph Labels
 {{- define "workflow-graph-node.workflowGraphLabels" -}}
 common.org.icgc.argo/type: workflow-graph
 workflow-graph.org.icgc.argo/app: workflow-graph-ingest-node
-workflow-graph.org.icgc.argo/pipeline-id: {{ .Values.kubeConfig.pipelineId }}
-workflow-graph.org.icgc.argo/node-id: {{ .Values.kubeConfig.nodeId }}
+workflow-graph.org.icgc.argo/pipeline-id: {{ .Values.wfgConfig.pipelineId }}
+workflow-graph.org.icgc.argo/node-id: {{ .Values.wfgConfig.nodeId }}
 {{- end }}
 
 {{/*
