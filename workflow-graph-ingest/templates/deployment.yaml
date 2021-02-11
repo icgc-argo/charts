@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: {{ include "workflow-graph-ingest.fullname" . }}
   labels:
-    app: workflow-graph-ingest
     {{- include "workflow-graph-ingest.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
@@ -19,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        app: workflow-graph-ingest
+        {{- include "workflow-graph-node.workflowGraphLabels" . | nindent 8 }}
         {{- include "workflow-graph-ingest.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
