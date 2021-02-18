@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/platform-ui
+  repository: ghcr.io/icgc-argo/platform-ui
   tag: 6df0541
   pullPolicy: IfNotPresent
 
