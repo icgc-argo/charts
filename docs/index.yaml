@@ -932,6 +932,15 @@ entries:
   platform-ui:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-02-18T14:50:27.200125-05:00"
+    description: A Helm chart for Kubernetes
+    digest: b66277924f26789592b48f9f0939544011474d8b282163e6ce4fcf72237496c2
+    name: platform-ui
+    urls:
+    - https://icgc-argo.github.io/charts/platform-ui-1.0.19.tgz
+    version: 1.0.19
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-02-12T11:53:14.3648908-05:00"
     description: A Helm chart for Kubernetes
     digest: 118c7eafeef4161765ba5f2cb564106c86180e557420baaad11b77b712bf2aa8
@@ -1790,4 +1799,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-12T11:53:13.9688784-05:00"
+generated: "2021-02-18T14:50:27.19944-05:00"
