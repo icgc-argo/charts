@@ -2,8 +2,8 @@ dependencies:
   - name: vault
     alias: vaultchart
     repository: https://helm.releases.hashicorp.com
-    version: 0.8.0
+    version: 0.9.1
   - name: consul
     alias: consulchart
     repository: https://helm.releases.hashicorp.com
-    version: 0.26.0
+    version: 0.30.0
