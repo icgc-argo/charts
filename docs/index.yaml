@@ -525,6 +525,16 @@ entries:
     version: 0.1.0
   consul-backup:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-03-02T16:49:12.02042-05:00"
+    description: Backup etcd cluster
+    digest: 904b24d651b5a9ef5bdb2b85133a8f436bccc127e6b3d447ddad7243c2416f15
+    name: consul-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/consul-backup-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 1.17.0
     created: "2021-02-12T11:53:14.1818783-05:00"
     description: Backup etcd cluster
@@ -1839,4 +1849,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-03-02T16:32:52.269565-05:00"
+generated: "2021-03-02T16:49:12.019252-05:00"
