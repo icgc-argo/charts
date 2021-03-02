@@ -753,6 +753,16 @@ entries:
     - https://icgc-argo.github.io/charts/jenkins-backup-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-03-02T16:32:52.270092-05:00"
+    description: Backup jenkins data
+    digest: ec8a59b8f7d4d4d25458e474b5cf793d8bd599cbb63ed3f423a27e6a554e26ab
+    name: jenkins-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/jenkins-backup-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.1.1
     created: "2021-02-12T11:53:14.2568781-05:00"
     description: Backup jenkins data
@@ -1829,4 +1839,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-23T09:06:49.667742-05:00"
+generated: "2021-03-02T16:32:52.269565-05:00"
