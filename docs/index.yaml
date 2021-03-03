@@ -771,16 +771,6 @@ entries:
     version: 0.1.0
   jenkins-backup:
   - apiVersion: v2
-    appVersion: 0.1.1
-    created: "2021-02-22T16:06:28.915046-05:00"
-    description: Backup jenkins data
-    digest: fc66c257582253d4ae0e8d283954e4cda4191be9be05440824f16408a2322af5
-    name: jenkins-backup
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/jenkins-backup-1.0.0.tgz
-    version: 1.0.0
-  - apiVersion: v2
     appVersion: 1.0.0
     created: "2021-03-02T16:32:52.270092-05:00"
     description: Backup jenkins data
