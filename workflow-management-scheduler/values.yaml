@@ -86,4 +86,6 @@ appConfig:
   gatekeeperUrl: # fill me in!
   rabbitHost: # fill me in!
 
-env: {}
+extraEnv: {}
+
+extraEnvYaml: {}
