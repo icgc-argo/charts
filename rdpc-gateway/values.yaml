@@ -69,5 +69,5 @@ appConfig:
   port: 4000
 
 extraEnv:
-  WORKFLOW_SEARCH_URL: http://search/graphql
-  SONG_SEARCH_URL: http://song-search/graphql
+  WORKFLOW_API_URL: http://search
+  SONG_SEARCH_URL: http://song-search
