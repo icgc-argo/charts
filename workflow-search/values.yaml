@@ -64,5 +64,9 @@ appConfig:
   ELASTIC_TASKINDEX: ""
   SPRING_PROFILES_ACTIVE: ""
   AUTH_JWTPUBLICKEYURL: ""
+  RABBIT_HOST:
+
 
 env: {}
+
+envYaml: {}

@@ -63,9 +63,13 @@ appConfig:
   spring_profiles_active: "default"
   client_id: ""
   auth_token_uri: ""
+  rabbitHost: ""
+  kafkaBrokers: ""
+  gatekeeperDbUrl: ""
 
 env: {}
 
+envYaml: {}
 
 kubeConfig:
   app:

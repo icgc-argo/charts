@@ -95,11 +95,22 @@ spec:
             - name: SECRET_TOKENURI
               value: {{ .Values.appConfig.auth_token_uri }}  
             {{- end }}
+            - name: RABBIT_ENDPOINTS_STANDALONE_HOST
+              value: {{ .Values.appConfig.rabbitHost }}
+            {{- if (contains "gatekeeper" .Values.appConfig.spring_profiles_active) }}
+            - name: SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS
+              value: {{ .Values.appConfig.kafkaBrokers }}
+            - name: SPRING_DATASOURCE_URL
+              value: {{ .Values.appConfig.gatekeeperDbUrl }}
+            {{- end }}
           {{- if .Values.env }}
             {{ range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
+          {{- end }}
+          {{- with .Values.envYaml }}
+            {{- toYaml . | nindent 10 }}
           {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
