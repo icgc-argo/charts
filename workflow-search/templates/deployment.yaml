@@ -87,7 +87,7 @@ spec:
             {{- end }}
           {{- end }}
           {{- with .Values.envYaml }}
-            {{- toYaml . | nindent 10 }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
