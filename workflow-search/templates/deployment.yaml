@@ -78,11 +78,16 @@ spec:
               value: {{ .Values.appConfig.SPRING_PROFILES_ACTIVE | quote }}
             - name: AUTH_JWTPUBLICKEYURL
               value: {{ .Values.appConfig.AUTH_JWTPUBLICKEYURL | quote }}
+            - name: RABBIT_ENDPOINTS_STANDALONE_HOST
+              value: {{ .Values.appConfig.RABBIT_HOST }}
           {{- if .Values.env }}
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
+          {{- end }}
+          {{- with .Values.envYaml }}
+            {{- toYaml . | nindent 10 }}
           {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
