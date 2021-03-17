@@ -56,10 +56,14 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: SERVER_PORT
-              value: {{ .Values.appConfig.server.port | quote }}
             - name: SPRING_PROFILES_ACTIVE
               value: {{ .Values.appConfig.profilesActive | quote }}
+            - name: SERVER_PORT
+              value: {{ .Values.appConfig.server.port | quote }}
+            - name: RDPC_GRAPHK8SNAMESPACE
+              value: {{ .Values.appConfig.rdpc.graphK8sNamespace | quote }}
+            - name: SONAR_SHALLOWUPDATEINTERVALSECONDS
+              value: {{ .Values.appConfig.sonar.shallowUpdateIntervalSeconds | quote }}
             - name: ELASTIC_HOST
               value: {{ .Values.appConfig.elastic.host | quote }}
             - name: ELASTIC_PORT
