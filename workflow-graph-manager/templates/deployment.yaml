@@ -60,10 +60,14 @@ spec:
               value: {{ .Values.appConfig.profilesActive | quote }}
             - name: SERVER_PORT
               value: {{ .Values.appConfig.server.port | quote }}
-            - name: RDPC_GRAPHK8SNAMESPACE
-              value: {{ .Values.appConfig.rdpc.graphK8sNamespace | quote }}
             - name: SONAR_SHALLOWUPDATEINTERVALSECONDS
               value: {{ .Values.appConfig.sonar.shallowUpdateIntervalSeconds | quote }}
+            - name: KUBERNETES_MASTER
+              value: {{ .Values.appConfig.kubernetes.master | quote }}
+            - name: KUBERNETES_TRUST_CERTIFICATES
+              value: {{ .Values.appConfig.kubernetes.trust.certificates | quote }}
+            - name: KUBERNETES_NAMESPACE
+              value: {{ .Values.appConfig.kubernetes.namespace | quote }}
             - name: ELASTIC_HOST
               value: {{ .Values.appConfig.elastic.host | quote }}
             - name: ELASTIC_PORT
