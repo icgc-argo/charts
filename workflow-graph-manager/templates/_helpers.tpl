@@ -60,3 +60,15 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create the name of the rolebinding to use
+*/}}
+{{- define "workflow-graph-manager.roleBindingName" -}}
+{{- if .Values.rbac.create -}}
+    {{ default (include "workflow-graph-manager.fullname" .) .Values.rbac.name }}
+{{- else -}}
+    {{ default "default" .Values.rbac.name }}
+{{- end -}}
+{{- end -}}
+
