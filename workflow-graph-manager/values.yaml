@@ -83,6 +83,10 @@ appConfig:
   profilesActive: secure
   server:
     port: 8080
+  rdpc:
+    graphK8sNamespace: default
+  sonar:
+    shallowUpdateIntervalSeconds: 10
   elastic:
     host: localhost
     port: 9200
