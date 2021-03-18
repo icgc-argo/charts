@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "workflow-search.fullname" . }}
+  name: {{ include "workflow-api.fullname" . }}
   labels:
-{{ include "workflow-search.labels" . | indent 4 }}
+{{ include "workflow-api.labels" . | indent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "workflow-search.name" . }}
+      app.kubernetes.io/name: {{ include "workflow-api.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "workflow-search.name" . }}
+        app.kubernetes.io/name: {{ include "workflow-api.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
     {{- with .Values.imagePullSecrets }}

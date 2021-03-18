@@ -1,11 +1,11 @@
-# Default values for workflow-search.
+# Default values for workflow-api.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: ghcr.io/icgc-argo/workflow-search
+  repository: ghcr.io/icgc-argo/workflow-api
   tag: latest
   pullPolicy: Always
 
