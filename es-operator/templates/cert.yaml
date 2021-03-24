@@ -4,6 +4,7 @@ metadata:
   name: {{ include "es-operator.fullname" . }}
 spec:
   isCA: true
+  commonName: {{ include "es-operator.fullname" . }}-http
   dnsNames:
   - {{ include "es-operator.fullname" . }}-http
   - {{ include "es-operator.fullname" . }}-http.default.svc
