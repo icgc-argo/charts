@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/program-service
-  tag: 4b78e9b
+  repository: ghcr.io/icgc-argo/program-service
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
