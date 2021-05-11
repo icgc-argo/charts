@@ -45,7 +45,7 @@ spec:
             - name: PORT
               value: {{ .Values.appConfig.PORT | quote }}
             - name: WF_API_HOST
-              value: {{ .Values.appConfig.WF_SEARCH_HOST | quote }}
+              value: {{ .Values.appConfig.WF_API_HOST | quote }}
             - name: WF_UI_HOST
               value: {{ .Values.appConfig.WF_UI_HOST | quote }}
       {{- with .Values.nodeSelector }}
