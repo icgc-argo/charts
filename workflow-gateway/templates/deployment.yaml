@@ -44,14 +44,10 @@ spec:
           env:
             - name: PORT
               value: {{ .Values.appConfig.PORT | quote }}
-            - name: WF_MANAGEMENT_HOST
-              value: {{ .Values.appConfig.WF_MANAGEMENT_HOST | quote }}
-            - name: WF_SEARCH_HOST
+            - name: WF_API_HOST
               value: {{ .Values.appConfig.WF_SEARCH_HOST | quote }}
             - name: WF_UI_HOST
               value: {{ .Values.appConfig.WF_UI_HOST | quote }}
-            - name: WF_DOCS_HOST
-              value: {{ .Values.appConfig.WF_DOCS_HOST | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
