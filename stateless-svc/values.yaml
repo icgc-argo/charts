@@ -54,6 +54,9 @@ service:
   type: ClusterIP
   port: 80
 
+container:
+  port: 3000
+
 ingress:
   enabled: false
   annotations: {}
@@ -88,5 +91,15 @@ affinity: {}
 customLabels: {}
 
 probes:
-  livenessProbePath: /
-  readinessProbe: /
+  liveness:
+    path: /
+    initialDelaySeconds: 30
+    timeoutSeconds: 2
+    periodSeconds: 8
+    failureThreshold: 1
+  readiness:
+    path: /
+    initialDelaySeconds: 60
+    timeoutSeconds: 2
+    periodSeconds: 3
+    failureThreshold: 2
