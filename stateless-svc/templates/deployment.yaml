@@ -41,16 +41,24 @@ spec:
 {{- end }}
           ports:
             - name: http
-              containerPort: 3000
+              containerPort: {{ .Values.container.port }}
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: {{ .Values.probes.livenessProbePath }}
-              port: http
+              path: {{ .Values.probes.liveness.path }}
+              port: {{ .Values.container.port }}
+            initialDelaySeconds: {{ .Values.probes.liveness.initialDelaySeconds }}
+            timeoutSeconds: {{ .Values.probes.liveness.timeoutSeconds }}
+            periodSeconds: {{ .Values.probes.liveness.periodSeconds }}
+            failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
           readinessProbe:
             httpGet:
-              path: {{ .Values.probes.readinessProbe }}
-              port: http
+              path: {{ .Values.probes.readiness.path }}
+              port: {{ .Values.container.port }}
+            initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
+            timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
+            periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
+            failureThreshold: {{ .Values.probes.readiness.failureThreshold }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
