@@ -5,9 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/kship
+  repository: ghcr.io/icgc-argo/kship
   pullPolicy: IfNotPresent
-  tag: 0.1.0
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""

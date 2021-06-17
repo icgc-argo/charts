@@ -882,6 +882,15 @@ entries:
     version: 0.1.0
   kship:
   - apiVersion: v2
+    created: "2021-06-08T12:11:22.039014-04:00"
+    description: A Helm chart for Kubernetes
+    digest: dc13323ca50eda623cc6cc894f0b400d1a1de1ddae1f5e07d2099b4272516a93
+    name: kship
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/kship-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     created: "2021-05-31T10:41:18.615723615-04:00"
     description: A Helm chart for Kubernetes
     digest: 763e81bfcbf8270b79278aee38afcc12b756700904e2c0bfc67b8a9b3b62a356
@@ -1976,4 +1985,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-31T10:41:18.523845154-04:00"
+generated: "2021-06-08T12:11:22.037384-04:00"
