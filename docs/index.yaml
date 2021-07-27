@@ -572,6 +572,17 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/consul-backup-0.1.0.tgz
     version: 0.1.0
+  dac-mongo-backup:
+  - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2021-07-27T12:44:33.283974-04:00"
+    description: Backup dac-mongo cluster
+    digest: 97ca4342f4398bd1d412b652d58e037c62d12409d531b40e7247e99a37bbce96
+    name: dac-mongo-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/dac-mongo-backup-0.2.1.tgz
+    version: 0.2.1
   daco2ego:
   - apiVersion: v1
     appVersion: "1.0"
@@ -1985,4 +1996,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-06-08T12:11:22.037384-04:00"
+generated: "2021-07-27T12:44:33.280888-04:00"
