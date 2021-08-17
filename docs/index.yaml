@@ -1492,6 +1492,17 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/rdpc-gateway-0.1.0.tgz
     version: 0.1.0
+  s3-files-backup:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-08-17T13:45:19.81157-04:00"
+    description: Backup dac user files
+    digest: dbfe379d86fbcfcfb6b3e34079c2691a1757eea9082389f34757a9043a304546
+    name: s3-files-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/s3-files-backup-0.1.0.tgz
+    version: 0.1.0
   song-search:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -1996,4 +2007,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2021-07-27T12:44:33.280888-04:00"
+generated: "2021-08-17T13:45:19.808487-04:00"
