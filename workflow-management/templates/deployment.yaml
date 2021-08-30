@@ -57,6 +57,10 @@ spec:
               value: {{ .Values.appConfig.port | quote }}
             - name: NEXTFLOW_K8S_RUNASUSER
               value: {{ .Values.appConfig.nextflow_k8s_runAsUser | quote }}
+            - name: NEXTFLOW_K8S_IMAGEPULLPOLICY
+              value: {{ .Values.appConfig.nextflow_k8s_imagePullPolicy | quote }}
+            - name: NEXTFLOW_K8S_PLUGINSDIR
+              value: {{ .Values.appConfig.nextflow_k8s_pluginsDir | quote }}
             - name: NEXTFLOW_K8S_SERVICEACCOUNT
               value: {{ include "workflow-management.wesServiceAccountName" . }}
             - name: NEXTFLOW_K8S_NAMESPACE
