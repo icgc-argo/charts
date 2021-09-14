@@ -62,3 +62,4 @@ appConfig:
   ego_jwt_key: ""
   rdpc_domain: ""
   rdpc_region: ""
+  enable_gql_playground: ""
