@@ -56,6 +56,8 @@ spec:
               value: {{ .Values.appConfig.rdpc_domain | quote }}
             - name: REACT_APP_RDPC_REGION
               value: {{ .Values.appConfig.rdpc_region | quote }}
+            - name: REACT_APP_ENABLE_GQL_PLAYGROUND
+              value: {{ .Values.appConfig.enable_gql_playground | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
