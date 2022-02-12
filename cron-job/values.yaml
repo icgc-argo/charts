@@ -1,0 +1,22 @@
+schedule: '"0 0 * * *"'
+restartPolicy: Never
+
+image:
+  repository: ghcr.io/supercluster-covid-data-portal/etl
+  tag: 1.0.0
+  pullPolicy: IfNotPresent
+
+service:
+  internalPort: 8080
+
+extraEnv:
+  {}
+  # PROCESS_VAR: abc
+extraEnvYaml: []
+# - name: ELASTIC_USER
+#   valueFrom:
+#     secretKeyRef:
+#       name: secret-name
+#       key: secret-key
+
+customLabels: {}

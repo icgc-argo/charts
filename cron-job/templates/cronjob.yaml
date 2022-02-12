@@ -1,0 +1,38 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+
+metadata:
+  name: {{ include "cron-job.fullname" . }}
+  labels:
+    {{- include "cron-job.labels" . | nindent 4 }}
+    {{- include "cron-job.customLabels" . | nindent 4 }}
+
+spec:
+  schedule: {{ .Values.schedule }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            {{- include "cron-job.labels" . | nindent 12 }}
+            {{- include "cron-job.customLabels" . | nindent 12 }}
+        spec:
+          containers:
+          - name: {{ .Chart.Name }}
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }} 
+            securityContext:
+              runAsUser: 1000
+            env: 
+{{- if .Values.extraEnv }} 
+  {{- range $key, $value := .Values.extraEnv }}
+              - name: {{ $key }}
+                value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+{{- with .Values.extraEnvYaml }}
+              {{- toYaml . | nindent 14 }}
+{{- end }}
+          restartPolicy: {{ .Values.restartPolicy }}
+          imagePullSecrets:
+            - name: artifactory 
