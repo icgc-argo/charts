@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "pensato.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "pensato.name" . }}
+    helm.sh/chart: {{ include "pensato.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  ports:
+    - port: 2222
+      targetPort: sftp
+      name: sftp
+  selector:
+    app.kubernetes.io/name: {{ include "pensato.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
