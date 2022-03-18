@@ -21,8 +21,8 @@ tolerations: []
 affinity: {}
 
 ego:
-  clientId: pensatoclient
-  clientSecret: pensatosecret
+  clientId: ""
+  clientSecret: ""
   introspectionUri: ""
   userInfoUri: ""
   scopes: PENSATO.WRITE
