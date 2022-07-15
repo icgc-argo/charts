@@ -19,7 +19,7 @@ spec:
         app.kubernetes.io/name: {{ include "daco2ego.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
-      serviceAccountName: {{ template "daco2ego.fullname" . }} 
+      serviceAccountName: {{ template "daco2ego.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -29,7 +29,7 @@ spec:
             - name: config-volume
               mountPath: {{ .Values.volume.mountPath }}
           env:
-            - name: SERVER_PORT 
+            - name: SERVER_PORT
               value: "8081"
 {{- if .Values.extraEnv }}
   {{ range $key, $value := .Values.extraEnv }}

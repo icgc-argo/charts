@@ -11,9 +11,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http 
+      targetPort: http
       protocol: TCP
-      name: http 
+      name: http
   selector:
     app.kubernetes.io/name: {{ include "daco2ego.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

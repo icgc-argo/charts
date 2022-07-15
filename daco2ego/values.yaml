@@ -11,17 +11,22 @@ image:
 service:
   type: ClusterIP
   port: 8081
+  portName: http
 
 ingress:
-  enabled: true 
+  enabled: false
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  # className: private
   hosts:
-    - daco2ego.someplace
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
   tls:
-    - secretName: daco2ego-someplace-cert
-      hosts:
-        - daco2ego.someplace
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
 
 nameOverride: ""
 fullnameOverride: ""
