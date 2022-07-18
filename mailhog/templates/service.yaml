@@ -28,14 +28,14 @@ spec:
     {{- toYaml . | nindent 4 }}
   {{- end }}
   ports:
-    - name: http
+    - name: {{ .Values.service.portName.http }}
       port: {{ .Values.service.port.http }}
       protocol: TCP
-      targetPort: http
-    - name: smtp
+      targetPort: {{ .Values.service.portName.http }}
+    - name: {{ .Values.service.portName.smtp }}
       port: {{ .Values.service.port.smtp }}
       protocol: TCP
-      targetPort: smtp
+      targetPort:  {{ .Values.service.portName.smtp }}
   selector:
     app.kubernetes.io/name: {{ include "mailhog.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
