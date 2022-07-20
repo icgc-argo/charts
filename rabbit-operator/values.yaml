@@ -5,14 +5,22 @@ rabbit:
 service:
   type: ClusterIP
   port: 5672
+  portName: amqp
 
 ingress:
+ # className: private
   enabled: false
-  annotations: {}
   hosts:
     - host: chart-example.local
-      paths: []
-  tls: []
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  annotations:
+  # cert-manager.io/cluster-issuer: clusterissuer-example
+  # tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
 
 nodeSelector: {}
 
