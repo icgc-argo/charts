@@ -15,21 +15,23 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+  portName: http
 
 ingress:
   enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  # className: private
   hosts:
     - host: chart-example.local
-      paths: []
-
-  tls: []
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  # annotations:
+  #   cert-manager.io/cluster-issuer: issuer-example
+  # tls:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
-  
+
 podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true

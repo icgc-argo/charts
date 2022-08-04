@@ -30,19 +30,23 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+  portName: http
 
 ingress:
   enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  # className: private
   hosts:
     - host: chart-example.local
-      paths: []
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  # annotations:
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  # tls:
+  # - secretName: chart-example-tls
+  #   hosts:
+  #     - chart-example.local
 
 
 resources:

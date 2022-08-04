@@ -15,23 +15,27 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+  portName: http
 
 podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true
   runAsUser: 9999
- 
+
 ingress:
-  enabled: true
-  annotations:
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
-    certmanager.k8s.io/acme-challenge-type: dns01
-    certmanager.k8s.io/acme-dns01-provider: route53
-  host: platform-ui.qa.cancercollaboratory.org
-  tls:
-    - secretName: platform-ui-tls-cert
-      hosts:
-        - platform-ui.qa.cancercollaboratory.org
+  # className: private
+  enabled: false
+  # annotations: {}
+    # certmanager.k8s.io/cluster-issuer: example
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  # tls:
+  #   - secretName: chart-example-tls
+  #     hosts:
+  #       - chart-example.local
 
 deployment:
   livenessProbe:

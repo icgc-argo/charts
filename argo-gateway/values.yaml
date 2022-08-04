@@ -15,6 +15,7 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+  portName: http
 
 podSecurityContext:
   runAsGroup: 9999
@@ -37,16 +38,19 @@ serviceAccount:
   name:
 
 ingress:
-  enabled: true
-  annotations:
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod-qa
-    certmanager.k8s.io/acme-challenge-type: dns01
-    certmanager.k8s.io/acme-dns01-provider: route53
-  host: argo-gateway.qa.cancercollaboratory.org
-  tls:
-    - secretName: argo-gateway-tls-cert
-      hosts:
-        - argo-gateway.qa.cancercollaboratory.org
+  enabled: false
+  # className: private
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  annotations: {}
+    # cert-manager.io/cluster-issuer: letsencrypt-prod-a
+  tls: []
+    # - secretName: chart-example-tls
+    #   hosts:
+    #     - chart-example.local
 
 resources:
   {}

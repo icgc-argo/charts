@@ -8,5 +8,5 @@ roleRef:
   name: {{ .Values.rabbit.name }}
 subjects:
 - kind: ServiceAccount
-  name: {{ .Values.rabbit.name }}-rabbitmq-server
+  name: {{ .Values.rabbit.name }}-server
   namespace: {{ .Release.Namespace }}
