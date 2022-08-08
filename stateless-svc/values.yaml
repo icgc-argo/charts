@@ -107,3 +107,9 @@ probes:
     timeoutSeconds: 2
     periodSeconds: 3
     failureThreshold: 2
+  startup:
+    path: /
+    initialDelaySeconds: 60
+    timeoutSeconds: 2
+    periodSeconds: 3
+    failureThreshold: 2
