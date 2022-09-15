@@ -1,4 +1,4 @@
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 
 metadata:
@@ -11,6 +11,7 @@ spec:
   schedule: {{ .Values.schedule }}
   jobTemplate:
     spec:
+      serviceAccountName: {{ include "cron-job.serviceAccountName" . }}
       template:
         metadata:
           labels:
@@ -23,7 +24,7 @@ spec:
             imagePullPolicy: {{ .Values.image.pullPolicy }} 
             securityContext:
               runAsUser: 1000
-            env: 
+            env:
 {{- if .Values.extraEnv }} 
   {{- range $key, $value := .Values.extraEnv }}
               - name: {{ $key }}
