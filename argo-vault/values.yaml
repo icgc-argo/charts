@@ -35,7 +35,7 @@ vaultchart:
   server:
     image:
       repository: "vault"
-      tag: "1.8.4"
+      tag: "1.10.3"
     ha:
       enabled: true
       replicas: 3
@@ -44,7 +44,7 @@ consulchart:
   global:
     datacenter: "clustername"
     enablePodSecurityPolicies: true
-    image: "consul:1.10.4"
+    image: "consul:1.12.3"
   server:
     replicas: 3
     storage: "6Gi"
