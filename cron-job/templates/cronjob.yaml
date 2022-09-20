@@ -11,13 +11,13 @@ spec:
   schedule: {{ .Values.schedule }}
   jobTemplate:
     spec:
-      serviceAccountName: {{ include "cron-job.serviceAccountName" . }}
       template:
         metadata:
           labels:
             {{- include "cron-job.labels" . | nindent 12 }}
             {{- include "cron-job.customLabels" . | nindent 12 }}
         spec:
+          serviceAccountName: {{ include "cron-job.serviceAccountName" . }}
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
