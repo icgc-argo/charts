@@ -28,6 +28,8 @@ rbac:
     # for vault kubernetes integration
     tokenReview: false
 
+podAnnotations: {}
+
 podSecurityContext:
   runAsGroup: 9999
   runAsNonRoot: true

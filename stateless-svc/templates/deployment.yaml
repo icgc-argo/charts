@@ -12,6 +12,11 @@ spec:
       {{- include "stateless-svc.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
       labels:
         {{- include "stateless-svc.selectorLabels" . | nindent 8 }}
         {{- include "stateless-svc.customLabels" . | nindent 8 }}
