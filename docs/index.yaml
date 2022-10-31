@@ -1784,9 +1784,18 @@ entries:
     version: 0.1.0
   stateless-svc:
   - apiVersion: v2
-    created: "2022-09-19T17:38:57.641843-04:00"
+    created: "2022-10-31T15:53:21.542288-04:00"
     description: A Helm chart for Kubernetes
-    digest: 5e9d6a1e991133aef97b3312b8f9abd0d45ea738b7312f49df47401da72ef39a
+    digest: 464344536b275f4569c50551fc67d2f5d5dc39b43c7d7f66364ed0c2b92d2686
+    name: stateless-svc
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/stateless-svc-1.3.1.tgz
+    version: 1.3.1
+  - apiVersion: v2
+    created: "2022-10-31T15:33:52.233703-04:00"
+    description: A Helm chart for Kubernetes
+    digest: f8ccadbff5ce8996606cf6db90f4171afdb37dcf313cf8011ded643782561dc0
     name: stateless-svc
     type: application
     urls:
@@ -2376,4 +2385,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2022-10-18T15:13:07.796446-04:00"
+generated: "2022-10-31T15:53:21.541589-04:00"
