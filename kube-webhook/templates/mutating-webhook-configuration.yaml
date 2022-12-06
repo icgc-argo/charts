@@ -1,4 +1,4 @@
-apiVersion: admissionregistration.k8s.io/v1beta1
+apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
   name: {{ include "kube-webhook.fullname" . }}-{{ .Release.Namespace }}
@@ -22,3 +22,6 @@ webhooks:
         apiVersions: ["v1"]
         resources: ["pods"]
         scope: "Namespaced"
+    sideEffects : None
+    admissionReviewVersions:
+      - v1beta1
