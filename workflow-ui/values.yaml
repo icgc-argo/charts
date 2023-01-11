@@ -65,3 +65,4 @@ appConfig:
   rdpc_domain: ""
   rdpc_region: ""
   enable_gql_playground: ""
+  k8_available_cores: ""

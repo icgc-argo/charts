@@ -58,6 +58,8 @@ spec:
               value: {{ .Values.appConfig.rdpc_region | quote }}
             - name: REACT_APP_ENABLE_GQL_PLAYGROUND
               value: {{ .Values.appConfig.enable_gql_playground | quote }}
+            - name: REACT_APP_K8_AVAILABLE_CORES
+              value: {{ .Values.appConfig.k8_available_cores | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
