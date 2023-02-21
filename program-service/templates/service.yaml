@@ -1,23 +1,23 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { include "program-service.fullname" . } }
+  name: {{ include "program-service.fullname" . }}
   labels:
-    app.kubernetes.io/name: { { include "program-service.name" . } }
-    helm.sh/chart: { { include "program-service.chart" . } }
-    app.kubernetes.io/instance: { { .Release.Name } }
-    app.kubernetes.io/managed-by: { { .Release.Service } }
+    app.kubernetes.io/name: {{ include "program-service.name" . }}
+    helm.sh/chart: {{ include "program-service.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.portGrpc } }
+    - port: {{ .Values.service.portGrpc }}
       targetPort: grpc
       protocol: TCP
       name: grpc
-    - port: { { .Values.service.portHttp } }
+    - port: {{ .Values.service.portHttp }}
       targetPort: http
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: { { include "program-service.name" . } }
-    app.kubernetes.io/instance: { { .Release.Name } }
+    app.kubernetes.io/name: {{ include "program-service.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
