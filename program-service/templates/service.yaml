@@ -10,10 +10,14 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - port: {{ .Values.service.portGrpc }}
       targetPort: grpc
       protocol: TCP
       name: grpc
+		- port: {{ .Values.service.portHttp }}
+      targetPort: http
+      protocol: TCP
+      name: http
   selector:
     app.kubernetes.io/name: {{ include "program-service.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

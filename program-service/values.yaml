@@ -14,8 +14,8 @@ fullnameOverride: ""
 
 service:
   type: ClusterIP
-  port: 50051
-  portName: grpc
+  portGrpc: 50051
+  portHttp: 8080
 
 podSecurityContext:
   runAsGroup: 9999

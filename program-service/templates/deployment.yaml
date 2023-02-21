@@ -43,7 +43,10 @@ spec:
 {{- end }}
           ports:
             - name: grpc
-              containerPort: 50051
+              containerPort: {{ .Values.service.portGrpc }}
+              protocol: TCP
+            - name: http
+              containerPort: {{ .Values.service.portHttp }}
               protocol: TCP
           # livenessProbe:
           #   httpGet:
