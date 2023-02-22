@@ -1,6 +1,6 @@
 {{- if .Values.ingress.enabled -}}
-{{- $svcPort := .Values.service.port -}}
-{{- $svcPortName := .Values.service.portName -}}
+{{- $svcPort := .Values.service.portHttp -}}
+{{- $svcPortName := "http" -}}
 {{- $fullName := include "program-service.fullname" . -}}
 {{- if semverCompare ">=1.19" .Capabilities.KubeVersion.Version -}}
 apiVersion: networking.k8s.io/v1
