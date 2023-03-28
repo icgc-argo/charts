@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/argo-gateway
-  tag: 1.0.2
+  repository: ghcr.io/icgc-argo/platform-api
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
