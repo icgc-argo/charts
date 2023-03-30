@@ -1,3 +1,4 @@
+{{- if .Values.podsecuritypolicy.enabled -}}
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
@@ -19,3 +20,4 @@ spec:
   - persistentVolumeClaim
   - emptyDir
   - downwardAPI
+{{- end }}
