@@ -36,10 +36,10 @@ spec:
           resources:
             requests:
               storage: {{ .Values.elastic.nodes.master.storage }}
-          storageClassName: standard
+          storageClassName: {{ .Values.elastic.nodes.master.storageClass }}
     {{- with .Values.elastic.nodes.master.extraVolumeClaimTemplates }}
       {{- toYaml . | nindent 6 }}
-    {{- end }} 
+    {{- end }}
     podTemplate:
       spec:
         serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
@@ -74,10 +74,10 @@ spec:
           {{- with .Values.elastic.nodes.master.extraVolumeMounts }}
             {{ toYaml . | nindent 12 }}
           {{- end }}
-      {{- end }}  
-        
+      {{- end }}
+
       {{- if or .Values.elastic.nodes.master.extraVolumes .Values.elastic.backup.pvc.create }}
-        volumes: 
+        volumes:
         {{- if .Values.elastic.backup.pvc.create }}
           - name: backup-vol
             persistentVolumeClaim:
@@ -118,10 +118,10 @@ spec:
           resources:
             requests:
               storage: {{ .Values.elastic.nodes.data.storage }}
-          storageClassName: standard
+          storageClassName: {{ .Values.elastic.nodes.data.storageClass }}
     {{- with .Values.elastic.nodes.data.extraVolumeClaimTemplates }}
         {{- toYaml . | nindent 6 }}
-    {{- end }} 
+    {{- end }}
     podTemplate:
       spec:
         serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
@@ -155,10 +155,10 @@ spec:
           {{ with .Values.elastic.nodes.data.extraVolumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
-      {{- end }}  
-        
+      {{- end }}
+
       {{- if or .Values.elastic.nodes.data.extraVolumes .Values.elastic.backup.pvc.create }}
-        volumes: 
+        volumes:
         {{- if .Values.elastic.backup.pvc.create }}
           - name: backup-vol
             persistentVolumeClaim:
