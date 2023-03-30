@@ -27,6 +27,7 @@ elastic:
       extraVolumeClaimTemplates: []
       extraVolumeMounts: []
       extraConfig: {}
+      storageClass: standard
     data:
       name: data
       count: 3
@@ -43,6 +44,7 @@ elastic:
       extraVolumeClaimTemplates: []
       extraVolumeMounts: []
       extraConfig: {}
+      storageClass: standard
   backup:
     pv:
       create: false
