@@ -705,6 +705,16 @@ entries:
   donor-submission-aggregator:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-03-31T14:33:33.586372-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 4ee2ac934d2f1ec99e7c7a48a31118f05bcd2d3efa677fc2cb5c5908b08fc21b
+    name: donor-submission-aggregator
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/donor-submission-aggregator-0.7.2.tgz
+    version: 0.7.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-03-31T10:44:22.667512-04:00"
     description: A Helm chart for Kubernetes
     digest: 548c0a30186ccc84510281907f8e9f0fa85f339f15461acf75638fdf0d4d2435
@@ -2479,4 +2489,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-31T10:44:22.665859-04:00"
+generated: "2023-03-31T14:33:33.585355-04:00"
