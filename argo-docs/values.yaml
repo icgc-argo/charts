@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/argo-docs
-  tag: stable
+  repository: ghcr.io/icgc-argo/argo-docs
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""

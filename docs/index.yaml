@@ -3,6 +3,15 @@ entries:
   argo-docs:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2023-03-31T10:44:22.666656-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 071172998d40e063c5cd475456de0c43c21d619d193d36e36a762f39e0c51e73
+    name: argo-docs
+    urls:
+    - https://icgc-argo.github.io/charts/argo-docs-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2023-02-22T15:53:02.702046-05:00"
     description: A Helm chart for Kubernetes
     digest: 6dc307f5d04dd4ea67ef3438801bbe5d11f0102f468bd4cfc3763ac223686dae
@@ -694,6 +703,16 @@ entries:
     - https://icgc-argo.github.io/charts/daco2ego-0.0.1.tgz
     version: 0.0.1
   donor-submission-aggregator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-31T10:44:22.667512-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 548c0a30186ccc84510281907f8e9f0fa85f339f15461acf75638fdf0d4d2435
+    name: donor-submission-aggregator
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/donor-submission-aggregator-0.7.1.tgz
+    version: 0.7.1
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-02-22T15:53:02.767134-05:00"
@@ -2460,4 +2479,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-30T13:30:00.187009-04:00"
+generated: "2023-03-31T10:44:22.665859-04:00"

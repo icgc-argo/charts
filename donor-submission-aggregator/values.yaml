@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: icgcargo/donor-submission-aggregator
+  repository: ghcr.io/icgc-argo/donor-submission-aggregator
   tag: latest
   pullPolicy: IfNotPresent
 
