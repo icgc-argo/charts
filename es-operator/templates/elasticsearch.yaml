@@ -54,7 +54,7 @@ spec:
         # https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-virtual-memory.html
         containers:
         - name: elasticsearch
-{{- if .Values.env }}
+{{- if .Values.elastic.nodes.master.env }}
           env:
   {{ range $key, $value := .Values.elastic.nodes.master.env }}
           - name: {{ $key }}
@@ -135,7 +135,7 @@ spec:
       {{- end }}
         containers:
         - name: elasticsearch
-{{- if .Values.env }}
+{{- if .Values.elastic.nodes.data.env  }}
           env:
   {{- range $key, $value := .Values.elastic.nodes.data.env }}
           - name: {{ $key }}
