@@ -1,7 +1,10 @@
 rabbit:
   name: wfg-rabbit
   replicas: 1
-
+  additionalConfigEnabled: "false"
+  additionalConfig: |
+    # rabbit-operator config params go here
+    # Examples: https://www.rabbitmq.com/kubernetes/operator/using-operator.html
 service:
   type: ClusterIP
   port: 5672

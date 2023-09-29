@@ -1726,6 +1726,16 @@ entries:
   rabbit-operator:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-09-29T12:30:30.635613-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 1c6a0689b721889f541bd2f86b97fea34febf65424e0b85efe9c5d7618105d61
+    name: rabbit-operator
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/rabbit-operator-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-02-22T15:53:02.809369-05:00"
     description: A Helm chart for Kubernetes
     digest: c9baa83f9b7fce7eef151cb9247edb4a8184f90e175bd385b9e57901787f5d5e
@@ -2508,4 +2518,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-20T13:32:38.445391-04:00"
+generated: "2023-09-29T12:30:30.634935-04:00"

@@ -3,9 +3,13 @@ kind: RabbitmqCluster
 metadata:
   name: {{ .Values.rabbit.name }}
 spec:
-  replicas: {{ .Values.rabbit.replicas }}
   override:
     statefulSet:
       metadata:
         labels:
           rabbitmq: workflow-graph
+  replicas: {{ .Values.rabbit.replicas }}
+  {{- if eq .Values.rabbit.additionalConfigEnabled "true" }}
+  rabbitmq:
+    additionalConfig: {{- .Values.rabbit.additionalConfig | toYaml | indent 4 }}
+  {{- end }}
