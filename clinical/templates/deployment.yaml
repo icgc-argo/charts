@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  
+
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -33,7 +33,7 @@ spec:
           env:
           - name: PORT
             value: {{ .Values.appConfig.port | quote }}
-{{- if .Values.extraEnv }}        
+{{- if .Values.extraEnv }}
   {{ range $key, $value := .Values.extraEnv }}
           - name: {{ $key }}
             value: {{ $value | quote }}
@@ -45,12 +45,20 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
-              port: http
+              path: {{ .Values.probes.liveness.path }}
+              port: {{ .Values.service.portName }}
+            initialDelaySeconds: {{ .Values.probes.liveness.initialDelaySeconds }}
+            timeoutSeconds: {{ .Values.probes.liveness.timeoutSeconds }}
+            periodSeconds: {{ .Values.probes.liveness.periodSeconds }}
+            failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
           readinessProbe:
             httpGet:
-              path: /
-              port: http
+              path: {{ .Values.probes.readiness.path }}
+              port: {{ .Values.service.portName }}
+            initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
+            timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
+            periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
+            failureThreshold: {{ .Values.probes.readiness.failureThreshold }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

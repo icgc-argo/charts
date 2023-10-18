@@ -45,9 +45,11 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  annotations: {}
+  annotations:
+    {}
     # cert-manager.io/cluster-issuer: letsencrypt-prod-a
-  tls: []
+  tls:
+    []
     # - secretName: chart-example-tls
     #   hosts:
     #     - chart-example.local
@@ -79,3 +81,17 @@ appConfig:
 tolerations: []
 
 affinity: {}
+
+probes:
+  liveness:
+    path: /status
+    initialDelaySeconds: 30
+    timeoutSeconds: 2
+    periodSeconds: 8
+    failureThreshold: 1
+  readiness:
+    path: /status
+    initialDelaySeconds: 60
+    timeoutSeconds: 2
+    periodSeconds: 3
+    failureThreshold: 2
