@@ -501,6 +501,15 @@ entries:
   clinical:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2023-10-19T15:54:16.385031-04:00"
+    description: A Helm chart for Argo clinical
+    digest: 650f5905c4d7508acda36aa29583b1f70be95d57bd555003b3b90bc96e09e9e0
+    name: clinical
+    urls:
+    - https://icgc-argo.github.io/charts/clinical-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2023-10-19T15:42:23.065671-04:00"
     description: A Helm chart for Argo clinical
     digest: e9d3e624f3347b0e30ea9a28decf2d4756ef640788861e75adbd484019e778b6
@@ -2554,4 +2563,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-19T15:42:23.064748-04:00"
+generated: "2023-10-19T15:54:16.384091-04:00"
