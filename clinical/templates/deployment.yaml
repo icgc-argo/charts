@@ -43,7 +43,7 @@ spec:
             - name: {{ .Values.service.clinical.targetPort }}
               containerPort: {{ .Values.appConfig.clinicalPort }}
               protocol: TCP
-            - name: {{ .Values.service.clinical-gql.targetPort }}
+            - name: {{ .Values.service.clinicalGql.targetPort }}
               containerPort: {{ .Values.appConfig.gqlPort }}
               protocol: TCP
           livenessProbe:

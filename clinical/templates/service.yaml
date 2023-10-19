@@ -14,10 +14,10 @@ spec:
       targetPort: {{ .Values.service.clinical.targetPort }}
       protocol: TCP
       name: {{ .Values.service.clinical.portName }}
-    - port: {{ .Values.service.clinical-gql.port }}
-      targetPort: {{ .Values.service.clinical-gql.targetPort }}
+    - port: {{ .Values.service.clinicalGql.port }}
+      targetPort: {{ .Values.service.clinicalGql.targetPort }}
       protocol: TCP
-      name: {{ .Values.service.clinical-gql.portName }}
+      name: {{ .Values.service.clinicalGql.portName }}
   selector:
     app.kubernetes.io/name: {{ include "clinical.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
