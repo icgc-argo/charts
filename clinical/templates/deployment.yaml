@@ -40,8 +40,11 @@ spec:
   {{- end }}
 {{- end }}
           ports:
-            - name: http
-              containerPort: {{ .Values.appConfig.port }}
+            - name: {{ .Values.service.clinical.targetPort }}
+              containerPort: {{ .Values.appConfig.clinicalPort }}
+              protocol: TCP
+            - name: {{ .Values.service.clinical-gql.targetPort }}
+              containerPort: {{ .Values.appConfig.gqlPort }}
               protocol: TCP
           livenessProbe:
             httpGet:

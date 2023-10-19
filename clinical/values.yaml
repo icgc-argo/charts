@@ -14,8 +14,14 @@ fullnameOverride: ""
 
 service:
   type: ClusterIP
-  port: 80
-  portName: http
+  clinical:
+    port: 80
+    portName: clinical
+    targetPort: clinical
+  clinical-gql:
+    port: 8080
+    portName: clinical-gql
+    targetPort: clinical-gql
 
 ingress:
   enabled: false
@@ -61,7 +67,8 @@ rbac:
     tokenReview: true
 
 appConfig:
-  port: 3000
+  clinicalPort: 3000
+  gqlPort: 3001
 
 podSecurityContext:
   runAsGroup: 9999
