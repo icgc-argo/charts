@@ -18,7 +18,7 @@ service:
     port: 80
     portName: clinical
     targetPort: clinical
-  clinical-gql:
+  clinicalGql:
     port: 8080
     portName: clinical-gql
     targetPort: clinical-gql
