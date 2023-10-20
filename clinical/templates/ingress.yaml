@@ -1,6 +1,4 @@
 {{- if .Values.ingress.enabled -}}
-#{{- $svcPort := .Values.service.clinical.port -}}
-#{{- $svcPortName := .Values.service.clinical.portName -}}
 {{- $fullName := include "clinical.fullname" . -}}
 {{- $ingressPaths := .Values.ingress.paths -}}
 {{- if semverCompare ">=1.19" .Capabilities.KubeVersion.Version -}}
