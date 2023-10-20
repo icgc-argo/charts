@@ -1,6 +1,6 @@
 {{- if .Values.ingress.enabled -}}
-{{- $svcPort := .Values.service.port -}}
-{{- $svcPortName := .Values.service.portName -}}
+#{{- $svcPort := .Values.service.clinical.port -}}
+#{{- $svcPortName := .Values.service.clinical.portName -}}
 {{- $fullName := include "clinical.fullname" . -}}
 {{- $ingressPaths := .Values.ingress.paths -}}
 {{- if semverCompare ">=1.19" .Capabilities.KubeVersion.Version -}}
@@ -51,10 +51,10 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  name: {{ $svcPortName }}
+                  name: {{ .portName }}
               {{- else }}
               serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
+              servicePort: {{ .portName }}
               {{- end }}
           {{- end }}
     {{- end }}
