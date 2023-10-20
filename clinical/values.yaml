@@ -35,6 +35,10 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
+          portName: clinical
+        - path: /gql
+          pathType: ImplementationSpecific
+          portName: clinical-gql
 
   tls: []
   #  - secretName: chart-example-tls
