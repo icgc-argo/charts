@@ -2321,6 +2321,15 @@ entries:
   workflow-management:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2024-01-23T17:13:49.501874-05:00"
+    description: A Helm chart for Kubernetes
+    digest: c3478bf13d14049787f7a219d79b8c99be567677c62151405bd9ef4306899dad
+    name: workflow-management
+    urls:
+    - https://icgc-argo.github.io/charts/workflow-management-0.15.0.tgz
+    version: 0.15.0
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2023-10-18T13:55:08.80254-04:00"
     description: A Helm chart for Kubernetes
     digest: a8bb598bed0afa860b3c868979fd29ddb95b4039fd3dbe6d92c699f443f7beae
@@ -2631,4 +2640,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-23T14:33:40.545115-05:00"
+generated: "2024-01-23T17:13:49.500792-05:00"
