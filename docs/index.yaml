@@ -1950,9 +1950,9 @@ entries:
   s3-files-backup:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-01-23T11:55:31.051144-05:00"
+    created: "2024-01-23T14:24:34.502725-05:00"
     description: Backup dac user files
-    digest: 99e1de6546c3f34d3418cae2e38eb9f60a51cc00a629c26198cd3853ac7c7f7f
+    digest: e0e5e97898aa85b3d72406fc8326453404ada73d6589fc5678735e8ef3597844
     name: s3-files-backup
     type: application
     urls:
@@ -2631,4 +2631,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-23T11:55:31.050414-05:00"
+generated: "2024-01-23T14:24:34.50195-05:00"
