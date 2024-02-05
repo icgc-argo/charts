@@ -637,6 +637,16 @@ entries:
   clinical-mongo-backup:
   - apiVersion: v2
     appVersion: 1.18.0
+    created: "2024-02-05T11:18:18.140058-05:00"
+    description: Backup clinical-mongo cluster
+    digest: abb46d9c5503e98f76b72b88620e919a024c22cac94e431949780e300d6b3a90
+    name: clinical-mongo-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/clinical-mongo-backup-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 1.18.0
     created: "2023-10-18T13:55:07.696594-04:00"
     description: Backup clinical-mongo cluster
     digest: ae7142cefa75c6799495aed98e91f63175419d39c00964745c7a96853de0c86e
@@ -2640,4 +2650,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-23T17:13:49.500792-05:00"
+generated: "2024-02-05T11:18:18.139177-05:00"
