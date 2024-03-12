@@ -27,10 +27,18 @@ elastic:
       extraVolumeClaimTemplates: []
       extraVolumeMounts: []
       extraConfig: {}
-      storageClass: standard
+      # storageClass: ""
+      config:
+        node.master: true
+        node.data: true
+        node.ingest: false
+        node.ml: false
+        xpack.ml.enabled: false
+
     data:
+      enable: false
       name: data
-      count: 3
+      count: 0
       env:
         ES_JAVA_OPTS: -Xms1g -Xmx1g
       storage: 2Gi #12Gi
@@ -44,7 +52,14 @@ elastic:
       extraVolumeClaimTemplates: []
       extraVolumeMounts: []
       extraConfig: {}
-      storageClass: standard
+      # storageClass: ""
+      config:
+        node.master: false
+        node.data: true
+        node.ingest: true
+        node.ml: false
+        xpack.ml.enabled: false
+
   backup:
     pv:
       create: false

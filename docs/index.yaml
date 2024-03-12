@@ -898,6 +898,15 @@ entries:
     version: 0.2.0
   es-operator:
   - apiVersion: v2
+    created: "2024-03-12T16:15:04.966355-04:00"
+    description: A Helm chart for Kubernetes
+    digest: 96935b907ee3e4a3e2dd033940ac0c710d28d6d32ff19a60b2f192394389c85c
+    name: es-operator
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/es-operator-0.11.0.tgz
+    version: 0.11.0
+  - apiVersion: v2
     created: "2023-10-18T13:55:07.791231-04:00"
     description: A Helm chart for Kubernetes
     digest: 0aedb016709ffd0404eb94c930798cd59b19d1a403aba6952496250a5b5b7fd0
@@ -2660,4 +2669,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-27T16:38:48.570407-05:00"
+generated: "2024-03-12T16:15:04.965423-04:00"

@@ -13,11 +13,10 @@ spec:
   - name: {{ .Values.elastic.nodes.master.name }}
     count: {{ .Values.elastic.nodes.master.count }}
     config:
-      node.master: true
-      node.data: false
-      node.ingest: false
-      node.ml: false
-      xpack.ml.enabled: false
+      {{- with .Values.elastic.nodes.master.config }}
+        {{- toYaml . | nindent 6 }}
+      {{- end }}
+
 {{- if .Values.elastic.nodes.master.extraConfig }}
   {{- range $key, $value := .Values.elastic.nodes.master.extraConfig }}
       {{ $key }}: {{ $value }}
@@ -92,20 +91,18 @@ spec:
           securityContext:
             privileged: true
           command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
-
+{{- if .Values.elastic.nodes.data.enable }}
   - name: {{ .Values.elastic.nodes.data.name }}
     count: {{ .Values.elastic.nodes.data.count }}
     config:
-      node.master: false
-      node.data: true
-      node.ingest: true
-      node.ml: false
-      xpack.ml.enabled: false
-{{- if .Values.elastic.nodes.data.extraConfig }}
-  {{- range $key, $value := .Values.elastic.nodes.data.extraConfig }}
-      {{ $key }}: {{ $value }}
-  {{- end }}
-{{- end }}
+      {{- with .Values.elastic.nodes.data.config }}
+        {{- toYaml . | nindent 6 }}
+      {{- end }}
+    {{- if .Values.elastic.nodes.data.extraConfig }}
+      {{- range $key, $value := .Values.elastic.nodes.data.extraConfig }}
+          {{ $key }}: {{ $value }}
+      {{- end }}
+    {{- end }}
     volumeClaimTemplates:
       - metadata:
           # cant be changed: The name of the volume claim must always be elasticsearch-data
@@ -135,13 +132,13 @@ spec:
       {{- end }}
         containers:
         - name: elasticsearch
-{{- if .Values.elastic.nodes.data.env  }}
-          env:
-  {{- range $key, $value := .Values.elastic.nodes.data.env }}
-          - name: {{ $key }}
-            value: {{ $value | quote }}
-  {{- end }}
-{{- end }}
+      {{- if .Values.elastic.nodes.data.env  }}
+                env:
+        {{- range $key, $value := .Values.elastic.nodes.data.env }}
+                - name: {{ $key }}
+                  value: {{ $value | quote }}
+        {{- end }}
+      {{- end }}
         {{- with .Values.elastic.nodes.data.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
@@ -173,3 +170,4 @@ spec:
           securityContext:
             privileged: true
           command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
+{{- end }}
