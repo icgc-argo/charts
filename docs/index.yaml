@@ -748,9 +748,9 @@ entries:
   dac-mongo-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-03-19T14:41:04.278161-04:00"
+    created: "2024-03-20T14:39:06.506745-04:00"
     description: Backup dac-mongo cluster
-    digest: 9611bd42b0ecaedc47bef60b622c11d84e0f067af924e7f05f9a550fbc8709e8
+    digest: 668abc5484909866229fe80433a0c73bff1d883094019a1ddde7337cbf066699
     name: dac-mongo-backup
     type: application
     urls:
@@ -2679,4 +2679,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-19T14:41:04.277269-04:00"
+generated: "2024-03-20T14:39:06.505842-04:00"
