@@ -133,10 +133,10 @@ spec:
         containers:
         - name: elasticsearch
       {{- if .Values.elastic.nodes.data.env  }}
-                env:
+          env:
         {{- range $key, $value := .Values.elastic.nodes.data.env }}
-                - name: {{ $key }}
-                  value: {{ $value | quote }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
         {{- end }}
       {{- end }}
         {{- with .Values.elastic.nodes.data.resources }}
