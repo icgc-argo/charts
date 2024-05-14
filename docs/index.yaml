@@ -637,9 +637,9 @@ entries:
   clinical-mongo-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-02-05T11:18:18.140058-05:00"
+    created: "2024-05-14T13:50:05.512288-04:00"
     description: Backup clinical-mongo cluster
-    digest: abb46d9c5503e98f76b72b88620e919a024c22cac94e431949780e300d6b3a90
+    digest: a10b3bb16ff080d9432bc4e3e94a7df5d3f143afae8f3a1253cb09f74c28e120
     name: clinical-mongo-backup
     type: application
     urls:
@@ -696,6 +696,16 @@ entries:
     - https://icgc-argo.github.io/charts/clinical-mongo-backup-0.1.0.tgz
     version: 0.1.0
   consul-backup:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-05-14T13:45:53.185406-04:00"
+    description: Backup consul cluster
+    digest: 3e484dc35f9b43e5467a0e3122b0fea25848fe8acc52595aadc37bc6f196ef3f
+    name: consul-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/consul-backup-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-10-18T13:55:07.704644-04:00"
@@ -2719,4 +2729,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-14T13:14:01.670123-04:00"
+generated: "2024-05-14T13:50:05.51133-04:00"
