@@ -649,7 +649,6 @@ entries:
     appVersion: 1.18.0
     created: "2024-05-14T13:50:05.512288-04:00"
     description: Backup clinical-mongo cluster
->>>>>>> a73b1fc (update charts - add extra labels)
     digest: a10b3bb16ff080d9432bc4e3e94a7df5d3f143afae8f3a1253cb09f74c28e120
     name: clinical-mongo-backup
     type: application
