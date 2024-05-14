@@ -1028,9 +1028,9 @@ entries:
   etcd-backup:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-05-14T12:32:19.508848-04:00"
+    created: "2024-05-14T13:14:01.670811-04:00"
     description: Backup etcd cluster
-    digest: 1fea40a947eebe9f391885891be68d4cfb86a58ee6701032b265aa9c24db1b89
+    digest: 1858267f757e73fde73e284bef4dded2d2750dfb9c42bc6ed54a9cbea0a1e691
     name: etcd-backup
     type: application
     urls:
@@ -2719,4 +2719,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-14T12:40:58.721005-04:00"
+generated: "2024-05-14T13:14:01.670123-04:00"
