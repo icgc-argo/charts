@@ -637,10 +637,6 @@ entries:
   clinical-mongo-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-<<<<<<< HEAD
-    created: "2024-05-14T13:50:05.512288-04:00"
-    description: Backup clinical-mongo cluster
-=======
     created: "2024-05-14T13:57:04.457143-04:00"
     description: Backup clinical-mongo cluster
     digest: de6c88ce7e4676a4e582a46b8f5121994b2a6456976408c294101c41736a8523
@@ -2744,8 +2740,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-<<<<<<< HEAD
-generated: "2024-05-14T13:50:05.51133-04:00"
-=======
 generated: "2024-05-14T13:57:04.456196-04:00"
->>>>>>> a73b1fc (update charts - add extra labels)
