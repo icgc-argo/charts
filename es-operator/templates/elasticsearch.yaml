@@ -40,6 +40,11 @@ spec:
       {{- toYaml . | nindent 6 }}
     {{- end }}
     podTemplate:
+      metadata:
+        labels:
+          {{- with .Values.extraLabels }}
+          {{ toYaml . | nindent 12 }}
+          {{- end }}
       spec:
         serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       {{- with .Values.tolerations }}
@@ -120,6 +125,11 @@ spec:
         {{- toYaml . | nindent 6 }}
     {{- end }}
     podTemplate:
+      metadata:
+        labels:
+          {{- with .Values.extraLabels }}
+          {{ toYaml . | nindent 12 }}
+          {{- end }}
       spec:
         serviceAccountName: {{ include "es-operator.serviceAccountName" . }}
       {{- with .Values.tolerations }}
