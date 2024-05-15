@@ -87,6 +87,8 @@ elastic:
       volumeName: es-backup-pv-1
 
 # the operator will create the service, this is needed for the ingress
+extraLabels: {}
+
 service:
   type: ClusterIP
   port: 9200
