@@ -29,7 +29,7 @@ affinity: {}
 vaultchart:
   global:
     psp:
-      enable: true
+      enable: false
   ui:
     enabled: true
   server:
@@ -43,7 +43,7 @@ vaultchart:
 consulchart:
   global:
     datacenter: "clustername"
-    enablePodSecurityPolicies: true
+    enablePodSecurityPolicies: false
     image: "consul:1.12.3"
   server:
     replicas: 3
