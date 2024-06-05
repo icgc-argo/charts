@@ -304,6 +304,24 @@ entries:
   argo-vault:
   - apiVersion: v1
     appVersion: 1.10.3
+    created: "2024-06-05T17:52:40.806144-04:00"
+    dependencies:
+    - alias: vaultchart
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.1
+    - alias: consulchart
+      name: consul
+      repository: https://helm.releases.hashicorp.com
+      version: 0.46.1
+    description: A Helm chart for Kubernetes
+    digest: 8c6e48cf4b2da1ee5241f65792ab53355ff26b7df5bad9305689fe7b3da9d758
+    name: argo-vault
+    urls:
+    - https://icgc-argo.github.io/charts/argo-vault-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v1
+    appVersion: 1.10.3
     created: "2023-10-18T13:55:07.625337-04:00"
     dependencies:
     - alias: vaultchart
@@ -2758,4 +2776,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-24T15:25:12.214812-04:00"
+generated: "2024-06-05T17:52:40.789667-04:00"
