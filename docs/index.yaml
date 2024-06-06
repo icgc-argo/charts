@@ -1379,9 +1379,9 @@ entries:
   lectern-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-06-06T14:48:30.450861-04:00"
+    created: "2024-06-06T15:53:32.421775-04:00"
     description: Backup lectern-mongo cluster
-    digest: 54430177f64f52c75073f297b524a24ef07daffaed8e28518903f453e4ba14b8
+    digest: a0911554c197d958126014407eb9cf482ca1162ea582aa3d4fb56ff23c22b8f5
     name: lectern-backup
     type: application
     urls:
@@ -2786,4 +2786,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-06T14:48:30.450043-04:00"
+generated: "2024-06-06T15:53:32.420974-04:00"
