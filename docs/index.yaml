@@ -1379,6 +1379,16 @@ entries:
   lectern-backup:
   - apiVersion: v2
     appVersion: 1.18.0
+    created: "2024-06-06T14:48:30.450861-04:00"
+    description: Backup lectern-mongo cluster
+    digest: 54430177f64f52c75073f297b524a24ef07daffaed8e28518903f453e4ba14b8
+    name: lectern-backup
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/lectern-backup-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.18.0
     created: "2023-10-18T13:55:08.057348-04:00"
     description: A Helm chart for Kubernetes
     digest: 78cb7ac359e03b0b7a772d0b637c12444f70218589d93dacff57982a02337645
@@ -2776,4 +2786,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-05T17:52:40.789667-04:00"
+generated: "2024-06-06T14:48:30.450043-04:00"
