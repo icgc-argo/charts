@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "icgc-legacy-sftp.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "icgc-legacy-sftp.name" . }}
+    helm.sh/chart: {{ include "icgc-legacy-sftp.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  ports:
+    - port: 2222
+      targetPort: sftp
+      name: sftp
+  selector:
+    app.kubernetes.io/name: {{ include "icgc-legacy-sftp.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

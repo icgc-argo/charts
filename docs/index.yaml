@@ -1153,6 +1153,18 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/etcd-backup-0.1.0.tgz
     version: 0.1.0
+  icgc-legacy-sftp:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2024-06-12T12:56:40.933936-04:00"
+    description: ICGC Legacy SFTP - This version of Pensato helm chart. has no stateful
+      set (no mounted volume or bucket), relies on configuring an external file or
+      s3 system.
+    digest: fbfb1ebb6bf9a50b186a1892a1eb53cd4a30b2c51fc173ef5a03f2736394c65a
+    name: icgc-legacy-sftp
+    urls:
+    - https://icgc-argo.github.io/charts/icgc-legacy-sftp-0.0.1.tgz
+    version: 0.0.1
   jenkins-backup:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -2786,4 +2798,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-06T15:55:06.482509-04:00"
+generated: "2024-06-12T12:56:40.929451-04:00"
