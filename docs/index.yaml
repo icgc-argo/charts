@@ -1156,9 +1156,11 @@ entries:
   icgc-legacy-sftp:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2024-06-12T12:38:39.859729-04:00"
-    description: ICGC Legacy SFTP - Pensato chart with mounted volume as file system
-    digest: 10e697f1b6a0bcc12fa4d6282e91eccfcccf468c6a555c7e55c8e70e4a7da033
+    created: "2024-06-12T12:56:40.933936-04:00"
+    description: ICGC Legacy SFTP - This version of Pensato helm chart. has no stateful
+      set (no mounted volume or bucket), relies on configuring an external file or
+      s3 system.
+    digest: fbfb1ebb6bf9a50b186a1892a1eb53cd4a30b2c51fc173ef5a03f2736394c65a
     name: icgc-legacy-sftp
     urls:
     - https://icgc-argo.github.io/charts/icgc-legacy-sftp-0.0.1.tgz
@@ -2796,4 +2798,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-12T12:38:39.856569-04:00"
+generated: "2024-06-12T12:56:40.929451-04:00"
