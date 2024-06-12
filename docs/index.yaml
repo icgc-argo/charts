@@ -1153,6 +1153,16 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/etcd-backup-0.1.0.tgz
     version: 0.1.0
+  icgc-legacy-sftp:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2024-06-12T12:38:39.859729-04:00"
+    description: ICGC Legacy SFTP - Pensato chart with mounted volume as file system
+    digest: 10e697f1b6a0bcc12fa4d6282e91eccfcccf468c6a555c7e55c8e70e4a7da033
+    name: icgc-legacy-sftp
+    urls:
+    - https://icgc-argo.github.io/charts/icgc-legacy-sftp-0.0.1.tgz
+    version: 0.0.1
   jenkins-backup:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -2786,4 +2796,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-06T15:55:06.482509-04:00"
+generated: "2024-06-12T12:38:39.856569-04:00"
