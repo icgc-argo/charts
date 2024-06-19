@@ -825,6 +825,15 @@ entries:
     - https://icgc-argo.github.io/charts/dac-mongo-backup-0.2.1.tgz
     version: 0.2.1
   daco2ego:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-06-19T16:23:01.038613-04:00"
+    description: Run the daco2ego script as a cronjob
+    digest: 64d6a378c21e2a7221d36f6602df68aef0fab04c85f50e36db1796005e821f39
+    name: daco2ego
+    urls:
+    - https://icgc-argo.github.io/charts/daco2ego-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
     created: "2023-10-18T13:55:07.737962-04:00"
@@ -2798,4 +2807,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-12T12:56:40.929451-04:00"
+generated: "2024-06-19T16:23:01.028156-04:00"

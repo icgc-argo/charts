@@ -1,0 +1,46 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "daco2ego.fullname" . }}
+  labels:
+    {{- include "daco2ego.labels" . | nindent 4 }}
+spec:
+  concurrencyPolicy: Forbid
+  schedule:  {{ .Values.schedule }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            {{- include "daco2ego.labels" . | nindent 12 }}
+            {{- with .Values.extraLabels }}
+              {{ toYaml . | nindent 12 }}
+            {{- end }}
+        spec:
+          containers:
+            - name: backup
+              image: {{ .Values.image.name }}
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              volumeMounts:
+                - name: config-file
+                  mountPath: /daco2ego/config/default.conf
+                  readOnly: true
+              env:
+{{- if .Values.extraEnv }} 
+  {{- range $key, $value := .Values.extraEnv }}
+                - name: {{ $key }}
+                  value: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+{{- with .Values.extraEnvYaml }}
+              {{- toYaml . | nindent 14 }}
+{{- end }}
+          restartPolicy: Never
+          serviceAccountName: {{ include "daco2ego.serviceAccountName" . }}
+          tolerations:
+            - effect: NoSchedule
+              operator: Exists
+          volumes:
+            - name: config-file
+              secret:
+                secretName: daco2ego-config-file

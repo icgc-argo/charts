@@ -1,0 +1,16 @@
+{{- if .Values.authDelegator.enable }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "daco2ego.fullname" . }}
+  labels:
+    {{- include "daco2ego.labels" . | nindent 4 }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "daco2ego.serviceAccountName" . }}
+    namespace: {{ $.Release.Namespace }}
+{{- end}}
