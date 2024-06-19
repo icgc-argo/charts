@@ -19,7 +19,7 @@ affinity: {}
 authDelegator:
   enable: false
 
-encryptPassword: encrypt
+configFileContent: "{}"
 extraLabels: {}
 fullnameOverride: ''
 nameOverride: ''
