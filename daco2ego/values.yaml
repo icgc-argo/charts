@@ -1,14 +1,15 @@
 image:
   name: ghcr.io/icgc-argo/daco2ego:latest
   pullPolicy: IfNotPresent
-  
+
+# Run at 1:00 AM
 schedule: 0 1 * * *
 
 extraEnv:
   {}
   # PROCESS_VAR: abc
 extraEnvYaml: []
-# - name: ELASTIC_USER
+# - name: EXAMPLE
 #   valueFrom:
 #     secretKeyRef:
 #       name: secret-name
@@ -17,30 +18,13 @@ extraEnvYaml: []
 affinity: {}
 authDelegator:
   enable: false
-backupConfigs:
-  BACKUP_ID: mongo-env
-  MONGO_DATABASE: mongo-db
-  MONGO_HOST: mongo-host
-  MONGO_PORT: 27017
-  MONGO_REPLICASET: rs0
-  VAULT_ADDR: https://vault.local
-  VAULT_K8_ROLE: mongo-role
-  VAULT_SECRET_PATH: kv/secret/mongo
-deployEnv: qa
+
 encryptPassword: encrypt
 extraLabels: {}
 fullnameOverride: ''
-
-imagePullSecrets: []
 nameOverride: ''
 podSecurityContext: {}
-psp:
-  enable: false
-resources: {}
-retention: '7'
-
 securityContext: {}
-
 serviceAccount:
   create: true
   name: daco2ego

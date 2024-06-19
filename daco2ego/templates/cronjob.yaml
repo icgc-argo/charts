@@ -35,14 +35,12 @@ spec:
 {{- with .Values.extraEnvYaml }}
               {{- toYaml . | nindent 14 }}
 {{- end }}
-          restartPolicy: {{ .Values.restartPolicy }}
+          restartPolicy: Never
           serviceAccountName: {{ include "daco2ego.serviceAccountName" . }}
           tolerations:
             - effect: NoSchedule
               operator: Exists
           volumes:
-            - name: backup
-              emptyDir: {}
             - name: config-file
               secret:
                 secretName: daco2ego-config-file
