@@ -26,7 +26,7 @@ spec:
                 runAsUser: 1000
               volumeMounts:
                 - name: config-file
-                  mountPath: /daco2ego/config/default.conf
+                  mountPath: /daco2ego/config
                   readOnly: true
               env:
 {{- if .Values.extraEnv }} 
