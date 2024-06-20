@@ -18,9 +18,12 @@ spec:
             {{- end }}
         spec:
           containers:
-            - name: backup
+            - name: app
               image: {{ .Values.image.name }}
               imagePullPolicy: {{ .Values.image.pullPolicy }}
+              securityContext:
+                runAsGroup: 1000
+                runAsUser: 1000
               volumeMounts:
                 - name: config-file
                   mountPath: /daco2ego/config/default.conf

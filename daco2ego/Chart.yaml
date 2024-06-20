@@ -1,5 +1,5 @@
 apiVersion: v2
 description: Run the daco2ego script as a cronjob
 name: daco2ego
-version: 1.0.0
+version: 1.0.1
 appVersion: "1.0"
