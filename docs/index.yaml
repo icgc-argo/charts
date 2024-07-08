@@ -827,6 +827,15 @@ entries:
   daco2ego:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2024-07-08T14:56:28.175612-04:00"
+    description: Run the daco2ego script as a cronjob
+    digest: ce2acb50e97ce9a9de807115feeebb64781be4afbc86f5bb2274a2aaca39e4e9
+    name: daco2ego
+    urls:
+    - https://icgc-argo.github.io/charts/daco2ego-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2024-06-20T12:35:16.501706-04:00"
     description: Run the daco2ego script as a cronjob
     digest: dbaad8074b54df63ebcbfe72497e7182be1866d855180574ecfc6a23f3c2a4e3
@@ -2826,4 +2835,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-27T15:13:47.002175-04:00"
+generated: "2024-07-08T14:56:28.174633-04:00"
