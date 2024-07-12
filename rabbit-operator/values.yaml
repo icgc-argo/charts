@@ -26,5 +26,6 @@ ingress:
   #      - chart-example.local
 
 nodeSelector: {}
-
+podsecuritypolicy:
+  enabled: false
 tolerations: []
