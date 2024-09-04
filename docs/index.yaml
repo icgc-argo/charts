@@ -1324,6 +1324,17 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/kafka-connect-0.1.0.tgz
     version: 0.1.0
+  kafka-operator-resources:
+  - apiVersion: v2
+    appVersion: 3.7.1
+    created: "2024-09-04T11:19:45.65723-04:00"
+    description: Deploy Kafka resources for Strimzi Kafka operator
+    digest: 63a0cdb5621818b84d8c513681d32d5d092f651f7826acb87a0e0ef20abe6a2a
+    name: kafka-operator-resources
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/kafka-operator-resources-0.1.0.tgz
+    version: 0.1.0
   kafka-ui:
   - apiVersion: v1
     appVersion: "1.0"
@@ -2855,4 +2866,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-12T16:43:41.538603-04:00"
+generated: "2024-09-04T11:19:45.653624-04:00"
