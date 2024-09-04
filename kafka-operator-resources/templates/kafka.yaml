@@ -1,0 +1,43 @@
+{{ if (eq .Values.kafkaMode "kraft") }}
+apiVersion: kafka.strimzi.io/v1beta2
+kind: Kafka
+metadata:
+  name: {{ .Release.Name }}
+  annotations:
+    strimzi.io/node-pools: enabled
+    strimzi.io/kraft: enabled
+spec:
+  kafka:
+    version: {{ .Values.Kafka.spec.kafka.version }}
+    metadataVersion: {{ .Values.Kafka.spec.kafka.metadataVersion }}
+    listeners:
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+      - name: tls
+        port: 9093
+        type: internal
+        tls: true
+    {{- if .Values.Kafka.listeners.external }}
+      - name: {{ .Values.Kafka.listeners.external.name }}
+        port:  {{ .Values.Kafka.listeners.external.port }}
+        type: internal
+        tls: {{ .Values.Kafka.listeners.external.tls }}
+        configuration:
+          brokers:
+          {{- range $i, $e := until (int .Values.KafkaNodePool.replicas) }}
+            - broker: {{ $i }}
+              advertisedHost: localhost
+              advertisedPort:  {{ $.Values.Kafka.listeners.external.port }}
+          {{- end }}
+      {{- end }}
+  config:
+    {{- with .Values.Kafka.config }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
+{{- end }}
+

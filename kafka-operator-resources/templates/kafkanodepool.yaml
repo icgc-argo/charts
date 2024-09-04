@@ -1,0 +1,29 @@
+{{ if (eq .Values.kafkaMode "kraft") }}
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaNodePool
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    strimzi.io/cluster: {{ .Release.Name }}
+spec:
+  replicas: 3
+  roles:
+    - controller
+    - broker
+  storage:
+    type: {{ .Values.KafkaNodePool.storage.type }}
+    size: {{ .Values.KafkaNodePool.storage.size }}
+    deleteClaim: {{ .Values.KafkaNodePool.storage.deleteClaim }}
+  template:
+    kafkaContainer:
+      securityContext:
+        {{- with .Values.KafkaNodePool.template.kafkaContainer.securityContext }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    pod:
+      securityContext:
+        {{- with .Values.KafkaNodePool.template.pod.securityContext }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+{{- end }}
+
