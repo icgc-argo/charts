@@ -35,7 +35,11 @@ KafkaNodePool:
     #   port: 19092
     #   tls: false
 kafkaMode: kraft
-
+entityOperator:
+  networkPolicy:
+    create: false
+    ingress: []
+    egress: []
 networkPolicyPeers: []
   # - podSelector:
   #     matchLabels:

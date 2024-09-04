@@ -1,0 +1,31 @@
+{{ if .Values.entityOperator.networkPolicy.create}}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ .Release.Name }}-custom
+spec:
+  {{ if .Values.entityOperator.networkPolicy.ingress}}
+  ingress:
+    {{- with .Values.entityOperator.networkPolicy.ingress }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- end }}
+  {{ if .Values.entityOperator.networkPolicy.egress}}
+  egress:
+    {{- with .Values.entityOperator.networkPolicy.egress }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- end }}
+  podSelector:
+    matchLabels:
+      strimzi.io/cluster: {{ .Release.Name }}
+      strimzi.io/kind: Kafka
+      strimzi.io/component-type: entity-operator
+  policyTypes:
+  {{ if .Values.entityOperator.networkPolicy.ingress}}
+  - Ingress
+  {{- end }}
+  {{ if .Values.entityOperator.networkPolicy.egress}}
+  - Egress
+  {{- end }}
+{{- end }}
