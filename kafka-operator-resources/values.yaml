@@ -35,3 +35,8 @@ KafkaNodePool:
     #   port: 19092
     #   tls: false
 kafkaMode: kraft
+
+networkPolicyPeers: []
+  # - podSelector:
+  #     matchLabels:
+  #       app.kubernetes.io/instance: kafka-client
