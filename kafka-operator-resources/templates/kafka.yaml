@@ -17,6 +17,10 @@ spec:
         tls: false
         {{- if .Values.networkPolicyPeers }}
         networkPolicyPeers:
+        - podSelector:
+            matchLabels:
+              strimzi.io/cluster: {{ .Release.Name }}
+              strimzi.io/kind: Kafka
           {{- with .Values.networkPolicyPeers }}
           {{- toYaml . | nindent 8 }}
           {{- end }}
