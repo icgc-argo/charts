@@ -10,6 +10,13 @@ Kafka:
     kafka:
       metadataVersion: 3.7-IV4
       version: 3.7.1
+kafkaBridge:
+  enabled: "false"
+  networkPolicy:
+    create: false
+    ingress: []
+    egress: []
+
 KafkaNodePool:
   replicas: 3
   storage:
