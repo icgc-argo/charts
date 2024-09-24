@@ -21,6 +21,12 @@ spec:
             matchLabels:
               strimzi.io/cluster: {{ .Release.Name }}
               strimzi.io/kind: Kafka
+        {{ if ( .Values.kafkaBridge.enabled ) }}
+        - podSelector:
+            matchLabels:
+              strimzi.io/cluster: {{ .Release.Name }}
+              strimzi.io/kind: KafkaBridge
+        {{- end }}
           {{- with .Values.networkPolicyPeers }}
           {{- toYaml . | nindent 8 }}
           {{- end }}

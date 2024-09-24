@@ -1,8 +1,9 @@
+---
 {{ if .Values.entityOperator.networkPolicy.create}}
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: {{ .Release.Name }}-custom
+  name: {{ .Release.Name }}-entity-operator-custom
 spec:
   {{ if .Values.entityOperator.networkPolicy.ingress}}
   ingress:
@@ -26,6 +27,38 @@ spec:
   - Ingress
   {{- end }}
   {{ if .Values.entityOperator.networkPolicy.egress}}
+  - Egress
+  {{- end }}
+{{- end }}
+
+---
+{{ if .Values.kafkaBridge.networkPolicy.create}}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ .Release.Name }}-kafka-bridge-custom
+spec:
+  {{ if .Values.kafkaBridge.networkPolicy.ingress}}
+  ingress:
+    {{- with .Values.kafkaBridge.networkPolicy.ingress }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- end }}
+  {{ if .Values.kafkaBridge.networkPolicy.egress}}
+  egress:
+    {{- with .Values.kafkaBridge.networkPolicy.egress }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- end }}
+  podSelector:
+    matchLabels:
+      strimzi.io/cluster: {{ .Release.Name }}
+      strimzi.io/kind: KafkaBridge
+  policyTypes:
+  {{ if .Values.kafkaBridge.networkPolicy.ingress}}
+  - Ingress
+  {{- end }}
+  {{ if .Values.kafkaBridge.networkPolicy.egress}}
   - Egress
   {{- end }}
 {{- end }}
