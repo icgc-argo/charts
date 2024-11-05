@@ -22,6 +22,17 @@ podSecurityContext:
   runAsNonRoot: true
   runAsUser: 9999
 
+postgres:
+  host: "" # defaults to {program-service.fullname}-postgres
+  port: 5432
+  postgresUsername: postgres
+  postgresPassword: password
+  postgresDb: postgres
+  secret:
+    key: postgres-password
+    name: "" # defaults to {program-service.fullname}-postgres
+  useInternalDep: true
+
 ingress:
   annotations:
     # cert-manager.io/cluster-issuer: letsencrypt
