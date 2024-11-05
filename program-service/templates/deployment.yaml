@@ -1,3 +1,8 @@
+{{- $programserviceFullName := include "program-service.fullname" . -}}
+{{- $defaultPostgresHost := printf "%s-postgres" $programserviceFullName -}}
+{{- $postgresHost := coalesce .Values.externalPostgres.host $defaultPostgresHost  -}}
+{{- $postgresDatabase := coalesce .Values.externalPostgres.database .Values.postgres.postgresDb  -}}
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -30,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://{{ template "program-service.fullname" . }}-postgres:5432/{{ .Values.postgres.postgresDb }}"
+              value: jdbc:postgresql://{{ $postgresHost }}:{{ .Values.postgres.port }}/{{ $postgresDatabase }}?stringtype=unspecified
             - name: SPRING_FLYWAY_ENABLED
               value: "true"
             - name: SPRING_FLYWAY_LOCATIONS
