@@ -27,3 +27,18 @@ serviceAccount:
   # name:
 
 customLabels: {}
+
+execute:
+  enable: false
+  spec:
+    command:
+    - sleep
+    args:
+    - infinity
+
+persistence:
+  volume:
+    attach: false
+    name: "volume_name"
+    path: "mount_path"
+

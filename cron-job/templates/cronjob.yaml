@@ -20,12 +20,22 @@ spec:
           serviceAccountName: {{ include "cron-job.serviceAccountName" . }}
           containers:
           - name: {{ .Chart.Name }}
-            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-            imagePullPolicy: {{ .Values.image.pullPolicy }} 
+            image: "{{.Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            {{- if .Values.execute.enable }}
+              {{- with .Values.execute.spec }}
+              {{- toYaml . | nindent 12 }}
+              {{- end }}
+            {{- end }}
             securityContext:
               runAsUser: 1000
+            {{- if .Values.persistence.volume.attach }}
+            volumeMounts:
+              - mountPath: {{.Values.persistence.volume.path }}
+                name: {{.Values.persistence.volume.name }}
+            {{- end }}
             env:
-{{- if .Values.extraEnv }} 
+{{- if .Values.extraEnv }}
   {{- range $key, $value := .Values.extraEnv }}
               - name: {{ $key }}
                 value: {{ $value | quote }}
@@ -36,4 +46,12 @@ spec:
 {{- end }}
           restartPolicy: {{ .Values.restartPolicy }}
           imagePullSecrets:
-            - name: artifactory 
+            - name: artifactory
+          {{- if .Values.persistence.volume.attach }}
+          volumes:
+            - name: {{.Values.persistence.volume.name }}
+              persistentVolumeClaim:
+                claimName: {{.Values.persistence.volume.name }}
+          {{- end }}
+
+
