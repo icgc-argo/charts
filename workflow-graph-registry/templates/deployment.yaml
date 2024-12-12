@@ -38,11 +38,13 @@ spec:
               value: {{ .Values.appConfig.port | quote }}
             - name: SPRING_DATASOURCE_URL
               value: {{ .Values.appConfig.databaseUrl }}
+            - name: SPRING_DATASOURCE_USERNAME
+              value: {{ .Values.appConfig.datasourceUsername }}
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.appConfig.psqlSecretName }}
-                  key: postgresql-password
+                  key: {{ .Values.appConfig.psqlSecretKey }}
             {{- if .Values.extraEnv }}
               {{ range $key, $value := .Values.extraEnv }}
             - name: {{ $key }}

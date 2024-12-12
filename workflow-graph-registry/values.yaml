@@ -75,7 +75,9 @@ affinity: {}
 
 appConfig:
   port: 8080
-  psqlSecretName: 
-  databaseUrl: 
+  psqlSecretName: "postgresql-secret"
+  psqlSecretKey: postgresql-password
+  databaseUrl: ""
+  datasourceUsername: postgres
 
 extraEnv: {}
