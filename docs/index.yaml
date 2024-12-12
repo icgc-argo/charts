@@ -2589,6 +2589,16 @@ entries:
   workflow-graph-registry:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-12-12T16:10:50.882476-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 84972c4fa2387e556e57697e0dcc900cf2070510206e94c920244d6b86e257c4
+    name: workflow-graph-registry
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/workflow-graph-registry-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-10-18T13:55:08.75206-04:00"
     description: A Helm chart for Kubernetes
     digest: c1eeb1ec6c6d2be582f5d256a7527f7d92a5c0c2a213bed5990fbbf7f051ef6e
@@ -2929,4 +2939,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-13T14:51:38.249279-05:00"
+generated: "2024-12-12T16:10:50.876088-05:00"
