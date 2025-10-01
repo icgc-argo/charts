@@ -766,9 +766,18 @@ entries:
     version: 0.1.0
   cron-job:
   - apiVersion: v2
-    created: "2024-11-13T14:51:38.254934-05:00"
+    created: "2025-10-01T11:12:27.184597-04:00"
     description: Generic chart to run a cron job
-    digest: 00da1d404440b4b651854f148694816abcf1754bf10696d36465c6a81247b789
+    digest: 0a026d34e8773a87f83595ddb1c862a207563d378408f7ff32e88588c515d5e9
+    name: cron-job
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/cron-job-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
+    created: "2025-10-01T11:12:13.49353-04:00"
+    description: Generic chart to run a cron job
+    digest: 2da50ab8fc6341fcc4083ce5ec47c39b1d186267e174c72d41116205ce43e872
     name: cron-job
     type: application
     urls:
@@ -2939,4 +2948,4 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-12T16:10:50.876088-05:00"
+generated: "2025-10-01T11:12:27.184076-04:00"

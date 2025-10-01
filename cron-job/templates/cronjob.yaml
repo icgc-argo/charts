@@ -45,8 +45,10 @@ spec:
               {{- toYaml . | nindent 14 }}
 {{- end }}
           restartPolicy: {{ .Values.restartPolicy }}
+          {{- if .Values.imagePullSecrets }}
           imagePullSecrets:
-            - name: artifactory
+            - name: {{.Values.imagePullSecrets}}
+          {{- end }}
           {{- if .Values.persistence.volume.attach }}
           volumes:
             - name: {{.Values.persistence.volume.name }}
