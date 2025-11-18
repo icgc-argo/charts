@@ -1,9 +1,9 @@
----
 {{ if .Values.entityOperator.networkPolicy.create}}
+{{ $clusterName := include "kafka-operator-resources.fullname" . }}
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: {{ .Release.Name }}-entity-operator-custom
+  name: {{ $clusterName }}-kafka-entity-operator-custom
 spec:
   {{ if .Values.entityOperator.networkPolicy.ingress}}
   ingress:
@@ -19,7 +19,7 @@ spec:
   {{- end }}
   podSelector:
     matchLabels:
-      strimzi.io/cluster: {{ .Release.Name }}
+      strimzi.io/cluster: {{ $clusterName }}
       strimzi.io/kind: Kafka
       strimzi.io/component-type: entity-operator
   policyTypes:
@@ -33,10 +33,11 @@ spec:
 
 ---
 {{ if .Values.kafkaBridge.networkPolicy.create}}
+{{ $clusterName := include "kafka-operator-resources.fullname" . }}
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: {{ .Release.Name }}-kafka-bridge-custom
+  name: {{ $clusterName }}-kafka-bridge-custom
 spec:
   {{ if .Values.kafkaBridge.networkPolicy.ingress}}
   ingress:
@@ -52,7 +53,7 @@ spec:
   {{- end }}
   podSelector:
     matchLabels:
-      strimzi.io/cluster: {{ .Release.Name }}
+      strimzi.io/cluster: {{ $clusterName }}
       strimzi.io/kind: KafkaBridge
   policyTypes:
   {{ if .Values.kafkaBridge.networkPolicy.ingress}}

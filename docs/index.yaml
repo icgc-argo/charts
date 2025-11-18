@@ -3,7 +3,7 @@ entries:
   argo-docs:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.364509-04:00"
+    created: "2025-11-18T00:09:58.318747-05:00"
     description: A Helm chart for Kubernetes
     digest: 071172998d40e063c5cd475456de0c43c21d619d193d36e36a762f39e0c51e73
     name: argo-docs
@@ -12,7 +12,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.361926-04:00"
+    created: "2025-11-18T00:09:58.318563-05:00"
     description: A Helm chart for Kubernetes
     digest: 6dc307f5d04dd4ea67ef3438801bbe5d11f0102f468bd4cfc3763ac223686dae
     name: argo-docs
@@ -21,7 +21,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.358662-04:00"
+    created: "2025-11-18T00:09:58.318348-05:00"
     description: A Helm chart for Kubernetes
     digest: 6372217bf7699c026e1daa7defa49793bcb75c5183733e24dc2f0ae0eadd29fb
     name: argo-docs
@@ -30,7 +30,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.351349-04:00"
+    created: "2025-11-18T00:09:58.318091-05:00"
     description: A Helm chart for Kubernetes
     digest: c40bee90939d0bdad2dfe35c6b2a5768b0cbe2520993cb188161a1f0095bd6aa
     name: argo-docs
@@ -39,7 +39,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.346479-04:00"
+    created: "2025-11-18T00:09:58.31783-05:00"
     description: A Helm chart for Kubernetes
     digest: 20295000ba4cec3737795ee62c7c295e383d7950ec1008526c9d75f0ce2310fc
     name: argo-docs
@@ -49,7 +49,7 @@ entries:
   argo-gateway:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.46525-04:00"
+    created: "2025-11-18T00:09:58.327633-05:00"
     description: A Helm chart for Kubernetes
     digest: 6c3c7f193bba7978202ad2894c94919f8218b1d4a6dad2484fddf976358cf751
     name: argo-gateway
@@ -58,7 +58,7 @@ entries:
     version: 2.3.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.461617-04:00"
+    created: "2025-11-18T00:09:58.327395-05:00"
     description: A Helm chart for Kubernetes
     digest: 0f8f2e4ae669e114843796fed1808c0c872509dcdbc04afa23275fd4e4f27412
     name: argo-gateway
@@ -67,7 +67,7 @@ entries:
     version: 2.3.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.454374-04:00"
+    created: "2025-11-18T00:09:58.327173-05:00"
     description: A Helm chart for Kubernetes
     digest: 7cc4d1c9f28ba76912e1299af70c76722ec3d6877f1667766f67ef9b9d7359da
     name: argo-gateway
@@ -76,7 +76,7 @@ entries:
     version: 2.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.439653-04:00"
+    created: "2025-11-18T00:09:58.326928-05:00"
     description: A Helm chart for Kubernetes
     digest: 61f3d2e6e0216a8e12459e64df52b794be784503a89634a596c7a9bbbca23ddf
     name: argo-gateway
@@ -85,7 +85,7 @@ entries:
     version: 2.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.4359-04:00"
+    created: "2025-11-18T00:09:58.326688-05:00"
     description: A Helm chart for Kubernetes
     digest: 38ee82f0311bd8b5c24846f60f73730735457a2a381b88263711bf3a6dc3fee6
     name: argo-gateway
@@ -94,7 +94,7 @@ entries:
     version: 2.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.429797-04:00"
+    created: "2025-11-18T00:09:58.326441-05:00"
     description: A Helm chart for Kubernetes
     digest: 0c81c8985d4feebbdf4f1b36ca6d6a2df70a38e71218c58d0b117cdf68ed65da
     name: argo-gateway
@@ -103,7 +103,7 @@ entries:
     version: 2.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.427329-04:00"
+    created: "2025-11-18T00:09:58.326171-05:00"
     description: A Helm chart for Kubernetes
     digest: a5e936dde7d85046e792062b5bf784a5cb04c9a980085d8539fdb299d3f2baec
     name: argo-gateway
@@ -112,7 +112,7 @@ entries:
     version: 2.0.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.424158-04:00"
+    created: "2025-11-18T00:09:58.3257-05:00"
     description: A Helm chart for Kubernetes
     digest: d1f1c135aa430a76a981233fd88d11d1fd4cfc4c46c921594fa0878b299d7d8e
     name: argo-gateway
@@ -121,7 +121,7 @@ entries:
     version: 2.0.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.421055-04:00"
+    created: "2025-11-18T00:09:58.325495-05:00"
     description: A Helm chart for Kubernetes
     digest: 84868a3b3470a491a6df2bda395654f0a06a3416dae39f40f1db7369c64f2d28
     name: argo-gateway
@@ -130,7 +130,7 @@ entries:
     version: 2.0.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.417579-04:00"
+    created: "2025-11-18T00:09:58.325284-05:00"
     description: A Helm chart for Kubernetes
     digest: 2372b220524d89762ca2c7830bf9ad77ad124a0fde10222a7e7292f7b67a35a1
     name: argo-gateway
@@ -139,7 +139,7 @@ entries:
     version: 2.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.411914-04:00"
+    created: "2025-11-18T00:09:58.325078-05:00"
     description: A Helm chart for Kubernetes
     digest: 6f55b5d262cde3c5ae50a080d4c8dd2d5607c5892735e5f8d07d7932ca9f3767
     name: argo-gateway
@@ -148,7 +148,7 @@ entries:
     version: 2.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.409375-04:00"
+    created: "2025-11-18T00:09:58.324898-05:00"
     description: A Helm chart for Kubernetes
     digest: 1601f9c9452abd03e54ec448f45463161ccc500a6721752400e488fdf13ad510
     name: argo-gateway
@@ -157,7 +157,7 @@ entries:
     version: 2.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.406939-04:00"
+    created: "2025-11-18T00:09:58.324724-05:00"
     description: A Helm chart for Kubernetes
     digest: a6a8d60078e71541adc8ee373cb4c16ae33c9e7e8ab769d032ead2b2c17bce77
     name: argo-gateway
@@ -166,7 +166,7 @@ entries:
     version: 2.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.404807-04:00"
+    created: "2025-11-18T00:09:58.324543-05:00"
     description: A Helm chart for Kubernetes
     digest: 470367dfaffca7cd18b8065a618ec2c8c77814c35c586508ba54901812c9e6c6
     name: argo-gateway
@@ -175,7 +175,7 @@ entries:
     version: 1.0.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.402692-04:00"
+    created: "2025-11-18T00:09:58.32436-05:00"
     description: A Helm chart for Kubernetes
     digest: f9bbd0e3e6c9f3807386af2523259223e339b32c7ce2cb6a307a9ec672779f50
     name: argo-gateway
@@ -184,7 +184,7 @@ entries:
     version: 1.0.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.399286-04:00"
+    created: "2025-11-18T00:09:58.323584-05:00"
     description: A Helm chart for Kubernetes
     digest: 8ec4697e201089d7973b8f022d7e6cfc5bedaa0b8164d745d88d5a4c0e6de837
     name: argo-gateway
@@ -193,7 +193,7 @@ entries:
     version: 1.0.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.395985-04:00"
+    created: "2025-11-18T00:09:58.320968-05:00"
     description: A Helm chart for Kubernetes
     digest: 90f92d1a5ca8326785fe417d295cf07e7cd50b8cc75faabc4e64c3e46c38fc7f
     name: argo-gateway
@@ -202,7 +202,7 @@ entries:
     version: 1.0.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.393113-04:00"
+    created: "2025-11-18T00:09:58.320409-05:00"
     description: A Helm chart for Kubernetes
     digest: 5f0dd0cbd88f120cf821101a84ee02840b16df395107dd496bc5a6db414a0d66
     name: argo-gateway
@@ -211,7 +211,7 @@ entries:
     version: 1.0.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.389752-04:00"
+    created: "2025-11-18T00:09:58.320049-05:00"
     description: A Helm chart for Kubernetes
     digest: bcd5af914ae61a691765c475ae726424a635229b7e2e65caae253f2a4fb16afe
     name: argo-gateway
@@ -220,7 +220,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.385239-04:00"
+    created: "2025-11-18T00:09:58.319747-05:00"
     description: A Helm chart for Kubernetes
     digest: c874ac0304230d791d2f8ffb747120f4d9402552c78fe5166d45c7b6bee85a79
     name: argo-gateway
@@ -229,7 +229,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.378734-04:00"
+    created: "2025-11-18T00:09:58.319531-05:00"
     description: A Helm chart for Kubernetes
     digest: c0b632480748ecb605f436be62a02227420db6912b17d039f42c91d6f3da4545
     name: argo-gateway
@@ -238,7 +238,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.37435-04:00"
+    created: "2025-11-18T00:09:58.319351-05:00"
     description: A Helm chart for Kubernetes
     digest: 84e78f265b809c47bed8b024004b5a56736d363e06833ebd1c9452f0383b1555
     name: argo-gateway
@@ -247,7 +247,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.369594-04:00"
+    created: "2025-11-18T00:09:58.319168-05:00"
     description: A Helm chart for Kubernetes
     digest: 98c3e235e48232b15dd71d62a0e32d41a497a14a0286dbf6d9ef172f24aa3391
     name: argo-gateway
@@ -257,7 +257,7 @@ entries:
   argo-stack:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.474193-04:00"
+    created: "2025-11-18T00:09:58.334533-05:00"
     dependencies:
     - alias: ego
       name: ego
@@ -304,7 +304,7 @@ entries:
   argo-vault:
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2024-06-05T17:52:40.806144-04:00"
+    created: "2025-11-18T00:09:58.368912-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -322,7 +322,7 @@ entries:
     version: 1.4.0
   - apiVersion: v1
     appVersion: 1.10.3
-    created: "2023-10-18T13:55:07.625337-04:00"
+    created: "2025-11-18T00:09:58.363491-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -340,7 +340,7 @@ entries:
     version: 1.3.0
   - apiVersion: v1
     appVersion: 1.8.4
-    created: "2023-10-18T13:55:07.605982-04:00"
+    created: "2025-11-18T00:09:58.358769-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -358,7 +358,7 @@ entries:
     version: 1.2.0
   - apiVersion: v1
     appVersion: 1.6.2
-    created: "2023-10-18T13:55:07.590574-04:00"
+    created: "2025-11-18T00:09:58.352913-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -376,7 +376,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: 1.5.4
-    created: "2023-10-18T13:55:07.571099-04:00"
+    created: "2025-11-18T00:09:58.347085-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -394,7 +394,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.556723-04:00"
+    created: "2025-11-18T00:09:58.343434-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -412,7 +412,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.54225-04:00"
+    created: "2025-11-18T00:09:58.340021-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -430,7 +430,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.536293-04:00"
+    created: "2025-11-18T00:09:58.338742-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -448,7 +448,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.515014-04:00"
+    created: "2025-11-18T00:09:58.337742-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -462,7 +462,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.509889-04:00"
+    created: "2025-11-18T00:09:58.33713-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -476,7 +476,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.498541-04:00"
+    created: "2025-11-18T00:09:58.336554-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -490,7 +490,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.490491-04:00"
+    created: "2025-11-18T00:09:58.335992-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -504,7 +504,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.481254-04:00"
+    created: "2025-11-18T00:09:58.335253-05:00"
     dependencies:
     - alias: vaultchart
       name: vault
@@ -519,7 +519,7 @@ entries:
   clinical:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-20T10:34:46.741968-04:00"
+    created: "2025-11-18T00:09:58.375185-05:00"
     description: A Helm chart for Argo clinical
     digest: 3314829b53b2db09b75e06caa907a16aa37793323dfb4e7164fbf01802430330
     name: clinical
@@ -528,7 +528,7 @@ entries:
     version: 1.1.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-20T10:24:43.448274-04:00"
+    created: "2025-11-18T00:09:58.374972-05:00"
     description: A Helm chart for Argo clinical
     digest: 761de2eb31b765457f10e23ac85a63a0cc8a20e7cd59229b55d4cb7f185e43a5
     name: clinical
@@ -537,7 +537,7 @@ entries:
     version: 1.1.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-19T15:54:16.385031-04:00"
+    created: "2025-11-18T00:09:58.374758-05:00"
     description: A Helm chart for Argo clinical
     digest: 650f5905c4d7508acda36aa29583b1f70be95d57bd555003b3b90bc96e09e9e0
     name: clinical
@@ -546,7 +546,7 @@ entries:
     version: 1.1.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-19T15:42:23.065671-04:00"
+    created: "2025-11-18T00:09:58.374548-05:00"
     description: A Helm chart for Argo clinical
     digest: e9d3e624f3347b0e30ea9a28decf2d4756ef640788861e75adbd484019e778b6
     name: clinical
@@ -555,7 +555,7 @@ entries:
     version: 1.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-19T15:23:51.328243-04:00"
+    created: "2025-11-18T00:09:58.374336-05:00"
     description: A Helm chart for Argo clinical
     digest: 2982e131585abc7d0b1b63a7d29e4b735db2852a8bee8eaf4e15c3b7e5659b34
     name: clinical
@@ -564,7 +564,7 @@ entries:
     version: 1.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.675556-04:00"
+    created: "2025-11-18T00:09:58.374121-05:00"
     description: A Helm chart for Argo clinical
     digest: 949f2c12a029982f99e7ea97293e8bef61c7f32d1cf449f01a8dc51d6ce4eccf
     name: clinical
@@ -573,7 +573,7 @@ entries:
     version: 1.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.674929-04:00"
+    created: "2025-11-18T00:09:58.373914-05:00"
     description: A Helm chart for Argo clinical
     digest: 4deb7904f0b07c650673be9679b05d1eeee536dba9da5c477bd069b643b1d9f5
     name: clinical
@@ -582,7 +582,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.672071-04:00"
+    created: "2025-11-18T00:09:58.372972-05:00"
     description: A Helm chart for Argo clinical
     digest: f2f22949fdb491b23bc4aea524e21b0dd4588b27a0ec801b4c8eb40af7a77a66
     name: clinical
@@ -591,7 +591,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.66976-04:00"
+    created: "2025-11-18T00:09:58.372785-05:00"
     description: A Helm chart for Argo clinical
     digest: 348ca9e812e8da4c603b792916bad6cbd8d22a598b2ba0b6a28eaf082488d87d
     name: clinical
@@ -600,7 +600,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.666219-04:00"
+    created: "2025-11-18T00:09:58.372566-05:00"
     description: A Helm chart for Argo clinical
     digest: b64003110b94ab8585a4dda85ef2ead82580cff783a033f941487591678b1e4b
     name: clinical
@@ -609,7 +609,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.664122-04:00"
+    created: "2025-11-18T00:09:58.371107-05:00"
     description: A Helm chart for Argo clinical
     digest: 49ec62d23226b3449d920b428505778c93027f04ac76c3d6bb691daf14a148be
     name: clinical
@@ -618,7 +618,7 @@ entries:
     version: 0.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.66122-04:00"
+    created: "2025-11-18T00:09:58.369793-05:00"
     description: A Helm chart for Argo clinical
     digest: 1c47e6ada856a870ddf463b8893d4d8db5746c5317856ed09ef4aa4f2359e54d
     name: clinical
@@ -627,7 +627,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.658319-04:00"
+    created: "2025-11-18T00:09:58.369615-05:00"
     description: A Helm chart for Argo clinical
     digest: 5fdb8e4e15cac282c95308d4afcaa1cb1d304d19c7aa15f89d6056127162e051
     name: clinical
@@ -636,7 +636,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.655651-04:00"
+    created: "2025-11-18T00:09:58.36943-05:00"
     description: A Helm chart for Argo clinical
     digest: 88f61233ea7812c5db06dd86616b6307c6c62f706274a6b6c109a0ee2c05b7cf
     name: clinical
@@ -645,7 +645,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.648334-04:00"
+    created: "2025-11-18T00:09:58.3692-05:00"
     description: A Helm chart for Argo clinical
     digest: 358b73fb2cb055a0d18bd37270516391519a3485c2a194941da5d811b2f56661
     name: clinical
@@ -655,7 +655,7 @@ entries:
   clinical-mongo-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-05-14T14:19:33.153157-04:00"
+    created: "2025-11-18T00:09:58.37676-05:00"
     description: Backup clinical-mongo cluster
     digest: c4661a3dcf465b4f8341657f80f34bcded86f35ba7247a33425ed4e62bfae1a1
     name: clinical-mongo-backup
@@ -665,9 +665,9 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-05-14T13:50:05.512288-04:00"
+    created: "2025-11-18T00:09:58.376563-05:00"
     description: Backup clinical-mongo cluster
-    digest: a10b3bb16ff080d9432bc4e3e94a7df5d3f143afae8f3a1253cb09f74c28e120
+    digest: abb46d9c5503e98f76b72b88620e919a024c22cac94e431949780e300d6b3a90
     name: clinical-mongo-backup
     type: application
     urls:
@@ -675,7 +675,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:07.696594-04:00"
+    created: "2025-11-18T00:09:58.376375-05:00"
     description: Backup clinical-mongo cluster
     digest: ae7142cefa75c6799495aed98e91f63175419d39c00964745c7a96853de0c86e
     name: clinical-mongo-backup
@@ -685,7 +685,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:07.693179-04:00"
+    created: "2025-11-18T00:09:58.376178-05:00"
     description: Backup clinical-mongo cluster
     digest: 2024646ac9fcad280757ad7712f42e7bf86cd3f3070a4f24b0338e91a713ba73
     name: clinical-mongo-backup
@@ -695,7 +695,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2023-10-18T13:55:07.690181-04:00"
+    created: "2025-11-18T00:09:58.375884-05:00"
     description: Backup clinical-mongo cluster
     digest: bf5d66d8bf0e828ab326430fedda657604f786c2c2ab8e79dd1ffbc200edbdfd
     name: clinical-mongo-backup
@@ -705,7 +705,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.68749-04:00"
+    created: "2025-11-18T00:09:58.37566-05:00"
     description: Backup clinical-mongo cluster
     digest: 46a953ac0f9495c30238613f28f53160805ed34ae27eb30622e010e90b1b0ab0
     name: clinical-mongo-backup
@@ -715,7 +715,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.678398-04:00"
+    created: "2025-11-18T00:09:58.375463-05:00"
     description: Backup clinical-mongo cluster
     digest: f93734ed2cf8071ff4e17eb3d971049dae6f80ac9974f484f254297c29669f78
     name: clinical-mongo-backup
@@ -726,7 +726,7 @@ entries:
   consul-backup:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-05-14T13:45:53.185406-04:00"
+    created: "2025-11-18T00:09:58.378967-05:00"
     description: Backup consul cluster
     digest: 3e484dc35f9b43e5467a0e3122b0fea25848fe8acc52595aadc37bc6f196ef3f
     name: consul-backup
@@ -736,7 +736,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:07.704644-04:00"
+    created: "2025-11-18T00:09:58.377377-05:00"
     description: Backup etcd cluster
     digest: 904b24d651b5a9ef5bdb2b85133a8f436bccc127e6b3d447ddad7243c2416f15
     name: consul-backup
@@ -746,7 +746,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2023-10-18T13:55:07.702318-04:00"
+    created: "2025-11-18T00:09:58.377214-05:00"
     description: Backup etcd cluster
     digest: 3c2548d62889a96613c26cf1909c978c90dbff7871cab249a0c942cde8b64763
     name: consul-backup
@@ -756,7 +756,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.699238-04:00"
+    created: "2025-11-18T00:09:58.376924-05:00"
     description: Backup etcd cluster
     digest: b179795f4d281444428a80e29ec85b18b1cd33877734d17c7c95dd9c3289346a
     name: consul-backup
@@ -766,7 +766,7 @@ entries:
     version: 0.1.0
   cron-job:
   - apiVersion: v2
-    created: "2025-10-01T11:15:13.462635-04:00"
+    created: "2025-11-18T00:09:58.37991-05:00"
     description: Generic chart to run a cron job
     digest: d6f9d4ecc0d43ed55b94d6de6645585a2f694461c8cf538173c9f4f4f9791e0f
     name: cron-job
@@ -775,16 +775,16 @@ entries:
     - https://icgc-argo.github.io/charts/cron-job-1.2.0.tgz
     version: 1.2.0
   - apiVersion: v2
-    created: "2025-10-01T11:12:13.49353-04:00"
+    created: "2025-11-18T00:09:58.379585-05:00"
     description: Generic chart to run a cron job
-    digest: 2da50ab8fc6341fcc4083ce5ec47c39b1d186267e174c72d41116205ce43e872
+    digest: 00da1d404440b4b651854f148694816abcf1754bf10696d36465c6a81247b789
     name: cron-job
     type: application
     urls:
     - https://icgc-argo.github.io/charts/cron-job-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.712346-04:00"
+    created: "2025-11-18T00:09:58.379265-05:00"
     description: Generic chart to run a cron job
     digest: 8f7d23044ac79235dc54685678596c0b27cd49fb774f063d48d337824507bef1
     name: cron-job
@@ -793,7 +793,7 @@ entries:
     - https://icgc-argo.github.io/charts/cron-job-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.707661-04:00"
+    created: "2025-11-18T00:09:58.379117-05:00"
     description: Generic chart to run a cron job
     digest: 5569bfa2da6543c25d697727954fd6caa88d723f6bfe4a948a5239e0246ceee0
     name: cron-job
@@ -804,7 +804,7 @@ entries:
   dac-mongo-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-05-14T12:18:51.045349-04:00"
+    created: "2025-11-18T00:09:58.380783-05:00"
     description: Backup dac-mongo cluster
     digest: a8aeb25b80be8ac59746e6d17690cbe81ca5aadf0dc9b14044064fb0f08d2505
     name: dac-mongo-backup
@@ -814,7 +814,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-03-20T14:43:34.471907-04:00"
+    created: "2025-11-18T00:09:58.380574-05:00"
     description: Backup dac-mongo cluster
     digest: 03c34a6fd75fc5e68f265a18fa63316ccc5bc6eaa70c6afd1321588144eb61af
     name: dac-mongo-backup
@@ -824,7 +824,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:07.730124-04:00"
+    created: "2025-11-18T00:09:58.380353-05:00"
     description: Backup dac-mongo cluster
     digest: cd302f20d759036073d4cfa1f5aea12ede16a8c3f9e5063e8ab3abd5e6a81a54
     name: dac-mongo-backup
@@ -834,7 +834,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:07.720102-04:00"
+    created: "2025-11-18T00:09:58.380129-05:00"
     description: Backup dac-mongo cluster
     digest: 97ca4342f4398bd1d412b652d58e037c62d12409d531b40e7247e99a37bbce96
     name: dac-mongo-backup
@@ -845,7 +845,7 @@ entries:
   daco2ego:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2024-07-08T14:56:28.175612-04:00"
+    created: "2025-11-18T00:09:58.382119-05:00"
     description: Run the daco2ego script as a cronjob
     digest: ce2acb50e97ce9a9de807115feeebb64781be4afbc86f5bb2274a2aaca39e4e9
     name: daco2ego
@@ -854,7 +854,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2024-06-20T12:35:16.501706-04:00"
+    created: "2025-11-18T00:09:58.38192-05:00"
     description: Run the daco2ego script as a cronjob
     digest: dbaad8074b54df63ebcbfe72497e7182be1866d855180574ecfc6a23f3c2a4e3
     name: daco2ego
@@ -863,7 +863,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2024-06-19T16:23:01.038613-04:00"
+    created: "2025-11-18T00:09:58.381687-05:00"
     description: Run the daco2ego script as a cronjob
     digest: 64d6a378c21e2a7221d36f6602df68aef0fab04c85f50e36db1796005e821f39
     name: daco2ego
@@ -872,7 +872,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.737962-04:00"
+    created: "2025-11-18T00:09:58.381469-05:00"
     description: A Helm chart for daco2ego
     digest: f6c01efc1fa769a9eed29cdcbd5c016792b27d7d0ae25890fd2818fcaea44039
     name: daco2ego
@@ -881,7 +881,7 @@ entries:
     version: 0.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.734101-04:00"
+    created: "2025-11-18T00:09:58.38129-05:00"
     description: A Helm chart for daco2ego
     digest: 8a21954075a274a9b5f814a26327dbaa5da48958a23d698e0ef58a39a5f7d171
     name: daco2ego
@@ -891,7 +891,7 @@ entries:
   donor-submission-aggregator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.779424-04:00"
+    created: "2025-11-18T00:09:58.385271-05:00"
     description: A Helm chart for Kubernetes
     digest: 4ee2ac934d2f1ec99e7c7a48a31118f05bcd2d3efa677fc2cb5c5908b08fc21b
     name: donor-submission-aggregator
@@ -901,7 +901,7 @@ entries:
     version: 0.7.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.776848-04:00"
+    created: "2025-11-18T00:09:58.38501-05:00"
     description: A Helm chart for Kubernetes
     digest: 548c0a30186ccc84510281907f8e9f0fa85f339f15461acf75638fdf0d4d2435
     name: donor-submission-aggregator
@@ -911,7 +911,7 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.773261-04:00"
+    created: "2025-11-18T00:09:58.384751-05:00"
     description: A Helm chart for Kubernetes
     digest: a8e347117b4efaed22cb989a40b17784c2963d4cf6085c35539b6a545ebdda43
     name: donor-submission-aggregator
@@ -921,7 +921,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.770079-04:00"
+    created: "2025-11-18T00:09:58.384518-05:00"
     description: A Helm chart for Kubernetes
     digest: 2a8410513ad19b43926a04c013e0db82419d589a7a651f17db5793c2d229a1ac
     name: donor-submission-aggregator
@@ -931,7 +931,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.765653-04:00"
+    created: "2025-11-18T00:09:58.384279-05:00"
     description: A Helm chart for Kubernetes
     digest: 301116dddaa89d0d694b4f09579483973aeab338bcfb35bc11742f16ae5d286c
     name: donor-submission-aggregator
@@ -941,7 +941,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.762117-04:00"
+    created: "2025-11-18T00:09:58.383273-05:00"
     description: A Helm chart for Kubernetes
     digest: 68855727978d34a666701887d4e9a1d310282f048e5e79a8bafc3ac8fbc0edd2
     name: donor-submission-aggregator
@@ -951,7 +951,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.756979-04:00"
+    created: "2025-11-18T00:09:58.383069-05:00"
     description: A Helm chart for Kubernetes
     digest: 3915b852ee21bd2fb409d5df6d89b4e53288d35da27485051a6b1bae44fd876f
     name: donor-submission-aggregator
@@ -961,7 +961,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.747944-04:00"
+    created: "2025-11-18T00:09:58.382747-05:00"
     description: A Helm chart for Kubernetes
     digest: 46c8911c834d6e8a1651c6da8684fb5acf4dcf4063de98129b9d2bd3c96287e1
     name: donor-submission-aggregator
@@ -971,7 +971,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.743666-04:00"
+    created: "2025-11-18T00:09:58.382536-05:00"
     description: A Helm chart for Kubernetes
     digest: 32e0e7ca5afd92d29da2cef8f57c7179d02dd4d943a3d7546315408fc257f39e
     name: donor-submission-aggregator
@@ -981,7 +981,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.740316-04:00"
+    created: "2025-11-18T00:09:58.382327-05:00"
     description: A Helm chart for Kubernetes
     digest: a0f9ac084a2bc419437e0d6f3cd5e1fd246e3c5c7786f34307a664fea667e997
     name: donor-submission-aggregator
@@ -992,7 +992,7 @@ entries:
   enrolment:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.782167-04:00"
+    created: "2025-11-18T00:09:58.385475-05:00"
     description: A Helm chart for Kubernetes
     digest: e770c084b824d029853dda9197e7e0d966c43dbe98cf05d6105876cf213b886a
     name: enrolment
@@ -1001,7 +1001,7 @@ entries:
     version: 0.2.0
   es-operator:
   - apiVersion: v2
-    created: "2024-05-15T12:30:24.491717-04:00"
+    created: "2025-11-18T00:09:58.386564-05:00"
     description: A Helm chart for Kubernetes
     digest: 804a046034f4bf94db870e8ac8da42f6ae331687b7bcede87b20130b885f9a1b
     name: es-operator
@@ -1010,7 +1010,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.12.0.tgz
     version: 0.12.0
   - apiVersion: v2
-    created: "2024-03-21T13:05:30.181165-04:00"
+    created: "2025-11-18T00:09:58.386274-05:00"
     description: A Helm chart for Kubernetes
     digest: 36374cfda9e6bc7e9481389ec49f8fa6f1dd803d22ed49bdf816b7dfe35757f3
     name: es-operator
@@ -1019,7 +1019,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.11.0.tgz
     version: 0.11.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.791231-04:00"
+    created: "2025-11-18T00:09:58.385966-05:00"
     description: A Helm chart for Kubernetes
     digest: 0aedb016709ffd0404eb94c930798cd59b19d1a403aba6952496250a5b5b7fd0
     name: es-operator
@@ -1028,7 +1028,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.10.0.tgz
     version: 0.10.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.828785-04:00"
+    created: "2025-11-18T00:09:58.390006-05:00"
     description: A Helm chart for Kubernetes
     digest: a280ae3ed6e1c4b611ec3009588ba5da82fabcd1a1480801e705b9d546277bf7
     name: es-operator
@@ -1037,7 +1037,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.9.0.tgz
     version: 0.9.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.825097-04:00"
+    created: "2025-11-18T00:09:58.389735-05:00"
     description: A Helm chart for Kubernetes
     digest: 3d193d3c14c8b4971521763616dceb40d2183d40b9b1ae2135056fe20bd2ffd2
     name: es-operator
@@ -1046,7 +1046,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.8.0.tgz
     version: 0.8.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.820923-04:00"
+    created: "2025-11-18T00:09:58.38947-05:00"
     description: A Helm chart for Kubernetes
     digest: 92d0ca6a54a6c7820375c0265f3b0e2748410ca1252455b709435e0699486dde
     name: es-operator
@@ -1055,7 +1055,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.7.0.tgz
     version: 0.7.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.816363-04:00"
+    created: "2025-11-18T00:09:58.389169-05:00"
     description: A Helm chart for Kubernetes
     digest: 4f65ffc46c0efe3ded0d9743ae9cb3380048e24de3c01be3fc6fedec67b375a5
     name: es-operator
@@ -1064,7 +1064,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.6.0.tgz
     version: 0.6.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.812037-04:00"
+    created: "2025-11-18T00:09:58.38774-05:00"
     description: A Helm chart for Kubernetes
     digest: df493b2e0bd5c799a5bb9a06c44f64e583d2535cb9828407a4a5df7825354a99
     name: es-operator
@@ -1073,7 +1073,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.80844-04:00"
+    created: "2025-11-18T00:09:58.38738-05:00"
     description: A Helm chart for Kubernetes
     digest: 43fa75ca05fa9019a0daa80019219034010fef061ef43f8880824d50acf7150c
     name: es-operator
@@ -1082,7 +1082,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.805032-04:00"
+    created: "2025-11-18T00:09:58.387175-05:00"
     description: A Helm chart for Kubernetes
     digest: 02824873619b200b975379214d771b197ef462dc78b9b57bab6c55447210745b
     name: es-operator
@@ -1091,7 +1091,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.800189-04:00"
+    created: "2025-11-18T00:09:58.386966-05:00"
     description: A Helm chart for Kubernetes
     digest: 7188d815918b0f209e50473e04a0d956f305badbee0a4c2962b13fbc3e5e1c86
     name: es-operator
@@ -1100,7 +1100,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.796064-04:00"
+    created: "2025-11-18T00:09:58.386769-05:00"
     description: A Helm chart for Kubernetes
     digest: 9264b7166b462197c9deda0d2a4c2f53256047144e0878349de3b8e4105001d4
     name: es-operator
@@ -1109,7 +1109,7 @@ entries:
     - https://icgc-argo.github.io/charts/es-operator-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.787769-04:00"
+    created: "2025-11-18T00:09:58.385692-05:00"
     description: A Helm chart for Kubernetes
     digest: db90f1131b61cc6fdabcf3c0e24c0284c8bdd5bc18e1c77b4f78c660c644f74c
     name: es-operator
@@ -1120,7 +1120,7 @@ entries:
   etcd-backup:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-05-14T13:14:01.670811-04:00"
+    created: "2025-11-18T00:09:58.391497-05:00"
     description: Backup etcd cluster
     digest: 1858267f757e73fde73e284bef4dded2d2750dfb9c42bc6ed54a9cbea0a1e691
     name: etcd-backup
@@ -1130,7 +1130,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-11-10T11:20:32.426315-05:00"
+    created: "2025-11-18T00:09:58.391322-05:00"
     description: Backup etcd cluster
     digest: cd1c0cb03d686907cce4710f0dd8f149b4d29c6b793bd34ec0c2de16f4c302dd
     name: etcd-backup
@@ -1140,7 +1140,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:07.867986-04:00"
+    created: "2025-11-18T00:09:58.391152-05:00"
     description: Backup etcd cluster
     digest: 9ab3ecaf0ea6e05ee05678941faa645a5c53272e8b9d72d371d52fa9796e5346
     name: etcd-backup
@@ -1150,7 +1150,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:07.858139-04:00"
+    created: "2025-11-18T00:09:58.390981-05:00"
     description: Backup etcd cluster
     digest: 03e176fcbca4ecbb6674ad0fa4b0c7add2158d4af4006d84a253c130c5e72f8f
     name: etcd-backup
@@ -1160,7 +1160,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:07.854337-04:00"
+    created: "2025-11-18T00:09:58.3908-05:00"
     description: Backup etcd cluster
     digest: 8ddeac2f34b0c500fcb60b7c8e4f6b98f56d8400296860b17f998adb081805cc
     name: etcd-backup
@@ -1170,7 +1170,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2023-10-18T13:55:07.850858-04:00"
+    created: "2025-11-18T00:09:58.390601-05:00"
     description: Backup etcd cluster
     digest: 71747e74502389f29607721c9e6bf731299556c43b8f6f3c83f661c8af5febbd
     name: etcd-backup
@@ -1180,7 +1180,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.842416-04:00"
+    created: "2025-11-18T00:09:58.390397-05:00"
     description: Backup etcd cluster
     digest: 0615c864e2faf73713f7e77163af288e87c3881a717d8a72159265c27eb0cc71
     name: etcd-backup
@@ -1190,7 +1190,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:07.831159-04:00"
+    created: "2025-11-18T00:09:58.390192-05:00"
     description: Backup etcd cluster
     digest: 4511bc9346254b123afd36c103232626ac9fe4c68debc94e7cd14b0c029ac5b7
     name: etcd-backup
@@ -1201,7 +1201,7 @@ entries:
   icgc-legacy-sftp:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2024-06-12T12:56:40.933936-04:00"
+    created: "2025-11-18T00:09:58.391719-05:00"
     description: ICGC Legacy SFTP - This version of Pensato helm chart. has no stateful
       set (no mounted volume or bucket), relies on configuring an external file or
       s3 system.
@@ -1213,7 +1213,7 @@ entries:
   jenkins-backup:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-06-27T15:13:47.003268-04:00"
+    created: "2025-11-18T00:09:58.393028-05:00"
     description: Backup jenkins data
     digest: 75e17b5cdde4b8ec1e86ee5b0039aab9ca33e22672c8fa8264ccf09cca01649b
     name: jenkins-backup
@@ -1223,7 +1223,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:07.895826-04:00"
+    created: "2025-11-18T00:09:58.392394-05:00"
     description: Backup jenkins data
     digest: ec8a59b8f7d4d4d25458e474b5cf793d8bd599cbb63ed3f423a27e6a554e26ab
     name: jenkins-backup
@@ -1233,7 +1233,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2023-10-18T13:55:07.892011-04:00"
+    created: "2025-11-18T00:09:58.392212-05:00"
     description: Backup jenkins data
     digest: 87686aae2dc2c31bf2eff8732635aed458d2d07bc2c33cc8a2c6afc55e247c3e
     name: jenkins-backup
@@ -1243,7 +1243,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:07.883979-04:00"
+    created: "2025-11-18T00:09:58.391914-05:00"
     description: Backup jenkins data
     digest: f786ea7ff74f634663837bb3db76879b982ee187d89177976999c2b46c7ce066
     name: jenkins-backup
@@ -1254,7 +1254,7 @@ entries:
   kafka-connect:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-09-11T16:37:54.387492-04:00"
+    created: "2025-11-18T00:09:58.395951-05:00"
     description: Backup kafka topics
     digest: 0034f006965f99d5565ceb59f453898ee020e2caeae0fef87f73db11758504c2
     name: kafka-connect
@@ -1264,7 +1264,7 @@ entries:
     version: 1.4.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-07-12T16:43:41.539495-04:00"
+    created: "2025-11-18T00:09:58.39569-05:00"
     description: Backup kafka topics
     digest: f8f4fc4d090f749601123e8a179c63042c1e46c09c6ff4364e2623d0c9d4a59b
     name: kafka-connect
@@ -1274,7 +1274,7 @@ entries:
     version: 1.4.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-11-22T20:00:02.618816-05:00"
+    created: "2025-11-18T00:09:58.395361-05:00"
     description: Backup kafka topics
     digest: 579762ce3d3a6ed203b875c6f205c04e1696117e85b73fcead8ca4559cf02b19
     name: kafka-connect
@@ -1284,9 +1284,9 @@ entries:
     version: 1.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-11-22T16:30:04.416477-05:00"
+    created: "2025-11-18T00:09:58.395139-05:00"
     description: Backup kafka topics
-    digest: a5acdd1a1314d54cad81afaf6abdb0d75b8add1b4c698cdeace6b3f4f8a4325e
+    digest: f1e9c29ee50d86a4a6acd68601e60e99f9f3281323a6486991a1ef0b6bcca165
     name: kafka-connect
     type: application
     urls:
@@ -1294,7 +1294,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:07.939393-04:00"
+    created: "2025-11-18T00:09:58.394891-05:00"
     description: Backup kafka topics
     digest: 7c8009719ed9c95126ac8c3307f1f73cc3167c0ae9992e4237c04342d8ab57bd
     name: kafka-connect
@@ -1304,7 +1304,7 @@ entries:
     version: 1.2.2
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2023-10-18T13:55:07.93411-04:00"
+    created: "2025-11-18T00:09:58.394639-05:00"
     description: Backup kafka topics
     digest: 806391d2187271fa0a0afb6fa52e0d0e234a1fa711d4a17c14c744bd3d1af874
     name: kafka-connect
@@ -1314,7 +1314,7 @@ entries:
     version: 1.2.1
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2023-10-18T13:55:07.925525-04:00"
+    created: "2025-11-18T00:09:58.394414-05:00"
     description: Backup kafka topics
     digest: ca54009ba32f640bac8a747672ccabc4fd20e06064087ce0b88db3376b97725d
     name: kafka-connect
@@ -1324,7 +1324,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2023-10-18T13:55:07.920185-04:00"
+    created: "2025-11-18T00:09:58.394183-05:00"
     description: Backup kafka topics
     digest: 2908c7360171674fa131a2608268c12c0cffdd6d423c8e2fc872db33387a40d6
     name: kafka-connect
@@ -1334,7 +1334,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-10-18T13:55:07.915719-04:00"
+    created: "2025-11-18T00:09:58.393933-05:00"
     description: Backup kafka topics
     digest: ce8d8134c49665796c193440ef1d2b0a8f68281b468572ceda7192b4b589d390
     name: kafka-connect
@@ -1344,7 +1344,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-10-18T13:55:07.906499-04:00"
+    created: "2025-11-18T00:09:58.393682-05:00"
     description: Backup kafka topics
     digest: 94c5086741d1f0feb8b36e12d11812ddbf47db787bf5dc69fa2374dfc4ac191f
     name: kafka-connect
@@ -1355,7 +1355,17 @@ entries:
   kafka-operator-resources:
   - apiVersion: v2
     appVersion: 3.7.1
-    created: "2024-09-24T13:40:00.005305-04:00"
+    created: "2025-11-18T00:09:58.397322-05:00"
+    description: Deploy Kafka resources for Strimzi Kafka operator
+    digest: 5f3ef058a8ab09a4fcebaa467716c32863043fc2f81c12f21a102a4a9b77bd05
+    name: kafka-operator-resources
+    type: application
+    urls:
+    - https://icgc-argo.github.io/charts/kafka-operator-resources-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 3.7.1
+    created: "2025-11-18T00:09:58.396993-05:00"
     description: Deploy Kafka resources for Strimzi Kafka operator
     digest: a61686a30eeb8e902b286a6be73f8b929ef37296a4e0751b25ddd3093c9f7546
     name: kafka-operator-resources
@@ -1365,7 +1375,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 3.7.1
-    created: "2024-09-05T11:04:31.901102-04:00"
+    created: "2025-11-18T00:09:58.396811-05:00"
     description: Deploy Kafka resources for Strimzi Kafka operator
     digest: 419c91d755e95d38086c95a8207ce6f87986e152d77a987e8c0bc8d3284bf344
     name: kafka-operator-resources
@@ -1375,7 +1385,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 3.7.1
-    created: "2024-09-04T12:32:49.738805-04:00"
+    created: "2025-11-18T00:09:58.396454-05:00"
     description: Deploy Kafka resources for Strimzi Kafka operator
     digest: c9eb59976f8c520449f77b4f5f1361a76e86a897d7cd62e220545555c86c8c7f
     name: kafka-operator-resources
@@ -1385,7 +1395,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 3.7.1
-    created: "2024-09-04T11:19:45.65723-04:00"
+    created: "2025-11-18T00:09:58.396211-05:00"
     description: Deploy Kafka resources for Strimzi Kafka operator
     digest: 63a0cdb5621818b84d8c513681d32d5d092f651f7826acb87a0e0ef20abe6a2a
     name: kafka-operator-resources
@@ -1396,7 +1406,7 @@ entries:
   kafka-ui:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.948407-04:00"
+    created: "2025-11-18T00:09:58.39782-05:00"
     description: A Helm chart for Kubernetes
     digest: ec73523f73c969cdd499f069fe32adb9f126e95799e3bc814b1c95cc3c58e0d7
     name: kafka-ui
@@ -1405,7 +1415,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.943786-04:00"
+    created: "2025-11-18T00:09:58.397624-05:00"
     description: A Helm chart for Kubernetes
     digest: dbe0986d71d33ec4a6f7d1f4a2593ebdbc44e0b020165c905fd57e9b4a31ff64
     name: kafka-ui
@@ -1414,7 +1424,7 @@ entries:
     version: 0.1.0
   kship:
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.985054-04:00"
+    created: "2025-11-18T00:09:58.400188-05:00"
     description: A Helm chart for Kubernetes
     digest: dae182afb36cad14a22e941dd6421b79ecb9e897dfbf421c0e575dd6c5be15ca
     name: kship
@@ -1423,7 +1433,7 @@ entries:
     - https://icgc-argo.github.io/charts/kship-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.972215-04:00"
+    created: "2025-11-18T00:09:58.399774-05:00"
     description: A Helm chart for Kubernetes
     digest: dc13323ca50eda623cc6cc894f0b400d1a1de1ddae1f5e07d2099b4272516a93
     name: kship
@@ -1432,7 +1442,7 @@ entries:
     - https://icgc-argo.github.io/charts/kship-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.96467-04:00"
+    created: "2025-11-18T00:09:58.399555-05:00"
     description: A Helm chart for Kubernetes
     digest: 763e81bfcbf8270b79278aee38afcc12b756700904e2c0bfc67b8a9b3b62a356
     name: kship
@@ -1441,7 +1451,7 @@ entries:
     - https://icgc-argo.github.io/charts/kship-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.96069-04:00"
+    created: "2025-11-18T00:09:58.399348-05:00"
     description: A Helm chart for Kubernetes
     digest: 818cc63c5c6931b5a6d098ecb129d8602aa71d4056ccbfbf0ea2c37785eaff2e
     name: kship
@@ -1450,7 +1460,7 @@ entries:
     - https://icgc-argo.github.io/charts/kship-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
-    created: "2023-10-18T13:55:07.955631-04:00"
+    created: "2025-11-18T00:09:58.398042-05:00"
     description: A Helm chart for Kubernetes
     digest: e30b04f6b0b92a29c3e54495858f53b47f4d7087c3a914498f4b93a451df78dc
     name: kship
@@ -1461,7 +1471,7 @@ entries:
   kube-webhook:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.038239-04:00"
+    created: "2025-11-18T00:09:58.401418-05:00"
     description: A Helm chart for kube-webhook
     digest: faeb62ebd9d3a46e1219e2e3fecd67c0219ec485b3dda6a5fd63d0c3ec81996b
     name: kube-webhook
@@ -1470,7 +1480,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.032379-04:00"
+    created: "2025-11-18T00:09:58.401207-05:00"
     description: A Helm chart for kube-webhook
     digest: abf463f2251324e5dad77d4f3836550711a26592f39183b689795f38dfff2b1b
     name: kube-webhook
@@ -1479,7 +1489,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.011112-04:00"
+    created: "2025-11-18T00:09:58.400959-05:00"
     description: A Helm chart for kube-webhook
     digest: da105931e2bdf117e57868dcabee8954cdddb56917c12a168f45c8541c5e802d
     name: kube-webhook
@@ -1488,7 +1498,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.993364-04:00"
+    created: "2025-11-18T00:09:58.400707-05:00"
     description: A Helm chart for kube-webhook
     digest: db897ca6f3abf16839aae815ea19c497eaf2057109c1daf912c3e4ef06552826
     name: kube-webhook
@@ -1497,7 +1507,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:07.989468-04:00"
+    created: "2025-11-18T00:09:58.400499-05:00"
     description: A Helm chart for kube-webhook
     digest: 17e027a13f3dff4c77ebfee76fbc5d088cea693c3fe6b1ec064ff8e4451dad45
     name: kube-webhook
@@ -1507,7 +1517,7 @@ entries:
   lectern-backup:
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2024-06-06T15:55:06.48336-04:00"
+    created: "2025-11-18T00:09:58.402322-05:00"
     description: Backup lectern-mongo cluster
     digest: 2a91d2cd8cca018335ce4086c8d1b46c81d7e5f9dc5fdf503227c5e3c55caf99
     name: lectern-backup
@@ -1517,7 +1527,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2023-10-18T13:55:08.057348-04:00"
+    created: "2025-11-18T00:09:58.402139-05:00"
     description: A Helm chart for Kubernetes
     digest: 78cb7ac359e03b0b7a772d0b637c12444f70218589d93dacff57982a02337645
     name: lectern-backup
@@ -1527,7 +1537,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.17.0
-    created: "2023-10-18T13:55:08.052609-04:00"
+    created: "2025-11-18T00:09:58.401965-05:00"
     description: A Helm chart for Kubernetes
     digest: dca88dc4c7361b9bb09e4f95f1f390c7f1368c77e2774a2679b4db23fd0ac604
     name: lectern-backup
@@ -1537,7 +1547,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.048116-04:00"
+    created: "2025-11-18T00:09:58.401789-05:00"
     description: A Helm chart for Kubernetes
     digest: c22677b2969e5a0abe937c288adf016fb360892497c0d96e83fe8f33c75c7727
     name: lectern-backup
@@ -1547,7 +1557,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.043828-04:00"
+    created: "2025-11-18T00:09:58.401607-05:00"
     description: A Helm chart for Kubernetes
     digest: 5d34706678f5de652ec05103015c13ce44aad10e3b3ddcf213081a29d18f48f0
     name: lectern-backup
@@ -1558,7 +1568,7 @@ entries:
   mailhog:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.074412-04:00"
+    created: "2025-11-18T00:09:58.403073-05:00"
     description: An e-mail testing tool for developers
     digest: 855fa2dc9d041105e3f532aa177454ec736898a5dd21ec9c2bcfd279badeb7a1
     name: mailhog
@@ -1567,7 +1577,7 @@ entries:
     version: 4.1.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.071207-04:00"
+    created: "2025-11-18T00:09:58.402866-05:00"
     description: An e-mail testing tool for developers
     digest: 9ddad23fc08fcb76415865d9c67d0d6e4de70007a3ce11caa504f09febdb00f9
     name: mailhog
@@ -1576,7 +1586,7 @@ entries:
     version: 4.0.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.064346-04:00"
+    created: "2025-11-18T00:09:58.402615-05:00"
     description: An e-mail testing tool for developers
     digest: 479946b05f20060639cc25840080cc08b87320f7524fa5aa562a984628a3a1be
     name: mailhog
@@ -1586,7 +1596,7 @@ entries:
   pensato:
   - apiVersion: v1
     appVersion: 0.1.0-SNAPSHOT
-    created: "2023-10-18T13:55:08.07998-04:00"
+    created: "2025-11-18T00:09:58.40362-05:00"
     description: Pensato chart with mounted volume as file system
     digest: 8ea384588aae70f6266c9b0860513df01790f2f59e99a5380a611575a183fff7
     name: pensato
@@ -1596,7 +1606,7 @@ entries:
   platform-ui:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.231415-04:00"
+    created: "2025-11-18T00:09:58.414661-05:00"
     description: A Helm chart for Kubernetes
     digest: 0f5d87e69d12b41b036be0f7b9dc36eb5d685305a9a3a1e7c0555432d0bbd23d
     name: platform-ui
@@ -1605,7 +1615,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.163264-04:00"
+    created: "2025-11-18T00:09:58.40905-05:00"
     description: A Helm chart for Kubernetes
     digest: b66277924f26789592b48f9f0939544011474d8b282163e6ce4fcf72237496c2
     name: platform-ui
@@ -1614,7 +1624,7 @@ entries:
     version: 1.0.19
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.158262-04:00"
+    created: "2025-11-18T00:09:58.408881-05:00"
     description: A Helm chart for Kubernetes
     digest: 118c7eafeef4161765ba5f2cb564106c86180e557420baaad11b77b712bf2aa8
     name: platform-ui
@@ -1623,7 +1633,7 @@ entries:
     version: 1.0.18
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.153379-04:00"
+    created: "2025-11-18T00:09:58.40871-05:00"
     description: A Helm chart for Kubernetes
     digest: cf142fe0d2ad37c90be6a31188b48bd780586ddeea78fc8e37e02fbb1053bc53
     name: platform-ui
@@ -1632,7 +1642,7 @@ entries:
     version: 1.0.17
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.14637-04:00"
+    created: "2025-11-18T00:09:58.408538-05:00"
     description: A Helm chart for Kubernetes
     digest: 5f3dc02a481a06ff788374b593b0827c60597cc555d6b9e9e9a94cf2a7d48bba
     name: platform-ui
@@ -1641,7 +1651,7 @@ entries:
     version: 1.0.16
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.141029-04:00"
+    created: "2025-11-18T00:09:58.40837-05:00"
     description: A Helm chart for Kubernetes
     digest: 8d1a25f5d0dcc8286a934670149c9439029862986c141200b56b248041dba2fc
     name: platform-ui
@@ -1650,7 +1660,7 @@ entries:
     version: 1.0.15
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.136918-04:00"
+    created: "2025-11-18T00:09:58.40816-05:00"
     description: A Helm chart for Kubernetes
     digest: c60fe50759d0c87a8b832336b46e7c72b4877c5bcbe9ccb530301cfff0923b3d
     name: platform-ui
@@ -1659,7 +1669,7 @@ entries:
     version: 1.0.14
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.131681-04:00"
+    created: "2025-11-18T00:09:58.40798-05:00"
     description: A Helm chart for Kubernetes
     digest: b76be1ce7a73f94764b9af52265f3c9357cdeee68941113d8bf7c3b322f04a4e
     name: platform-ui
@@ -1668,7 +1678,7 @@ entries:
     version: 1.0.13
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.124474-04:00"
+    created: "2025-11-18T00:09:58.407779-05:00"
     description: A Helm chart for Kubernetes
     digest: 755119070f8bca230a9c06037777bc570c855119537f997978120a353922d54d
     name: platform-ui
@@ -1677,7 +1687,7 @@ entries:
     version: 1.0.12
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.121142-04:00"
+    created: "2025-11-18T00:09:58.407609-05:00"
     description: A Helm chart for Kubernetes
     digest: bf1789a77e2842c3f3606eb727dc9a2cfd047193367443d95751d25122d53d27
     name: platform-ui
@@ -1686,7 +1696,7 @@ entries:
     version: 1.0.11
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.113268-04:00"
+    created: "2025-11-18T00:09:58.40742-05:00"
     description: A Helm chart for Kubernetes
     digest: e6e98d3f12b78cec78bd5ef5164f0d54b4daa470a06f626dc1734033d3cdfacc
     name: platform-ui
@@ -1695,7 +1705,7 @@ entries:
     version: 1.0.10
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.227788-04:00"
+    created: "2025-11-18T00:09:58.414347-05:00"
     description: A Helm chart for Kubernetes
     digest: 0859687eaeeb20982daf22945cd57fd33d50b2918ceb1f109a71f2878c449ef6
     name: platform-ui
@@ -1704,7 +1714,7 @@ entries:
     version: 1.0.9
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.219707-04:00"
+    created: "2025-11-18T00:09:58.412855-05:00"
     description: A Helm chart for Kubernetes
     digest: e0f7f171b49363f865ba7229814582f33a753040fb858b65c47e5f60a35871b6
     name: platform-ui
@@ -1713,7 +1723,7 @@ entries:
     version: 1.0.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.204436-04:00"
+    created: "2025-11-18T00:09:58.411892-05:00"
     description: A Helm chart for Kubernetes
     digest: 2590823dfe5b33c50a27d19a25b99dc65e5b2289428da8d80a5472628056de94
     name: platform-ui
@@ -1722,7 +1732,7 @@ entries:
     version: 1.0.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.188333-04:00"
+    created: "2025-11-18T00:09:58.411287-05:00"
     description: A Helm chart for Kubernetes
     digest: 58f521c245c6d1196ae23fddae5db73773618b3dacaddb9079ada6ec6d785829
     name: platform-ui
@@ -1731,7 +1741,7 @@ entries:
     version: 1.0.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.181745-04:00"
+    created: "2025-11-18T00:09:58.409842-05:00"
     description: A Helm chart for Kubernetes
     digest: df897e2f6dac04648473469fba53ee1a27cd2ed6e6e331415cfbcc32452c5d50
     name: platform-ui
@@ -1740,7 +1750,7 @@ entries:
     version: 1.0.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.17137-04:00"
+    created: "2025-11-18T00:09:58.409469-05:00"
     description: A Helm chart for Kubernetes
     digest: 96bf8f33e9a4d4a9abc77c4008da950aaf90755170a92f3ea2537d875b7f08f1
     name: platform-ui
@@ -1749,7 +1759,7 @@ entries:
     version: 1.0.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.167556-04:00"
+    created: "2025-11-18T00:09:58.409237-05:00"
     description: A Helm chart for Kubernetes
     digest: 30b26976604ce12ea2353895499d83ba891fbc31a134acd31d3049694435f11d
     name: platform-ui
@@ -1758,7 +1768,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.085092-04:00"
+    created: "2025-11-18T00:09:58.404846-05:00"
     description: A Helm chart for Kubernetes
     digest: 97b1bd11a933ffd246a8745b30c216a955cdcde2868300f53e9b822c1e2494da
     name: platform-ui
@@ -1768,7 +1778,7 @@ entries:
   postgres:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.242951-04:00"
+    created: "2025-11-18T00:09:58.415091-05:00"
     description: A Helm chart for Kubernetes
     digest: 18dc60605ce7ab326b68157b2533d9e63ab3d0b8097e9b48fbce6807cc508e34
     name: postgres
@@ -1777,7 +1787,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.238008-04:00"
+    created: "2025-11-18T00:09:58.414915-05:00"
     description: A Helm chart for Kubernetes
     digest: 541780d70a6d533e3c99c42716a38aba2b5afd0fdfb2d135ee3807107817db63
     name: postgres
@@ -1787,7 +1797,7 @@ entries:
   program-service:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2024-11-05T12:54:08.393302-05:00"
+    created: "2025-11-18T00:09:58.42196-05:00"
     dependencies:
     - condition: postgres.useInternalDep
       name: postgres
@@ -1801,7 +1811,7 @@ entries:
     version: 1.7.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.373918-04:00"
+    created: "2025-11-18T00:09:58.421448-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1814,7 +1824,7 @@ entries:
     version: 1.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.362625-04:00"
+    created: "2025-11-18T00:09:58.421106-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1827,7 +1837,7 @@ entries:
     version: 1.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.354085-04:00"
+    created: "2025-11-18T00:09:58.420744-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1840,7 +1850,7 @@ entries:
     version: 1.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.33945-04:00"
+    created: "2025-11-18T00:09:58.42012-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1853,7 +1863,7 @@ entries:
     version: 1.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.332489-04:00"
+    created: "2025-11-18T00:09:58.419796-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1866,7 +1876,7 @@ entries:
     version: 1.2.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.324403-04:00"
+    created: "2025-11-18T00:09:58.419508-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1879,7 +1889,7 @@ entries:
     version: 1.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.31877-04:00"
+    created: "2025-11-18T00:09:58.41909-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1892,7 +1902,7 @@ entries:
     version: 1.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.30572-04:00"
+    created: "2025-11-18T00:09:58.418624-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1905,7 +1915,7 @@ entries:
     version: 1.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.295202-04:00"
+    created: "2025-11-18T00:09:58.418152-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1918,7 +1928,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.283593-04:00"
+    created: "2025-11-18T00:09:58.41767-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1931,7 +1941,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.275091-04:00"
+    created: "2025-11-18T00:09:58.417218-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1944,7 +1954,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.271407-04:00"
+    created: "2025-11-18T00:09:58.416391-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1957,7 +1967,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.264739-04:00"
+    created: "2025-11-18T00:09:58.416028-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1970,7 +1980,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.26117-04:00"
+    created: "2025-11-18T00:09:58.415771-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1983,7 +1993,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.256272-04:00"
+    created: "2025-11-18T00:09:58.415514-05:00"
     dependencies:
     - name: postgres
       repository: https://icgc-argo.github.io/charts
@@ -1996,7 +2006,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.249151-04:00"
+    created: "2025-11-18T00:09:58.415247-05:00"
     description: A Helm chart for Kubernetes
     digest: 0c242a90995834f57f6665aba74393b1b1ef7b895d50209dc9c9e69686820014
     name: program-service
@@ -2006,7 +2016,7 @@ entries:
   psql-backup:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-05-13T17:42:56.065714-04:00"
+    created: "2025-11-18T00:09:58.424903-05:00"
     description: A Helm chart for Kubernetes
     digest: cb200d4e099fc98505d586d3182c7277aaff5095742987881abc324ad0fa45c5
     name: psql-backup
@@ -2016,7 +2026,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-11-02T10:51:06.614758-04:00"
+    created: "2025-11-18T00:09:58.424693-05:00"
     description: A Helm chart for Kubernetes
     digest: 572c578a636dab986808845e1cc3dc9a1477bec699d55b2cb25f190496e21859
     name: psql-backup
@@ -2026,7 +2036,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.406858-04:00"
+    created: "2025-11-18T00:09:58.424485-05:00"
     description: A Helm chart for Kubernetes
     digest: 4d4f43b1e86c1fbe3c34a21fac55cc17b427669ffd0bd4bbf1bb93b6a0570538
     name: psql-backup
@@ -2036,7 +2046,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-10-18T13:55:08.402444-04:00"
+    created: "2025-11-18T00:09:58.424224-05:00"
     description: A Helm chart for Kubernetes
     digest: f560b419030bb9007045e6b0a0c13bec6a2cf0c7341c697e9a584769a635f9f7
     name: psql-backup
@@ -2046,7 +2056,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-10-18T13:55:08.394815-04:00"
+    created: "2025-11-18T00:09:58.42341-05:00"
     description: A Helm chart for Kubernetes
     digest: b630ecac4b0c839986093dd81c70053165bb95e765315d705be8a8e378596020
     name: psql-backup
@@ -2056,7 +2066,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-10-18T13:55:08.389972-04:00"
+    created: "2025-11-18T00:09:58.422579-05:00"
     description: A Helm chart for Kubernetes
     digest: 0b91b7230a1fa4398d32b6fd20fabb06d3d5f7015d79a0dcccf6655fe28c996f
     name: psql-backup
@@ -2066,7 +2076,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-10-18T13:55:08.385309-04:00"
+    created: "2025-11-18T00:09:58.422377-05:00"
     description: A Helm chart for Kubernetes
     digest: e661858fb4298aa422ca41d62c961be6f2855520e6b23acd54a479844744eda5
     name: psql-backup
@@ -2076,7 +2086,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-10-18T13:55:08.381583-04:00"
+    created: "2025-11-18T00:09:58.422175-05:00"
     description: A Helm chart for Kubernetes
     digest: 3d0c392aabe9ee4a60b03dab12c3e882c1f759d4c681b2825b13396f1e096d8e
     name: psql-backup
@@ -2087,7 +2097,7 @@ entries:
   rabbit-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-12T12:49:50.230703-04:00"
+    created: "2025-11-18T00:09:58.425847-05:00"
     description: A Helm chart for Kubernetes
     digest: 86bd43e1908eeeb88dd9f339b0621a89fb53d88572db339361ab6780166f80ec
     name: rabbit-operator
@@ -2097,7 +2107,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.427365-04:00"
+    created: "2025-11-18T00:09:58.425583-05:00"
     description: A Helm chart for Kubernetes
     digest: 1c6a0689b721889f541bd2f86b97fea34febf65424e0b85efe9c5d7618105d61
     name: rabbit-operator
@@ -2107,7 +2117,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.419601-04:00"
+    created: "2025-11-18T00:09:58.4254-05:00"
     description: A Helm chart for Kubernetes
     digest: c9baa83f9b7fce7eef151cb9247edb4a8184f90e175bd385b9e57901787f5d5e
     name: rabbit-operator
@@ -2117,7 +2127,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.416066-04:00"
+    created: "2025-11-18T00:09:58.425073-05:00"
     description: A Helm chart for Kubernetes
     digest: e8641778948525d37cb49d33769f3474a8b257ffdc33825f74476267558578cf
     name: rabbit-operator
@@ -2128,7 +2138,7 @@ entries:
   rdpc-gateway:
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2023-10-18T13:55:08.487162-04:00"
+    created: "2025-11-18T00:09:58.427955-05:00"
     description: A Helm chart for Kubernetes
     digest: 5f0a7c7167e99a6de9da8a5376894a72aa7cbe0be127c7ae1e87097744703010
     name: rdpc-gateway
@@ -2138,7 +2148,7 @@ entries:
     version: 1.4.0
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2023-10-18T13:55:08.476044-04:00"
+    created: "2025-11-18T00:09:58.427725-05:00"
     description: A Helm chart for Kubernetes
     digest: d4b1178c7cdff2ccbfe67895b095e8c7e6ee67c2234fc618bfe7b66e99484afc
     name: rdpc-gateway
@@ -2148,7 +2158,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2023-10-18T13:55:08.46918-04:00"
+    created: "2025-11-18T00:09:58.427498-05:00"
     description: A Helm chart for Kubernetes
     digest: 5bc50f9a27df9fcb09427f7e094037167c9efa25cdea51a1a7288f3aa90b833f
     name: rdpc-gateway
@@ -2158,7 +2168,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.463884-04:00"
+    created: "2025-11-18T00:09:58.427277-05:00"
     description: A Helm chart for Kubernetes
     digest: 6f1703a3d539a70cabc02746626b72bc08b0f95ac5fda0e56464d05639489b04
     name: rdpc-gateway
@@ -2168,7 +2178,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.459252-04:00"
+    created: "2025-11-18T00:09:58.427056-05:00"
     description: A Helm chart for Kubernetes
     digest: b6c9743bd08104a94b113ce96c97c76d3ac9ba047dd324ef23d6b4762afb8ebc
     name: rdpc-gateway
@@ -2178,7 +2188,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.45532-04:00"
+    created: "2025-11-18T00:09:58.426812-05:00"
     description: A Helm chart for Kubernetes
     digest: f13f4a8f5bdd6c5826ff8f3118ea201d84c0ef3655123ae8f337e8c9eb760267
     name: rdpc-gateway
@@ -2188,7 +2198,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.448359-04:00"
+    created: "2025-11-18T00:09:58.426548-05:00"
     description: A Helm chart for Kubernetes
     digest: 7e8b7a2d2d7c10ce6edbfbf04f8676a15d80e3eb028df3b27e652f60ae630380
     name: rdpc-gateway
@@ -2198,7 +2208,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.435915-04:00"
+    created: "2025-11-18T00:09:58.426321-05:00"
     description: A Helm chart for Kubernetes
     digest: cd056c247d68398c7cce599b5a8e2d24fde10114c4118f5d6c76a5562ad439b6
     name: rdpc-gateway
@@ -2208,7 +2218,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.431974-04:00"
+    created: "2025-11-18T00:09:58.426083-05:00"
     description: A Helm chart for Kubernetes
     digest: 357fa0630ad23941d4cc6bc9eeb8152195b57a2ae21691ead347ad9b5407afe0
     name: rdpc-gateway
@@ -2218,7 +2228,7 @@ entries:
   s3-files-backup:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-05-24T15:25:12.21589-04:00"
+    created: "2025-11-18T00:09:58.429267-05:00"
     description: Backup dac user files
     digest: 361efbb128ed4ca48c4fe9a5ae086b7e0ad696dada3d316e1738645e2596ec27
     name: s3-files-backup
@@ -2228,7 +2238,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-05-14T12:40:58.72218-04:00"
+    created: "2025-11-18T00:09:58.428948-05:00"
     description: Backup dac user files
     digest: 862effd8c9582145a977b1d6f0fe3b7758d489076666d8cb92e73a2ca0208eda
     name: s3-files-backup
@@ -2238,7 +2248,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-27T16:38:48.571508-05:00"
+    created: "2025-11-18T00:09:58.428625-05:00"
     description: Backup dac user files
     digest: 1aa64d642b16200b7fb01c40085876bf0a3eb6cb1199d9f58c9cb03f075e96bb
     name: s3-files-backup
@@ -2248,7 +2258,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-01-23T14:33:40.546893-05:00"
+    created: "2025-11-18T00:09:58.428421-05:00"
     description: Backup dac user files
     digest: 145df6bb5e60d984bcf2cb6618ebbfaeac51d63fa2b55a4ce477b6f883574e95
     name: s3-files-backup
@@ -2258,7 +2268,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.494294-04:00"
+    created: "2025-11-18T00:09:58.42819-05:00"
     description: Backup dac user files
     digest: dbfe379d86fbcfcfb6b3e34079c2691a1757eea9082389f34757a9043a304546
     name: s3-files-backup
@@ -2269,7 +2279,7 @@ entries:
   song-search:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.527868-04:00"
+    created: "2025-11-18T00:09:58.431212-05:00"
     description: A Helm chart for Kubernetes
     digest: 91ab932f35c5dcbeddbd271c19de0328655630a186994ed05f9b08776ea5790a
     name: song-search
@@ -2279,7 +2289,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.510885-04:00"
+    created: "2025-11-18T00:09:58.430961-05:00"
     description: A Helm chart for Kubernetes
     digest: 46da4c2e6ad5c762a7cf329fff401e5e64ddf06cc8697ee05df2f07debbb23c7
     name: song-search
@@ -2289,7 +2299,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.505825-04:00"
+    created: "2025-11-18T00:09:58.430724-05:00"
     description: A Helm chart for Kubernetes
     digest: eacdb19adfe27597decde89ba94586605307d91028b4177c46c543facc0e55a0
     name: song-search
@@ -2299,7 +2309,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-18T13:55:08.502288-04:00"
+    created: "2025-11-18T00:09:58.429679-05:00"
     description: A Helm chart for Kubernetes
     digest: e79dbbb8d363776dd36e6e0e827b3db5aaae21444d1064e1af6f8b2fa6be2bbd
     name: song-search
@@ -2309,7 +2319,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.498292-04:00"
+    created: "2025-11-18T00:09:58.429477-05:00"
     description: A Helm chart for Kubernetes
     digest: 75224445fa0adfcdef71d7e55ab99cdc50dc0459c0f5d62c08f8cf402e18acda
     name: song-search
@@ -2317,92 +2327,10 @@ entries:
     urls:
     - https://icgc-argo.github.io/charts/song-search-0.1.0.tgz
     version: 0.1.0
-  stateless-svc:
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.595703-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 464344536b275f4569c50551fc67d2f5d5dc39b43c7d7f66364ed0c2b92d2686
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-1.3.1.tgz
-    version: 1.3.1
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.589819-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 5e9d6a1e991133aef97b3312b8f9abd0d45ea738b7312f49df47401da72ef39a
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-1.3.0.tgz
-    version: 1.3.0
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.58467-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 72b3613708f82f87d86f64380c01414419b556b317bb6bad7230cc3774e37be8
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-1.2.0.tgz
-    version: 1.2.0
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.578055-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 5641acec85df09dd3ad63277b09a35c8b604160916ea35596d997324ec8c3fd7
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-1.1.0.tgz
-    version: 1.1.0
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.570789-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 22535961de4d1ee3bbb2f5c05a60aa23fff2839645790d2daf48427bcf2d3042
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-1.0.0.tgz
-    version: 1.0.0
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.560974-04:00"
-    description: A Helm chart for Kubernetes
-    digest: ae1d1150b1087380ff7f03fadc559df05045a366a8e6064f476d9aa39965f78e
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-0.3.0.tgz
-    version: 0.3.0
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.556256-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 1bf42b66742fb21f5ee3212c71f3a237c793c5f3f694c4456c6903f1d5f94366
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-0.2.0.tgz
-    version: 0.2.0
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.543647-04:00"
-    description: A Helm chart for Kubernetes
-    digest: a188b4bba627d52165320d6c2be8905fca3afbcff5576a6ae62d1e9fe5ef9481
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    created: "2023-10-18T13:55:08.537166-04:00"
-    description: A Helm chart for Kubernetes
-    digest: 33a5fae4a98d8abd2aec0841f7a4d77050d5eaa50fe41a8c0b03e3e98c798518
-    name: stateless-svc
-    type: application
-    urls:
-    - https://icgc-argo.github.io/charts/stateless-svc-0.1.0.tgz
-    version: 0.1.0
   workflow-api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.605274-04:00"
+    created: "2025-11-18T00:09:58.431613-05:00"
     description: A Helm chart for Kubernetes
     digest: 606eb31a4b72faf3f6018d89e50dfa828c20828d74d82f7c635cf76ee34927c9
     name: workflow-api
@@ -2411,7 +2339,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.600883-04:00"
+    created: "2025-11-18T00:09:58.431404-05:00"
     description: A Helm chart for Kubernetes
     digest: 808b5bb495a2a31d615114d9aad7c8324a8bd60fc669a7ed66084d7e9b03a013
     name: workflow-api
@@ -2421,7 +2349,7 @@ entries:
   workflow-docs:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.623027-04:00"
+    created: "2025-11-18T00:09:58.432156-05:00"
     description: A Helm chart for Kubernetes
     digest: 230b1fc64b7ab3e8cf9294a2c1cf0edfc6bac30d466c937cdf5ce36d2e00eeb5
     name: workflow-docs
@@ -2430,7 +2358,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.618366-04:00"
+    created: "2025-11-18T00:09:58.431969-05:00"
     description: A Helm chart for Kubernetes
     digest: db8223af47b30c758deca4b1d3da54a4a2ab26acecb8805ef8397f2cf9ab2351
     name: workflow-docs
@@ -2439,7 +2367,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.614408-04:00"
+    created: "2025-11-18T00:09:58.431786-05:00"
     description: A Helm chart for Kubernetes
     digest: 2ebbca43b5fd73747f949223056f5e541bb4755bb4c2701305876962a266b136
     name: workflow-docs
@@ -2449,7 +2377,7 @@ entries:
   workflow-gateway:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.655177-04:00"
+    created: "2025-11-18T00:09:58.433261-05:00"
     description: A Helm chart for Kubernetes
     digest: 2d89c2aecdc740321b1556496549623b522563b21b3c9d84f4649a966d86f18a
     name: workflow-gateway
@@ -2458,7 +2386,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.647299-04:00"
+    created: "2025-11-18T00:09:58.432999-05:00"
     description: A Helm chart for Kubernetes
     digest: 3d6535b184db23216c6c9f32ccc4263317d104e8f74047dd12f1dbeb5d9f6c44
     name: workflow-gateway
@@ -2467,7 +2395,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.642659-04:00"
+    created: "2025-11-18T00:09:58.432806-05:00"
     description: A Helm chart for Kubernetes
     digest: 27ac273822404559ffea03db92cf00edf46cdff7764232a9dabc633eb3f474e4
     name: workflow-gateway
@@ -2476,7 +2404,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.637153-04:00"
+    created: "2025-11-18T00:09:58.432589-05:00"
     description: A Helm chart for Kubernetes
     digest: 49e50998a41b232ad63b990a90714636d05aeb86b2157f4fb431efd8ce43e1ba
     name: workflow-gateway
@@ -2485,7 +2413,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.631592-04:00"
+    created: "2025-11-18T00:09:58.432359-05:00"
     description: A Helm chart for Kubernetes
     digest: 870410efb1d5b00dcbc05b6abd44d9bf9228316681be2754101889d026a49bae
     name: workflow-gateway
@@ -2495,7 +2423,7 @@ entries:
   workflow-graph-ingest:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.670955-04:00"
+    created: "2025-11-18T00:09:58.433998-05:00"
     description: Ingest Node for Workflow Graph
     digest: 9343dfd2fb2a5c14781edb2df59b52252f433b2eb9111585d3f8a7eed58ae922
     name: workflow-graph-ingest
@@ -2505,7 +2433,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.665814-04:00"
+    created: "2025-11-18T00:09:58.433755-05:00"
     description: Ingest Node for Workflow Graph
     digest: 25e81b2d611ba3fc2316d6a61a673f6f2acc4d7d77aeafc475345fea787381f6
     name: workflow-graph-ingest
@@ -2515,7 +2443,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.662212-04:00"
+    created: "2025-11-18T00:09:58.433513-05:00"
     description: Ingest Node for Workflow Graph
     digest: 2938774eb425194e8cf4c7df0d97eff5ec2c1a715d62279e5e5414b0ed3672d8
     name: workflow-graph-ingest
@@ -2526,7 +2454,7 @@ entries:
   workflow-graph-manager:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.706554-04:00"
+    created: "2025-11-18T00:09:58.435286-05:00"
     description: A Helm chart for Kubernetes
     digest: 9aa97067b4e6db6d21976674f4ae6228e745f04ce926dbcfc1f6a0bb67537e91
     name: workflow-graph-manager
@@ -2536,7 +2464,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.694088-04:00"
+    created: "2025-11-18T00:09:58.434925-05:00"
     description: A Helm chart for Kubernetes
     digest: 325df940a9a40e8734407ccd51038e221e6e4750edc77a53e2759556ed86053d
     name: workflow-graph-manager
@@ -2546,7 +2474,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.684703-04:00"
+    created: "2025-11-18T00:09:58.434526-05:00"
     description: A Helm chart for Kubernetes
     digest: 8c446f3865318acad7b6a357ca613b5f74d7a430c251ec7319483e3508178730
     name: workflow-graph-manager
@@ -2556,7 +2484,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-18T13:55:08.678527-04:00"
+    created: "2025-11-18T00:09:58.434254-05:00"
     description: A Helm chart for Kubernetes
     digest: 99266be710400c10f12f1feb738890546a16458e29cfd37287d337377ae27c27
     name: workflow-graph-manager
@@ -2567,7 +2495,7 @@ entries:
   workflow-graph-node:
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2023-10-18T13:55:08.739325-04:00"
+    created: "2025-11-18T00:09:58.436012-05:00"
     description: A Helm chart for Kubernetes
     digest: ec53000e0a48555d73614fbc5844802ff042410fa26a9e5d56338c8a2397e3da
     name: workflow-graph-node
@@ -2577,7 +2505,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2023-10-18T13:55:08.723179-04:00"
+    created: "2025-11-18T00:09:58.435776-05:00"
     description: A Helm chart for Kubernetes
     digest: 6b42b79d2726c687a363a0d961ad6905aa5001f678a63e744651a3d21c14b09e
     name: workflow-graph-node
@@ -2587,7 +2515,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2023-10-18T13:55:08.71035-04:00"
+    created: "2025-11-18T00:09:58.435531-05:00"
     description: A Helm chart for Kubernetes
     digest: c9b0ff41efe06257c0111511afa987ddce3eb2dc527709c338547b8905df16d2
     name: workflow-graph-node
@@ -2598,7 +2526,7 @@ entries:
   workflow-graph-registry:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-12T16:10:50.882476-05:00"
+    created: "2025-11-18T00:09:58.437904-05:00"
     description: A Helm chart for Kubernetes
     digest: 84972c4fa2387e556e57697e0dcc900cf2070510206e94c920244d6b86e257c4
     name: workflow-graph-registry
@@ -2608,7 +2536,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.75206-04:00"
+    created: "2025-11-18T00:09:58.437574-05:00"
     description: A Helm chart for Kubernetes
     digest: c1eeb1ec6c6d2be582f5d256a7527f7d92a5c0c2a213bed5990fbbf7f051ef6e
     name: workflow-graph-registry
@@ -2618,7 +2546,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:55:08.747478-04:00"
+    created: "2025-11-18T00:09:58.437286-05:00"
     description: A Helm chart for Kubernetes
     digest: 270d5142053484742604d2eb870c16cf094ff4a74bb947110c00dbfadee2cf34
     name: workflow-graph-registry
@@ -2629,7 +2557,7 @@ entries:
   workflow-management:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2024-01-23T17:13:49.501874-05:00"
+    created: "2025-11-18T00:09:58.43973-05:00"
     description: A Helm chart for Kubernetes
     digest: c3478bf13d14049787f7a219d79b8c99be567677c62151405bd9ef4306899dad
     name: workflow-management
@@ -2638,7 +2566,7 @@ entries:
     version: 0.15.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.80254-04:00"
+    created: "2025-11-18T00:09:58.439461-05:00"
     description: A Helm chart for Kubernetes
     digest: a8bb598bed0afa860b3c868979fd29ddb95b4039fd3dbe6d92c699f443f7beae
     name: workflow-management
@@ -2647,7 +2575,7 @@ entries:
     version: 0.14.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.796868-04:00"
+    created: "2025-11-18T00:09:58.439209-05:00"
     description: A Helm chart for Kubernetes
     digest: e52a7d564a0a9805462ac914e241d452a653eb9df331ee9767652eaa6fbcc555
     name: workflow-management
@@ -2656,7 +2584,7 @@ entries:
     version: 0.13.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.791816-04:00"
+    created: "2025-11-18T00:09:58.43896-05:00"
     description: A Helm chart for Kubernetes
     digest: 3478aa21777c78034b9cf8a340378178f8d7f17d36cfc08eb40abad9a0be78ff
     name: workflow-management
@@ -2665,7 +2593,7 @@ entries:
     version: 0.12.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.782822-04:00"
+    created: "2025-11-18T00:09:58.438583-05:00"
     description: A Helm chart for Kubernetes
     digest: e5c76df3841d1288bb69189e6a09a7da479f88bc591c90b3bd0c4010bc4abc1e
     name: workflow-management
@@ -2674,7 +2602,7 @@ entries:
     version: 0.11.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.774191-04:00"
+    created: "2025-11-18T00:09:58.438345-05:00"
     description: A Helm chart for Kubernetes
     digest: baae9b8a9fd3f0372459f01dd857467fa67586fec3470bdfa32c31b07ae0dc72
     name: workflow-management
@@ -2683,7 +2611,7 @@ entries:
     version: 0.10.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.860393-04:00"
+    created: "2025-11-18T00:09:58.441401-05:00"
     description: A Helm chart for Kubernetes
     digest: 7e1e49a9748f70468bef49305ba2785b70a519f74e47ef9dd66664ae1e02c814
     name: workflow-management
@@ -2692,7 +2620,7 @@ entries:
     version: 0.9.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.855844-04:00"
+    created: "2025-11-18T00:09:58.441171-05:00"
     description: A Helm chart for Kubernetes
     digest: d74065c8de4a0005dbe6375bfc11aa1578ebc6d694e6c03253c2fc44c7138604
     name: workflow-management
@@ -2701,7 +2629,7 @@ entries:
     version: 0.8.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.85167-04:00"
+    created: "2025-11-18T00:09:58.440937-05:00"
     description: A Helm chart for Kubernetes
     digest: 1b943d5105c459adb747782fd04ea6e7d4e5a55c7936e9e377e630008347b454
     name: workflow-management
@@ -2710,7 +2638,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.847566-04:00"
+    created: "2025-11-18T00:09:58.440742-05:00"
     description: A Helm chart for Kubernetes
     digest: aeebcbca1a57f8cd0fe67c6664fd22195594922e17df1a29fce7f9aa64875fac
     name: workflow-management
@@ -2719,7 +2647,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.8399-04:00"
+    created: "2025-11-18T00:09:58.440522-05:00"
     description: A Helm chart for Kubernetes
     digest: e6892158af425cee48ce9d0f0be7fc088bad43e028d7fe54db0d4e63ecf7013e
     name: workflow-management
@@ -2728,7 +2656,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.83181-04:00"
+    created: "2025-11-18T00:09:58.440315-05:00"
     description: A Helm chart for Kubernetes
     digest: 4ba3585efbe638812924c1ad2279b9ae0ba29c04f8b5f4471fadeaf707d57a9d
     name: workflow-management
@@ -2737,7 +2665,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.820998-04:00"
+    created: "2025-11-18T00:09:58.440116-05:00"
     description: A Helm chart for Kubernetes
     digest: 9798c26066a24cd7ea28a13d49fce66920a470b2cd2ba1d8a2575740bb0501f1
     name: workflow-management
@@ -2746,7 +2674,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.812055-04:00"
+    created: "2025-11-18T00:09:58.439923-05:00"
     description: A Helm chart for Kubernetes
     digest: c0d8734b857e6a1f337684b694ba5c1b10d99abee092e9a691a80053cf619fa6
     name: workflow-management
@@ -2755,7 +2683,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.755668-04:00"
+    created: "2025-11-18T00:09:58.438094-05:00"
     description: A Helm chart for Kubernetes
     digest: e98a87c053e99b5b93766e31a72c7bdcd3a972c3ee7994ebf2627511e6d2e380
     name: workflow-management
@@ -2765,7 +2693,7 @@ entries:
   workflow-management-scheduler:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-10-18T13:55:08.875674-04:00"
+    created: "2025-11-18T00:09:58.442935-05:00"
     description: A Helm chart for Kubernetes
     digest: 6d7e73f040d3499d66ea529ed36605d56828e501d9a326a526ab63642f429129
     name: workflow-management-scheduler
@@ -2775,7 +2703,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-10-18T13:55:08.868292-04:00"
+    created: "2025-11-18T00:09:58.441616-05:00"
     description: A Helm chart for Kubernetes
     digest: a7707853036cf1323ac88be9216f757647ce18089e805b70e984f361d9a784fa
     name: workflow-management-scheduler
@@ -2786,7 +2714,7 @@ entries:
   workflow-relay:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.918158-04:00"
+    created: "2025-11-18T00:09:58.444458-05:00"
     description: A Helm chart for Kubernetes
     digest: f3c0f19a6e33ed7a10f2f344b53043a6fe04eccb81a635931652a5332300cece
     name: workflow-relay
@@ -2795,7 +2723,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.909735-04:00"
+    created: "2025-11-18T00:09:58.444179-05:00"
     description: A Helm chart for Kubernetes
     digest: 8cbadfc13e4e93931cfae80a0f34cd92cbdff218fecd97eea03e1f885116c5b5
     name: workflow-relay
@@ -2804,7 +2732,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.902667-04:00"
+    created: "2025-11-18T00:09:58.443945-05:00"
     description: A Helm chart for Kubernetes
     digest: a8a13c9551bc33208745c1e2a3500b0aa4b89f9938a956d6656709ebf891f278
     name: workflow-relay
@@ -2813,7 +2741,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.89482-04:00"
+    created: "2025-11-18T00:09:58.443717-05:00"
     description: A Helm chart for Kubernetes
     digest: 52f313618b32a6cb433f1abb61ca862ad7a3a64953c6ea9f6dc19a66da444547
     name: workflow-relay
@@ -2822,7 +2750,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.888467-04:00"
+    created: "2025-11-18T00:09:58.443491-05:00"
     description: A Helm chart for Kubernetes
     digest: 3372d90911d2a92d772c5222936ef5c1c3159a3be1739a1a43f971b42cf03a23
     name: workflow-relay
@@ -2831,7 +2759,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.884659-04:00"
+    created: "2025-11-18T00:09:58.443159-05:00"
     description: A Helm chart for Kubernetes
     digest: d800900a5cd579b69c7e97a7361f762196506b2f52eb3a6b9c1add7a1edbeb51
     name: workflow-relay
@@ -2841,7 +2769,7 @@ entries:
   workflow-search:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.948195-04:00"
+    created: "2025-11-18T00:09:58.445278-05:00"
     description: A Helm chart for Kubernetes
     digest: ea7a7e1940ac7b7720c1edd383cfa26d42b68cdee6ee4fb8a255d248ce44973e
     name: workflow-search
@@ -2850,7 +2778,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.933345-04:00"
+    created: "2025-11-18T00:09:58.445086-05:00"
     description: A Helm chart for Kubernetes
     digest: cadd2e850575a64000cf8c288de59bcb5dbafa79a80f26703b6d1650be6f1361
     name: workflow-search
@@ -2859,7 +2787,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.928399-04:00"
+    created: "2025-11-18T00:09:58.444879-05:00"
     description: A Helm chart for Kubernetes
     digest: d61035b3f0eb51ae1870effe12616ab31dfe417a811408504e089a84b035bf91
     name: workflow-search
@@ -2868,7 +2796,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.921881-04:00"
+    created: "2025-11-18T00:09:58.444661-05:00"
     description: A Helm chart for Kubernetes
     digest: 92cb89d3802fe560b797066f7ff31f0b6e7b3aa3558ea849bed1705cff6d356b
     name: workflow-search
@@ -2878,7 +2806,7 @@ entries:
   workflow-ui:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:09.009573-04:00"
+    created: "2025-11-18T00:09:58.446719-05:00"
     description: A Helm chart for Kubernetes
     digest: 623d9d4f7bca5680f86ad9af9fdf727ee80a7adbd8b5d1f2520810c4215d3ede
     name: workflow-ui
@@ -2887,7 +2815,7 @@ entries:
     version: 0.8.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.999187-04:00"
+    created: "2025-11-18T00:09:58.446525-05:00"
     description: A Helm chart for Kubernetes
     digest: edc1848dc66a88310a2389c6ec582fab93a24987cfd61296bec81350cd3e471d
     name: workflow-ui
@@ -2896,7 +2824,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.995228-04:00"
+    created: "2025-11-18T00:09:58.446336-05:00"
     description: A Helm chart for Kubernetes
     digest: 68ae40d591ce2860f4d8c5228bda5ee1ed20e29945decf7ed9e7160f4049d4c4
     name: workflow-ui
@@ -2905,7 +2833,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.987378-04:00"
+    created: "2025-11-18T00:09:58.446163-05:00"
     description: A Helm chart for Kubernetes
     digest: cceb9be192400370ae113396f5863ba9cd971ed9dd90778513eba75b93a022ed
     name: workflow-ui
@@ -2914,7 +2842,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.981607-04:00"
+    created: "2025-11-18T00:09:58.445992-05:00"
     description: A Helm chart for Kubernetes
     digest: 8e505d3136019ca83b57d60d23dd2166a6c6a6e808b17dc5329b6f284bfee94c
     name: workflow-ui
@@ -2923,7 +2851,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.970303-04:00"
+    created: "2025-11-18T00:09:58.445813-05:00"
     description: A Helm chart for Kubernetes
     digest: 3bc6ccef5dffd2608454f6e1fc8f76c004d75dc3125d47650eb5f8635c9aabab
     name: workflow-ui
@@ -2932,7 +2860,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.964646-04:00"
+    created: "2025-11-18T00:09:58.44564-05:00"
     description: A Helm chart for Kubernetes
     digest: 513c8eb2bda2ed16519792ce79fa46fd57c6d7156e532ae68c813d19229fe56b
     name: workflow-ui
@@ -2941,11 +2869,11 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-10-18T13:55:08.955321-04:00"
+    created: "2025-11-18T00:09:58.445458-05:00"
     description: A Helm chart for Kubernetes
     digest: 3e089a2dfc48d6edb35166b53588fa0429c03eae84f67853ebdde4a4485792c9
     name: workflow-ui
     urls:
     - https://icgc-argo.github.io/charts/workflow-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-01T11:15:13.461978-04:00"
+generated: "2025-11-18T00:09:58.317014-05:00"

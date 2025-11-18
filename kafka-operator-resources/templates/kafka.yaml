@@ -1,8 +1,9 @@
 {{ if (eq .Values.kafkaMode "kraft") }}
+{{ $clusterName := include "kafka-operator-resources.fullname" . }}
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ $clusterName }}
   annotations:
     strimzi.io/node-pools: enabled
     strimzi.io/kraft: enabled
@@ -19,12 +20,12 @@ spec:
         networkPolicyPeers:
         - podSelector:
             matchLabels:
-              strimzi.io/cluster: {{ .Release.Name }}
+              strimzi.io/cluster: {{ $clusterName }}
               strimzi.io/kind: Kafka
         {{ if ( .Values.kafkaBridge.enabled ) }}
         - podSelector:
             matchLabels:
-              strimzi.io/cluster: {{ .Release.Name }}
+              strimzi.io/cluster: {{ $clusterName }}
               strimzi.io/kind: KafkaBridge
         {{- end }}
           {{- with .Values.networkPolicyPeers }}

@@ -2,9 +2,9 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaNodePool
 metadata:
-  name: {{ .Release.Name }}
+  name: kafka-node
   labels:
-    strimzi.io/cluster: {{ .Release.Name }}
+    strimzi.io/cluster: {{ include "kafka-operator-resources.fullname" . }}
 spec:
   replicas: 3
   roles:
